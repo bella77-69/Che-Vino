@@ -58,10 +58,10 @@ routes: [
         method: 'get',
         endpoint: 'wines/rose',
     },
-    // {
-    //     method: 'get',
-    //     endpoint: 'wines/sparkling',
-    // },
+    {
+        method: 'get',
+        endpoint: 'wines/dessert',
+    },
     {
         method: 'post',
         endpoint: '/wines/reds', 

@@ -34,6 +34,7 @@ toggleContent(event) {
     this.fetchWine();
     console.log(this.props)
     }
+    
 
 render () {
     const { items } =this.state;

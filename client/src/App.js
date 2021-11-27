@@ -14,9 +14,9 @@ function App() {
       <header className="App-header">
         <div>
 {/* <Header /> */}
-<RedWinePage />
+{/* <RedWinePage /> */}
 {/* <WhiteWinePage /> */}
-{/* <DessertWinePage /> */}
+<DessertWinePage />
 {/* <PortWinePage /> */}
 {/* <SparklingWinePage /> */}
 {/* <RoseWinePage /> */}
