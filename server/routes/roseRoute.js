@@ -16,7 +16,7 @@ router
     
     // const users = getUsers();
 
-    const findRose = roses.find((rose) => rose.id === req.decoded.id) 
+    const findRose = rose.find((rose) => rose.id === req.decoded.id) 
 
     const favoriteRoseId = findRose.favoriteRose
     //console.log("favorite rose of current rose -- object", favoriteRoseId)
@@ -26,8 +26,8 @@ router
     const favoriteRose = [];
 
     for ( const foundId of favoriteRoseId) {
-     const favoriteRose = rose.find((plant) => {
-       return( plant.id === foundId.id)
+     const favoriteRose = rose.find((rose) => {
+       return( rose.id === foundId.id)
     })
     favoriteRose.push(favoriteRose)
  }
@@ -39,7 +39,7 @@ router
 
   })
 
-  .get("/:id", (req, res) => {
+  .get("/rose/:id", (req, res) => {
     const rose = getRose();
     const { id } = req.params;
 

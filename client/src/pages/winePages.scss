@@ -1,0 +1,82 @@
+@import "../partials/variables";
+@import "../partials/fonts";
+@import "../partials/_mixins";
+
+.wine {
+    font-family: $glory;
+    margin: 0, auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5625rem;
+    padding: 3%;
+    box-shadow: .625rem .625rem;
+    background-color: moccasin;
+
+    &-container {
+    margin: 0;
+    }
+
+    &-title {
+    color: midnightblue;
+    display: flex;
+    align-items: center;
+
+    }
+    &-info {
+        color: red;
+    }
+
+    &-location {
+        color: green;
+    }
+
+    &-reviews {
+        color: orange;
+    }
+
+    &-img {
+        object-fit: cover;
+    }
+
+    &-img__box {
+    margin: 0;
+
+    }
+    &-button {
+    outline: none;
+    text-decoration: none;
+    border-radius: 3.125rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    opacity: 1;
+    background-color: orchid;
+    border: .0625rem solid grey;
+
+    &:hover {
+        animation: rotate 0.7s ease-in-out both;
+        animation-delay: 0.06s;
+    
+    @keyframes rotate {
+        0% {
+          transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+        25% {
+          transform: rotate(3deg) translate3d(0, 0, 0);
+        }
+        50% {
+          transform: rotate(-3deg) translate3d(0, 0, 0);
+        }
+        75% {
+          transform: rotate(1deg) translate3d(0, 0, 0);
+        }
+        100% {
+          transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+      }
+      
+    }
+}
+}

@@ -1,0 +1,12 @@
+@use "./_variables.scss" as *;
+@use "./_fonts.scss" as *;
+@use "./_mixins.scss" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,300;0,400;0,600;1,100&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    background-color: #282c34;
+    font-family: 'Glory', sans-serif;
+}

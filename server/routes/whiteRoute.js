@@ -17,23 +17,23 @@ router.get("/", (req, res) => {
     const whites = listWhites();
     res.status(200).json(whites);
 });
-// router
-// .get('/reds:id', (req, res) => {
-//     console.log(req.params.id);
-//     fs.readFile('./data/red.json', 'utf-8', (err, data) => {
-//         if (err) {
-//             console.log(err);
-//             res.json({message: 'error getting red wine id data'});
-//         }
-//         const redData = JSON.parse(data);
-//         const foundRed = redData.find((red) => red.id === req.params.id);
-//         if(!foundRed) {
-//             res.status(404).send({message: 'No wine found with the id'});
-//         } else {
-//             res.json(foundRed);
-//         }
-//     });
-// }
-// )
+router
+.get('/:id', (req, res) => {
+    console.log(req.params.id);
+    fs.readFile('./data/white.json', 'utf-8', (err, data) => {
+        if (err) {
+            console.log(err);
+            res.json({message: 'error getting White Wine id data'});
+        }
+        const whiteData = JSON.parse(data);
+        const foundWhite = whiteData.find((white) => white.id === req.params.id);
+        if(!foundWhite) {
+            res.status(404).send({message: 'No White Wine found with the id'});
+        } else {
+            res.json(foundWhite);
+        }
+    });
+}
+)
 
 module.exports = router;
