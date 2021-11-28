@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './winePages.scss';
 
+
 export default function RedWinePage () {
     const [data, setData] = useState([]); //hook for all wines
     const [oneData, fetchOneWine] = useState(''); //another hook for current wine
@@ -28,6 +29,7 @@ export default function RedWinePage () {
     };
    
     return (
+     
       <section className="wine">
           <div className="wine-container">
           <h1 className="wine-title">{oneData.winery}</h1>
@@ -35,11 +37,12 @@ export default function RedWinePage () {
           <p className="wine-location">{oneData.location}</p>
          </div>
           <div className="wine-img__box">
-          <img src={oneData.image} className="wine-img"/>
+          <img src={oneData.image} className="wine-img" alt="red-wine"/>
  
         <button className="wine-button" onClick={handleClick}>Wine Generator</button>
       </div>
       </section>
+ 
     );
   }
 

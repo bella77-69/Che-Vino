@@ -1,60 +1,43 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default class RoseWinePage extends React.Component {
-constructor(props){
-    super(props);
-    this.state ={
-        items: [],
-    }
-    this.toggleContent = this.toggleContent.bind(this)
-}
 
-    //lifecycle
-    componentDidMount() {
-        this.fetchWine();
-       }
+export default function RoseWinePage() {
+    const [data, setData] = useState([]);
+    const [oneData, fetchOneWine] = useState('');
 
-fetchWine = () => {
-    axios.get('http://localhost:8080/wines/rose')
-    .then((response) => {
-        this.setState ({
-            items: response.data,
+    useEffect(() => {
+        fetch('http://localhost:8080/wines/rose')
+        .then((res) => res.json())
+        .then((data) => {
+            setData(data);
         })
-        console.log(response.data)
-    })
-    .catch((error) => {
-    console.log(error)
-    });
-}
+        .catch((err) => {
+            console.log(err)
+        });
+    }, []);
 
-toggleContent(event) {
-    event.preventDefault();
-    const {dataCallBack} = this.props
-    this.fetchWine();
-    console.log(this.props)
+    const handleClick = () => {
+        const random = data[Math.floor(Math.random() * data.length)];
+        fetchOneWine(random);
     }
-
-render () {
-    const { items } =this.state;
     return (
-    <div>
-        <ul>{items.map(item => (
-            <li key={item.id}> 
-            <img src={item.image} alt="wine-img"/>
-            <h3 className="wine-title">{item.wine}
-            </h3>
-            <p className ="wine-info">{item.winery}</p>
-            <p className="wine-location">{item.location}</p>
-            <p className="wine-rating">{item.rating.average}</p>
-            <p className="wine-review">{item.rating.reviews}</p>
-            <button className="button" onClick={this.toggleContent}>
-                 <span>WINE GENERATOR</span>
-         </button>
-            </li>
-        ))};
+        <ul>
+            {data.map((item) => (
+                     <section className="wine" key={item.id}>
+                     <div className="wine-container">
+                     <h1 className="wine-title">{item.winery}</h1>
+                     <h2 className="wine-info">{item.wine}</h2>
+                     <p className="wine-location">{item.location}</p>
+                    </div>
+                     <div className="wine-img__box">
+                     <img src={item.image} className="wine-img" alt="red-wine"/>
+            
+                   <button className="wine-button" onClick={handleClick}>Wine Generator</button>
+                 </div>
+                 </section>
+            ))}
         </ul>
-</div>
     );
 }
-}
+
