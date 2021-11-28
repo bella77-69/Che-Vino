@@ -24,7 +24,7 @@ app.use('/wines/whites', whiteRoute);
 app.use('/wines/dessert', dessertRoute);
 app.use('/wines/port', portRoute);
 app.use('/wines/rose', roseRoute);
- app.use('/wines/sparkling', sparklingRoute);
+app.use('/wines/sparkling', sparklingRoute);
 
 // home route
 app.get('/', (req, res) => {
@@ -34,18 +34,18 @@ routes: [
         method: 'get',
         endpoint: '/wines/reds',
     },
-    {
-        method: 'get',
-        endpoint: '/wines/reds/:id',
-    },
+    // {
+    //     method: 'get',
+    //     endpoint: '/wines/reds/:id',
+    // },
     {
         method: 'get',
         endpoint:'/wines/whites',
     },
-    {
-        method: 'get',
-        endpoint: '/wines/whites/:id'
-    },
+    // {
+    //     method: 'get',
+    //     endpoint: '/wines/whites/:id'
+    // },
     {
         method: 'get',
         endpoint: '/wines/sparkling',
@@ -58,6 +58,10 @@ routes: [
         method: 'get',
         endpoint: 'wines/rose',
     },
+     {
+         method: 'get',
+         endpoint: '/wines/rose/:id'
+     },
     {
         method: 'get',
         endpoint: 'wines/dessert',

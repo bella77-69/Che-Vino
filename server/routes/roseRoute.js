@@ -1,45 +1,26 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const rose = require=('./data/rose.json');
 
-function getRose() {
-  return JSON.parse(fs.readFileSync("./data/rose.json", "utf-8"));
+function listRose() {
+  return JSON.parse(fs.readFileSync("./data/rose.json", 'utf-8'));
 }
 
-// function getUsers() {
-//   return JSON.parse(fs.readFileSync("./data/users.json"));
-// }
+function getRedsById(id) {
+  const roseArr = listRose();
+  let filteredRose = roseArr.find(item => item.id === id);
+  return filteredRose;
+}
 
-router
-  .get("/", (req, res) => {
-    const rose = getRose();
-    
-    // const users = getUsers();
+router.get("/", (req, res) => {
+  const rose = listRose();
+  res.status(200).json(rose);
+});
 
-    const findRose = rose.find((rose) => rose.id === req.decoded.id) 
 
-    const favoriteRoseId = findRose.favoriteRose
-    //console.log("favorite rose of current rose -- object", favoriteRoseId)
 
-    //---
-
-    const favoriteRose = [];
-
-    for ( const foundId of favoriteRoseId) {
-     const favoriteRose = rose.find((rose) => {
-       return( rose.id === foundId.id)
-    })
-    favoriteRose.push(favoriteRose)
- }
-   
-    const getResponse = [ favoriteRose, rose]
-
-    //console.log(getResponse)
-    res.json(getResponse)
-
-  })
-
-  .get("/rose/:id", (req, res) => {
+router   .get('/rose/:id', (req, res) => {
     const rose = getRose();
     const { id } = req.params;
 

@@ -1,0 +1,47 @@
+@import "../partials/variables";
+@import "../partials/fonts";
+@import "../partials/_mixins";
+
+.card {
+    margin: 0, auto;
+ 
+
+    &-img {
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+        opacity: 1;
+        padding: 5px;
+        
+    }
+    
+
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+        gap: 2rem;
+        justify-content: center;
+        border: 2px solid black;
+        padding-bottom: 1rem;
+        background-color: orchid;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 200ms ease-in;
+    }
+
+    &-title {
+        color: red;
+    }
+
+    &-description {
+        color: blue;
+    }
+
+    &-button {
+        width: 80%;
+        border-radius: .625rem;
+        border: none;
+    }
+}
