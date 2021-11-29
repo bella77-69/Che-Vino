@@ -1,0 +1,81 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+.footer {
+    margin: 0, auto;
+
+    &-main {
+    background-color: $blacker;
+    margin: 0;
+    @include flex;
+    justify-content: center;
+    
+    &-social {
+    display: flex;
+    position: absolute;
+    margin: 1rem;
+    }
+}
+}
+.nav {
+    background-image: url("../../assets/images/cork3.jfif");
+    background-repeat: no-repeat;
+    position: relative;
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    z-index: 1;
+    height: 45vh;
+    margin: 0;
+  
+    
+  
+    &--wrapper {
+    @include flexColumn;
+    justify-content: center;
+    text-decoration: none;
+    }
+    
+    &-list {
+    @include flexColumn;
+    margin: 0;
+    list-style: none;
+    padding: .3125rem;
+    bottom: 5rem;
+    }
+
+    &-list__item {
+    color: $beige;
+    text-decoration: none;
+    top: 0;
+    
+
+    &-title {
+    text-decoration: none;
+    }
+}
+}
+
+.logo {
+    background-color: $darkGrey;
+    margin-top: -1.062rem;
+    height: 17vh;
+    
+    &-container {
+    @include flexColumn;
+    align-items: center;
+    
+    &__image {
+    margin-top: 1.5rem;
+    width: 22%;
+    border-radius: 25px;
+    }
+    
+    &__text {
+    color: $beige;
+    margin-bottom: 2rem;
+    }
+}
+}
