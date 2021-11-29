@@ -38,15 +38,4 @@ router
 }
 )
 
-
-
-// router.get('/reds/reds/:id', (req, res) => {
-//     const found = reds.some(red => red.id === req.params.id);
-//     if(found) {
-//         res.json(reds.filter(red => red.id === req.params.id));
-//     } else {
-//         res.status(400).json({error: `Sorry Red Wine With ID:${req.params.id} not found`});
-//     }
-// });
-
 module.exports = router;
