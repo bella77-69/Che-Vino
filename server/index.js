@@ -42,10 +42,10 @@ routes: [
         method: 'get',
         endpoint:'/wines/whites',
     },
-    // {
-    //     method: 'get',
-    //     endpoint: '/wines/whites/:id'
-    // },
+    {
+        method: 'get',
+        endpoint: '/wines/whites/:id'
+    },
     {
         method: 'get',
         endpoint: '/wines/sparkling',
