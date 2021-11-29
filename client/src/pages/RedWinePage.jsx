@@ -29,7 +29,6 @@ export default function RedWinePage () {
     };
    
     return (
-     
       <section className="wine">
           <div className="wine-container">
           <h1 className="wine-title">{oneData.winery}</h1>

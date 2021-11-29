@@ -1,0 +1,46 @@
+@import "../partials/variables";
+@import "../partials/fonts";
+@import "../partials/_mixins";
+
+.form {
+    margin: 0;
+    padding: 10px;
+    background-color: $blacker;
+
+    &-container {
+    @include flexColumn;
+    margin: 1rem;
+    align-items: center;
+    }
+
+    &-input {
+    padding: 1rem;
+    border-radius: .3125rem;
+    margin-bottom: 1.5rem;
+    background-color: $Greyish;
+    
+
+    &::placeholder {
+    color:$beige;
+    font-family: 'Glory';
+    font-size: 1.1875rem;
+    font-weight: 600;
+    }
+    }
+    &-comment {
+    height: 10vh;
+    }
+
+    &-button {
+    width: 35%;
+    height: 6vh;
+    background-color: $darkdarkgrey;
+    color: $beige;
+    border-radius: .625rem;
+    font-size: 20px;
+
+    &:hover{
+    background-color: $brown;
+    }
+    }
+}

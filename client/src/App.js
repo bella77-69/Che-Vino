@@ -9,35 +9,29 @@ import WhiteWinePage from './pages/WhiteWinePage';
 import SparklingWinePage from './pages/SparkingWinePage';
 import WelcomePage from './pages/WelcomePage';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SearchPage from './pages/SearchPage';
+import ContactPage from './pages/ContactPage';
 
 
 function App() {
   return (
     <div className="App">
+      {/* <SearchPage /> */}
     <Router >
-      {/* <Header /> */}
-    <Switch >
+      <Header />
+     <Switch >
       <Route path="/" exact component={WelcomePage}/>
+      <Route path="/search" exact component={SearchPage}/>
+      <Route path="/contact" exact component={ContactPage}/>
       <Route path="/wines/reds" component={RedWinePage}/>
       <Route path="/wines/whites" component={WhiteWinePage}/>
       <Route path="/wines/dessert" component={DessertWinePage}/>
       <Route path="/wines/port" exact component={PortWinePage}/>
       <Route path="/wines/rose"exact component={RoseWinePage}/>
       <Route path="/wines/sparkling" exact component={SparklingWinePage}/>
-     
-
-{/* <WelcomePage /> */}
-{/* <RedWinePage /> */}
-{/* <WhiteWinePage /> */}
-{/* <DessertWinePage /> */}
-{/* <PortWinePage /> */}
-{/* <SparklingWinePage /> */}
-{/* <RoseWinePage /> */}
- 
-  
     </Switch>
     <Footer />
-    </Router>
+    </Router> 
     </div>
   );
 }

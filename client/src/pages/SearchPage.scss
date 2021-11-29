@@ -1,0 +1,50 @@
+@import "../partials/variables";
+@import "../partials/fonts";
+@import "../partials/_mixins";
+
+.search {
+    margin: 0, auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &:active {
+        opacity: 1;
+        transition: 1s ease-in-out;
+        transform: scale(1.08);
+    }
+    &-box {
+        display: flex;
+    
+    }
+
+    &-left {
+        // position: absolute;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    &-right {
+        // position: absolute;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none; 
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    &-title {
+        color: purple;
+    }
+
+
+}

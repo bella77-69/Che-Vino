@@ -2,44 +2,72 @@
 @import "../partials/fonts";
 @import "../partials/_mixins";
 
-.card {
+.main {
     margin: 0, auto;
- 
+    @include flexColumn;
+    align-items: center;
+    background-color: $black;
 
-    &-img {
-        height: 12rem;
-        width: 100%;
-        object-fit: cover;
-        opacity: 1;
-        padding: 5px;
-        
-    }
-    
 
-    &-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
-        gap: 2rem;
-        justify-content: center;
-        border: 2px solid black;
-        padding-bottom: 1rem;
-        background-color: orchid;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: transform 200ms ease-in;
+    &-container {
+    display: flex;
+    width: 85%;
+    font-family: 'Glory';
+    color: $beige;
+    font-size: 1.312rem;
+    margin: 1rem;
     }
 
     &-title {
-        color: red;
+        text-align: left;
+    }
+}
+
+.card {
+    margin: 0, auto;
+    background-color: $blacker;
+   
+    background-repeat: no-repeat;
+    position: relative;
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+    @include flexColumn;
+    align-items: center;
+   
+    &-link {
+    text-decoration: none;
+    }
+    
+    
+   
+    &-wrapper {
+        display: flex;
+        // position: relative;
+        justify-content: center;
+        // border: 2px solid $dark;
+        padding-bottom: 1rem;
+        // background-color: $matteDarkGrey;
+        overflow: hidden;
+        width: 60%;
+    }
+
+    &-title {
+    color: $cement;
+    text-decoration: none;
+    font-size: 1.5rem;
     }
 
     &-description {
-        color: blue;
+        color: $cement;
     }
 
     &-button {
+        background-color: $black;
         width: 80%;
         border-radius: .625rem;
         border: none;

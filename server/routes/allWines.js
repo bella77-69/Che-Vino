@@ -23,8 +23,6 @@ function addWine(body) {
     return wine;
 }
 
-
-
 function Wine(winery, wine, location, image, rating, average, reviews) {
     this.id = uuidv4();
     this.winery = winery;

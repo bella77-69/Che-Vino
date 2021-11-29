@@ -34,18 +34,18 @@ routes: [
         method: 'get',
         endpoint: '/wines/reds',
     },
-    // {
-    //     method: 'get',
-    //     endpoint: '/wines/reds/:id',
-    // },
+    {
+        method: 'get',
+        endpoint: '/wines/reds/:id',
+    },
     {
         method: 'get',
         endpoint:'/wines/whites',
     },
-    // {
-    //     method: 'get',
-    //     endpoint: '/wines/whites/:id'
-    // },
+    {
+        method: 'get',
+        endpoint: '/wines/whites/:id'
+    },
     {
         method: 'get',
         endpoint: '/wines/sparkling',
@@ -60,7 +60,7 @@ routes: [
     },
      {
          method: 'get',
-         endpoint: '/wines/rose/:id'
+         endpoint: '/rose/:id'
      },
     {
         method: 'get',
