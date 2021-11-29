@@ -38,6 +38,7 @@ toggleContent(event) {
 render () {
     const { items } =this.state;
     return (
+        <section>
     <div>
         <ul>{items.map(item => (
             <li key={item.id}> 
@@ -55,6 +56,7 @@ render () {
         ))};
         </ul>
 </div>
+</section>
     );
 }
 }
