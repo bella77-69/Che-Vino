@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
 const fs = require("fs");
-const reds = require('../data/red.json');
+
 
 function listReds() {
     return JSON.parse(fs.readFileSync("./data/red.json", 'utf-8'));
@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
     res.status(200).json(reds);
 });
 router
-.get('/reds/:id', (req, res) => {
+.get('/:id', (req, res) => {
     console.log(req.params.id);
     fs.readFile('./data/red.json', 'utf-8', (err, data) => {
         if (err) {

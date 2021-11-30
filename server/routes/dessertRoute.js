@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router()
-
 const fs = require("fs");
 
 function listDessert() {
@@ -18,19 +17,19 @@ router.get("/", (req, res) => {
     res.status(200).json(dessert);
 });
 router
-.get('/dessert/:id', (req, res) => {
+.get('/:id', (req, res) => {
     console.log(req.params.id);
     fs.readFile('./data/dessert.json', 'utf-8', (err, data) => {
         if (err) {
             console.log(err);
-            res.json({message: 'error getting red wine id data'});
+            res.json({message: 'error getting Dessert wine id data'});
         }
-        const redData = JSON.parse(data);
-        const foundRed = redData.find((red) => red.id === req.params.id);
-        if(!foundRed) {
-            res.status(404).send({message: 'No wine found with the id'});
+        const dessertData = JSON.parse(data);
+        const foundDessert = dessertData.find((red) => red.id === req.params.id);
+        if(!foundDessert) {
+            res.status(404).send({message: 'No Dessert Wine found with the id'});
         } else {
-            res.json(foundRed);
+            res.json(foundDessert);
         }
     });
 }

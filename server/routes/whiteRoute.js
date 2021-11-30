@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
-
 const fs = require("fs");
+const whites = require ('../data/white.json');
 
 function listWhites() {
     return JSON.parse(fs.readFileSync("./data/white.json", 'utf-8'));

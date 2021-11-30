@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
-
 const fs = require("fs");
+const sparkling = require('../data/sparkling.json');
 
 function listSparkling() {
     return JSON.parse(fs.readFileSync("./data/sparkling.json", 'utf-8'));
@@ -17,20 +17,21 @@ router.get("/", (req, res) => {
     const sparkling = listSparkling();
     res.status(200).json(sparkling);
 });
+
 router
-.get('/sparkling/:id', (req, res) => {
+.get('/:id', (req, res) => {
     console.log(req.params.id);
     fs.readFile('./data/sparkling.json', 'utf-8', (err, data) => {
         if (err) {
             console.log(err);
-            res.json({message: 'error getting red wine id data'});
+            res.json({message: 'error getting sparking wine id data'});
         }
-        const redData = JSON.parse(data);
-        const foundRed = redData.find((red) => red.id === req.params.id);
-        if(!foundRed) {
-            res.status(404).send({message: 'No wine found with the id'});
+        const sparklingData = JSON.parse(data);
+        const foundSparkling = sparklingData.find((spark) => spark.id === req.params.id);
+        if(!foundSparkling) {
+            res.status(404).send({message: 'No Sparkling found with the id'});
         } else {
-            res.json(foundRed);
+            res.json(foundSparkling);
         }
     });
 }

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const rose = require=('./data/rose.json');
+
 
 function listRose() {
   return JSON.parse(fs.readFileSync("./data/rose.json", 'utf-8'));
@@ -18,27 +18,23 @@ router.get("/", (req, res) => {
   res.status(200).json(rose);
 });
 
-
-
-router   .get('/rose/:id', (req, res) => {
-    const rose = getRose();
-    const { id } = req.params;
-
-    const foundRose = rose.find((rose) => {
-      if (rose.id === id) {
-        return true;
-      } else {
-        return false;
-      }
+router
+.get('/:id', (req, res) => {
+    console.log(req.params.id);
+    fs.readFile('./data/rose.json', 'utf-8', (err, data) => {
+        if (err) {
+            console.log(err);
+            res.json({message: 'error getting rose id data'});
+        }
+        const roseData = JSON.parse(data);
+        const foundRose = roseData.find((review) => review.id === req.params.id);
+        if(!foundRose) {
+            res.status(404).send({message: 'No rose wine found with the id'});
+        } else {
+            res.json(foundRose);
+        }
     });
+}
+)
 
-    if (!foundRose) {
-      return res
-        .status(404)
-        .json({ message: `Unable to find rose with id of ${id}` });
-    }
-
-    return res.json(foundRose);
-  })
-
-  module.exports = router;
+module.exports = router;

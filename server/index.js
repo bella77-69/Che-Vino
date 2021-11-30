@@ -1,14 +1,17 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 const router = express.Router()
 PORT = 8080;
-const cors = require('cors');
+
 const redRoute = require('./routes/redRoute');
 const whiteRoute = require('./routes/whiteRoute');
 const dessertRoute = require('./routes/dessertRoute');
 const portRoute = require('./routes/portRoute');
 const roseRoute = require('./routes/roseRoute');
 const sparklingRoute = require('./routes/sparklingRoute');
+const reviewRoute = require('./routes/reviewRoute');
+// const { response } = require("express");
 
 require ('dotenv').config();
 
@@ -18,45 +21,60 @@ app.use(express.static('public'));
 
 
 //routes
-// app.use('/wines', apiRoute);
+
 app.use('/wines/reds', redRoute);
 app.use('/wines/whites', whiteRoute);
 app.use('/wines/dessert', dessertRoute);
 app.use('/wines/port', portRoute);
 app.use('/wines/rose', roseRoute);
 app.use('/wines/sparkling', sparklingRoute);
+app.use('/wines/review', reviewRoute);
+
 
 // home route
-app.get('/', (req, res) => {
+app.get('/wines', (req, res) => {
     res.json({message: 'Hello, welcome to my Wine api',
 routes: [
     {
         method: 'get',
-        endpoint: '/wines/reds',
+        endpoint: '/review',
     },
     {
         method: 'get',
-        endpoint: '/wines/reds/:id',
+        endpoint: '/reds',
+    },
+   
+    {
+        method: 'get',
+        endpoint: '/reds/:id',
     },
     {
         method: 'get',
-        endpoint:'/wines/whites',
+        endpoint:'/whites',
     },
     {
         method: 'get',
-        endpoint: '/wines/whites/:id'
+        endpoint: '/whites/:id'
     },
     {
         method: 'get',
-        endpoint: '/wines/sparkling',
+        endpoint: '/sparkling',
     },
     {
         method: 'get',
-        endpoint: 'wines/port',
+        endpoint: '/sparkling/:id'
     },
     {
         method: 'get',
-        endpoint: 'wines/rose',
+        endpoint: '/port'
+    },
+    {
+        method: 'get',
+        endpoint: '/port/:id'
+    },
+    {
+        method: 'get',
+        endpoint: '/rose',
     },
      {
          method: 'get',
@@ -64,18 +82,19 @@ routes: [
      },
     {
         method: 'get',
-        endpoint: 'wines/dessert',
+        endpoint: '/dessert',
+    },
+    {
+        method: 'get',
+        endpoint: '/dessert/:id'
     },
     {
         method: 'post',
-        endpoint: '/wines/reds', 
+        endpoint: '/review', 
         body: {
-            winery: 'string',
+            name: 'string',
             wine: 'string',
-            location: 'string',       
-            review: 'string',
-            image: 'string',
-            rating: 'string',
+            comment: 'string',       
         }
     }
 ]
@@ -83,6 +102,22 @@ routes: [
 
 })
 })
+
+app.get ('/review', (req, res) => {
+    res.json({message: 'Hello, welcome to my Reviews api',
+routes: [
+    {
+        method: 'get',
+        endpoint: '/review'
+    },
+    {
+        method: 'get',
+        endpoint: 'review/:id'
+    }
+]
+})
+})
+
 
 
 

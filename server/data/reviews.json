@@ -1,0 +1,602 @@
+[
+    {
+        "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_loveblocksauvignonblanc.jpg",
+        "wine": "Loveblock Marlborough Sauvignon Blanc",
+        "style": "White ",
+        "rating": "88",
+        "price": "$27.00",
+        "review": "This is a Marlborough Savvi B that has all the Marlborough Savvi B stuff that has made the region famous. It has sharp, intense green bell pepper notes and high acid and the strong aroma of fresh cut grass. The difference is that the green bell pepper here is slightly muted by a saline quality, so may not be exactly what a lover of Marlborough Sauvignon Blanc is looking for. But it’s sustainable, and has a really cool label, so would make a fun gift.",
+        "comments": [
+            {
+                "id": "35bba08b-1b51-4153-ba7e-6da76b5ec1b9",
+                "name": "Micheal Lyons",
+                "comment": "This is among the handful of best wines that I’ve tasted ",
+                "timestamp": 1628522461000
+            },
+            {
+                "id": "091de676-61af-4ee6-90de-3a7a53af7521",
+                "name": "Gary Wong",
+                "comment": "I don’t know whether I’m glad or not to be conjoining the words in this sentence or not.  On one hand, the wine is undeniably delicious, so no problem there.  On the other hand, it shows very ripe fruit that comes off as notably sweet, even though I doubt there’s any residual sugar in the finished wine…just an impression of sweetness from the ripeness of the grapes at the time of harvest. ",
+                "timestamp": 1626359541000
+            },
+            {
+                "id": "66b7d3c7-4023-47f1-a02c-520c9ca187a6",
+                "name": "Theodore Duncan",
+                "comment": "The oak influence is still apparent in this 2017, but the alluring stone fruit aroma of Arneis still comes through.  The oak, and perhaps the age of the vines, add opulence and weight that some consumers will find appealing.  Others will prefer the purity of their stainless steel fermented and aged Roero Arneis labeled Cayega.",
+                "timestamp": 1626011132000
+            }
+        ]
+    
+    },
+    {
+        "id": "c05b9a93-8682-4ab6-aff2-92ebb4bbfc14",
+        "image": "https://vinepair.com/wp-content/uploads/2020/10/winereview_internal_johannesehoehe.jpg",
+        "wine": "Weingut Prieler Johanneshohe Blaufrankisch 2017",
+        "style": "Red",
+        "rating": "89",
+        "price": "$16.00",
+        "review": "A crowd-pleasing Austrian Blaufränkisch, this wine has good acidity and medium depth. It is juicy yet spicy, and is best enjoyed chilled. At $16, this wine will please the palate without breaking the bank. ",
+        "comments": [
+            {
+                "id": "ade82e25-6c87-4403-ba35-47bdff93a51c",
+                "name": "Mattie Casarez",
+                "comment": "The grape variety for this tasty wine is Carricante, which is indigenous the island of Sicily.  Ian D’Agata in his book Native Wine Grapes of Italy calls it a “one-zone variety” since it if found only on Mt. Etna on the east side of the island.  These grapes were grown on the north and east sides of the volcano.  It is a sleek, polished wine with light, citrus, green apple aromas with floral notes of jasmine.  It is lean and crisp in the mouth with delicate green apple, grapefruit, slightly saline flavors with mouthwateringly crisp acidity.  It will be a great partner with fresh goat cheese, oysters on the half shell  or  smoked turkey.  The Tascante estate is one of five owned by the Tasca d’Almerita family who have been making wines in Sicily for seven generations.",
+                "timestamp": 1625250720000
+            },
+            {
+                "id": "bf704c76-cba9-462e-ac0a-166315df756c",
+                "name": "Mattie Casarez",
+                "comment": " This is an exuberant white wine, with lovely scents of apple, peach, lemon, lily, and subtle herbs.  The flavors are refreshing and complex, with the panoply of citrus and peach nuances enhanced by elements of marjoram and lemon zest.",
+                "timestamp": 1625250720000
+            },
+            {
+                "id": "bf704c76-cba9-462e-ac0a-166315df756c",
+                "name": "Taylor Jade",
+                "comment": " Its color is black ruby with a touch of purple in the rim.  Aromas of black fruits of Boysenberries, blackberries, plums spiced with black pepper corns.  It is intense and concentrated, with black fruits on the palate, yet very smooth and elegant finishing with solid, fine-grained tannins.  It is drinking well now and has the structure and intensity to develop and age well.",
+                "timestamp": 1625177192000
+            }
+        ]
+    
+    },
+    {
+        "id": "25ce5d91-a262-4dcf-bb87-42b87546bcfa",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_sottimanomaterosso.jpg",
+        "wine": "Sottimano Mate Rosso 2019",
+        "style": "Red",
+        "rating": "89",
+        "price": "$17.00",
+        "review": "What?! This wine is so crazy and so good. It hits the sweet, spicy, and herby spaces in your brain. This wine deserves thirty minutes in the fridge. It has a nice grip on the palate and smells like a sweet and savory galette (messy pie) of strawberries and herbs with a dollop of yogurt. This wine, chilled, with any style of carpaccio (veggie, meat, whatever you like) is a win-win. And save some for a panna cotta — OH!",
+        "comments": [
+            {
+                "id": "7ba106bf-e74a-4c21-b59e-c485a30eea45",
+                "name": "Giovana Alpine",
+                "comment": "A glass of white flowers is what you'll get on the nose — if someone held this in front of you blindfolded, you'd never guess it was a liquid.  There's a floral component to the palate as well, where it is joined by lively citrus and a little nectarine.  A touch of spritz holds it all together.",
+                "timestamp": 1623104591000
+            },
+            {
+                "id": "921f0e8d-f9d1-44db-b4a2-a2718339891e",
+                "name": "Victoire Lesage",
+                "comment": "The vast Alentjo DOC is famous not only for its cork production but is now one of the country’s major wine producing areas known especially for it rich, easy-drinking red wines such as the family owned Esporão’s Reserva.",
+                "timestamp": 1623071160000
+            },
+            {
+                "id": "f7b9027b-e407-45fa-98f3-7d8a308ddf7c",
+                "name": "Sharon Tillson",
+                "comment": " Seventy-five percent of the blend was fermented in stainless steel vats while the rest spent a little time in both new and used oak before being aged for about 9 months on fine lees.  In addition to fruit, the wine offers notable stony minerality and rewards the taster with its overall elegance and persistence.  The long finish is another pleasing aspect of Duas Quintas, which has a modest 13% alcohol.",
+                "timestamp": 1623002522000
+            }
+        ]
+    
+    },
+    {
+        "id": "b6f35f03-7936-409b-bd2a-446bcc5f30e7",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_treleavencabernetfranc.jpg",
+        "wine": "Treleaven Cabernet Franc 2019",
+        "style": "Red",
+        "rating": "89",
+        "price": "$20.00",
+        "review": "This is such a fun example of how Cab Franc can shine in New York. It has a vibrant, juicy character and smells like cherries and fresh soil. The acidity really amplifies the fruit and lifts on the palate. This wine with a slight chill and a burger (maybe a lamb burger) and some homemade fries would be legit. ",
+        "comments": [
+            {
+                "id": "a2b4ccd4-af48-46e9-9e62-b96731dad728",
+                "name": "Aurora Anit",
+                "comment": "It is packed with peachy deliciousness that makes one wonder for an instant whether it might be a bit too sweet, but then the acidity comes roaring into the midpalate and drives right through the finish, keeping this vibrant and energetic while also seeming generous.  For those who open just one bottle of wine each night (meaning, basically everybody other than geeks like me who are tasting all the time) and who want a wine that tastes great as an aperitif but is also very broadly versatile with food, this is the ticket.  Not just a ticket — the ticket.",
+                "timestamp": 1620983771000
+            },
+            {
+                "id": "6ed06295-635f-4fe7-b2b2-83b422c65a1f",
+                "name": "Fatima Hassan",
+                "comment": "This unique 80/20 blend of Mencía and Godello has captivating aromas of subtle but tremendously expressive floral and red fruit notes.  It has a medium body, with well-integrated tannins and flavors of red cherry, strawberry, rhubarb, and allspice wrapped in a rustic package with mouthwatering acidity.  This wine over-performs for the price.  Stock your cellar to ensure you have a bottle or three on hand! ",
+                "timestamp": 1620937932000
+            },
+            {
+                "id": "43edd26e-1a76-45da-98f8-684e660a8d5b",
+                "name": "Joan Hidaka",
+                "comment": "Nectarine, pear, apple and citrus are packed together on the nose of this fresh Albariño, that appear on the palate as lively flavors framed by the stony mineral core.  The flavors linger long, and there's a pleasant floral retronasal impression that hangs in the air.  Crisp, crisp, crisp!",
+                "timestamp": 1620930181000
+            }
+        ]
+    
+    },
+    {
+        "id": "1b964601-a6dd-4fcc-b5f3-1000338c9557",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_espectacledelmotsant.jpg",
+        "wine": "Espectacle del Montsant 2017",
+        "style": "Red",
+        "rating": "94",
+        "price": "$110.00",
+        "review": "This wine throws you intense black and blueberry flavors, with a slight waft of this variety’s inherent orange peel aroma. The tannins are apparent, but woven into the texture of the wine. This, along with its brilliant acidity, keeps everything in harmony.",
+        "comments": [
+            {
+                "id": "823f6f49-db71-49fe-9918-bde8d8da6a4a",
+                "name": "Felicia Hill",
+                "comment": "Spanish Albariño at its artisanal best.  This saline, citrus-driven Albariño transmits the terroir of Galicia, full of salted lemon, white peach, crushed rocks, and fresh cream flavors.  It celebrates racy acidity and textural complexity, and offers a captivating drinking experience.",
+                "timestamp": 1630790612000
+            },
+            {
+                "id": "797ca18c-4fd4-4887-b9f4-3ec098e8121d",
+                "name": "Louis Applebee",
+                "comment": "The thing you’ll notice most about this wine at first pass is the generous texture.  It’s almost silky on entry, pushing flavors of plum and blackberry with fall spice notes.  Then the finish brings the structure to bear, with moderate oak char giving tension to the flavors and extending the finish.  Well done!",
+                "timestamp": 1630762321000
+            },
+            {
+                "id": "fcc1cbf2-e332-4b49-9643-c08ddd8f85af",
+                "name": "Anne Weston",
+                "comment": "A nice combo of richness and rusticity is on proud display here, with a mix of black and red berries, easy fall spice, moderate oak influence and a lasting finish that keeps the fruit in front.  The edgy tannic structure is just right, setting of the lively fruit and keeping it pushing throughout.  Contains 10% Petit Verdot.",
+                "timestamp": 1630678260000
+            }
+        ]
+    
+    },
+    {
+        "id": "9c268c0a-83dc-4b96-856a-bb5ded2772b1",
+        "image": "",
+        "wine": "Alois Lageder 'Riff' Pinot Grigio 2019",
+        "style": "White",
+        "rating": "91",
+        "price": "$10.00",
+        "review": "For a cheap Pinot Grigio you can’t go wrong here. It’s under screw cap and ready to be the bottle you pop for whatever you have going on. It is crisp with good, ripe fruit that will remind you of sliced apples. It’s a great bottle to buy a case of in the name of spontaneity.",
+        "comments": [
+            {
+                "id": "52a21461-b0cc-43bc-a9d6-d52a7d4cedbe",
+                "name": "Marcus Forest",
+                "comment": "2018 Napa Valley Cabernet shows proper and much desired Napa style points in a crowd-pleasing mix, with rounded edges and vibrant black fruit that gets a subtle spice and oak toast complement.  It’s all about rich fruit, and you know that will find a wide audience.  Contains 10% Merlot.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "bc913baf-ff2e-41f0-99cb-b7ef4dc70ab4",
+                "name": "Ashley Jones",
+                "comment": "This is a “classically Californian” expression of Cabernet Sauvignon, one you might expect from further north in the state, showing blackberry, cassis, dried herbs, a dash of bell pepper and some crushed rock minerality, all present aromatically and on the palate.  The texture is rich with tension between the flavors, and it’s well integrated already.  It has few peers in its price category.  Decant well and enjoy with a seared sirloin.",
+                "timestamp": 1631088092000
+            },
+            {
+                "id": "85e3621c-493a-41e0-b0f8-2734d102c7d9",
+                "name": "Dylan Walter",
+                "comment": "  A little blueberry comes to the fore in the finish, where good grip and lively acidity bode well for a long life -- as usual! ",
+                "timestamp": 1631023292000
+            }
+        ]
+    
+    },
+    {
+        "id": "fc5261d1-58a0-47e4-9c19-2b7a1715fa1b",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_ridgecrestveltliner.jpg",
+        "wine": "Ridgecrest Estate Grüner Veltliner 2019",
+        "style": "White",
+        "rating": "93",
+        "price": "$24.00",
+        "review": "Man, this wine is great. It has a fun, subtle depth, with good, balanced acidity. It smells like lemons and pear. The palate is wonderful and creamy, with just the right grip. This Austrian grape has found a new home.",
+        "comments": [
+            {
+                "id": "c93c16f0-4795-45d1-b0da-21696d54f25a",
+                "name": "Fionna Miller",
+                "comment": " I always enjoy this bottling – it’s dependably unique in the world of Cabernet Franc.  This vintage features bold mixed berry fruit, vanilla, fall spice and a subtle pepper note in both aroma and flavor profiles, and focused acidity leads to a zesty finish that’s long and lively.  It shows the snazzy side of Cabernet Franc! ",
+                "timestamp": 1631816492000
+            },
+            {
+                "id": "99938bd4-67f9-4404-ad3e-b23a6ad05717",
+                "name": "Suzie Maxwell",
+                "comment": "Plush, polished, and near-perfect” are descriptors that came immediately to mind.  The 2018 vintage is being closely watched as Napa’s relatively cool, long growing season led to many successes.  Hand-harvesting at night and employing numerous pump-overs in the cellar, the Pine Ridge team came up with a brilliant Cabernet that captures ripe fruit, black currants with layers of spice, herbs and mocha.  But it is all compressed and gradually unfolds to reveal more subtleties with light toasty oak, spiced plum flavor and refined tannins.  Despite its 15% alcohol, it maintains its Stags Leap identity with finesse and a seamless, silky texture.  It will reward at least 5 years of cellaring, but will likely age well for at least a decade.",
+                "timestamp": 1631799181000
+            },
+            {
+                "id": "fc2e9a8c-7daa-4e14-980d-5467ca2054ec",
+                "name": "Alasie Rivers",
+                "comment": " What to serve with a Thanksgiving feast that will please the many palates in attendance?  Nothing beats a big, buttery California Chardonnay.  The coalescent decadence of this wine and food pairing is memorable.  The Mount Eden Vineyards Edna Valley Chardonnay is rich, ripe and opulent and up to the task.  Drawn from the Wolff Vineyard that was planted in 1976, this shows the classic Edna Valley style.  Layers of ripe apple and pineapple fruit are deftly balanced by butterscotch, vanilla and baking spice nuances from its barrel age.  The texture is rich enough and the fruit is ripe enough to balance the varied textures and subtly sweet dishes of a traditional Thanksgiving array.",
+                "timestamp": 1631716921000
+            }
+        ]
+    
+    },
+    {
+        "id": "99478bed-6428-49ed-8eaa-f245a5414336",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_eberlebarbera.jpg",
+        "wine": "Eberle Barbera 2018",
+        "style": "Red",
+        "rating": "91",
+        "price": "$36.00",
+        "review": "This wine is awesome, straight up. It has such a soft, deep, fruit core with subtle tannins. It has an earthiness to it and smells like fresh soil and cherries. This is one hell of an American wine, made from an Italian grape, for an Italian American pasta night. A simple spaghetti and red sauce with some meatballs and crusty garlic bread is in order here. ",
+        "comments": [
+            {
+                "id": "6ff4314c-acde-4c91-a753-95cb7a366ee9",
+                "name": "Jesse Cruz",
+                "comment": "One of the last holdouts for Gewurztraminer from this area brings us another argument that the grape deserves wider recognition in the region.  I think what’s happening is that so little acreage is left, area winemakers avail themselves of this and the other couple of bottlings for drinking pleasure so that their own customers won’t request yet another bottling in their own arsenals.  This example is actually fully dry (zero residual sugar) and utilizes a little neutral oak to round off the acidity, leaving impressions of fresh tangerine, roses, lychee and a dash of grapefruit to refresh, finish long and leave us wanting more.  Perfectly balanced, there’s a tension that keeps me coming back sip after sip.  Riveting wine!",
+                "timestamp":  1632227521000
+            },
+            {
+                "id": "894b2ef9-640e-4d55-95ac-c65cfc39d693",
+                "name": "Tristan Carter",
+                "comment": "n 1991, Willakenzie Estate was family-run until being acquired by Jackson Family in 2016.  In recent vintages the Estate Pinot Gris has maintained its position as one of the most reliable food-friendly versions with its purity of fruit and balance.  The 2020 combines aromas of apples and white peach with a backdrop of citrus.  Medium-bodied, it adds a touch of minerality in the flavors and the pleasing texture brings you to a clean finish with decent acidity.  A solid first course restaurant choice kind of Pinot Gris.",
+                "timestamp": 1631976360000
+            },
+            {
+                "id": "2d818087-c1f4-4ec2-bcdc-b545fd6ec258",
+                "name": "Martin Evergreen",
+                "comment": "This wine is a bit shy on aromatics, it’s not shy on flavor, showing lively mixed citrus and some subtle peach.  I suspect that I happened to catch it in a slightly closed phase of its development, as the aromatics opened fairly well in the glass.  Here’s to revisiting in the near future.",
+                "timestamp": 1632512763000
+            }
+        ]
+    
+    },
+    {
+        "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_adelaidarose.jpg",
+        "wine": "Adelaida Rose 2019",
+        "style": "Rose",
+        "rating": "94",
+        "price": "$28.00",
+        "review": "This rosé drinks like a red wine. It has layers and complexity for a pink hue. The nose straight up smells like enjoying a plate of Brie with a side of fresh fruit. The palate has depth and grip, making it a rosé for food and not just snacks. I’m thinking duck breast, or even a skirt steak, or roasted chicken. Yeah, this wine is awesome. ",
+        "comments": [
+            {
+                "id": "191de346-b3c2-47b4-bf5b-6db90d1e3bdc",
+                "name": "Emily Harper",
+                "comment": "a top-notch example of what excellent Rosé from this region should be.  With straightforward fruit flavors leavened by gentle hints of cinnamon, cocoa and a refreshing burst of fresh lemon, the wine is both substantial and refreshing.  The 130-year-old estate, one of the largest vineyards in the appellation, covers 185 acres, of which ten acres of vines are replanted every year.  The property is ideally situated on a plateau1400 feet above the sea, where warm days and cool nights are the norm.   ",
+                "timestamp": 1632496261000
+            },
+            {
+                "id": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+                "name": "Monica Jones",
+                "comment": "The wine’s vibrant deep pink color is a result of brief contact with the dark purple skins of the grapes.  It is mouthwateringly fragrant and multi-faceted on the palate.  Thanks to its generous aromas and flavors, it pairs well with food as well as being good sipping wine.   ",
+                "timestamp": 1632496261000
+            },
+            {
+                "id": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+                "name": "Brad Pitt",
+                "comment": "Canorei is Carretta’s oldest vineyard.  They vinify and then age their best grapes from this vineyard in oak barrels.  The oak influence is still apparent in this 2017, but the alluring stone fruit aroma of Arneis still comes through.  The oak, and perhaps the age of the vines, add opulence and weight that some consumers will find appealing.  Others will prefer the purity of their stainless steel fermented and aged Roero Arneis labeled Cayega",
+                "timestamp": 1632496261000
+            }
+        ]
+    
+    },
+    {
+        "id": "115a7fe2-88f2-40b2-8d66-2530c6af1936",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_flowerssonomacoastrose.jpg",
+        "wine": "Flowers Sonoma Coast Rosé 2019",
+        "style": "Rose",
+        "rating": "94",
+        "price": "$30.00",
+        "review": "This is one one hell of a structured rosé. It's refreshing, but has actual depth, which is unique for this style of wine. It’s a pink you wanna chew on with it’s toothsome mouthfeel. There isn’t really tannin, so much as it is just the right amount of acidity, so the weight of the wine shows that depth.",
+        "comments": [
+            {
+                "id": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7",
+                "name": "Rich Cook",
+                "comment": "Snazzy sweet peach aromas are quite pronounced up front, and they dovetail with lemon, lime, faint anise and jasmine notes.  I haven’t seen many dry examples of Müller Thurgau, but this succeeds with crisp acidity that keeps the peach present through all the citrus zest that comes at you with force.  A serious quencher!",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+                "name": "Peter Parker",
+                "comment": "Excellent wine with this price! I recommend every one, who is looking for the good wine with the reasonable price.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "150a36cf-f38e-4f59-8e31-39974207372d",
+                "name": "Marcus Forest",
+                "comment": "2018 Napa Valley Cabernet shows proper and much desired Napa style points in a crowd-pleasing mix, with rounded edges and vibrant black fruit that gets a subtle spice and oak toast complement.  It’s all about rich fruit, and you know that will find a wide audience.  Contains 10% Merlot.",
+                "timestamp": 1631273521000
+            }
+        ]
+    
+    },
+    {
+        "id": "a193a6a7-42ab-4182-97dc-555ee85e7486",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_jeffersonvineyardcabernetfrant.jpg",
+        "wine": "Jefferson Vineyards Cabernet Franc 2017",
+        "style": "Red",
+        "rating": "91",
+        "price": "$28.00",
+        "review": "Wow, this is an awesome Virginia wine. It has a soft, earthy fruit core and smells like cooked meat and cracked black pepper, as well as brambly blackberries. This is the kind of wine you can slightly chill in the warm months and cozy up to at room temperature as the leaves turn in the fall.",
+        "comments": [
+            {
+                "id": "2922c286-16cd-4d43-ab98-c79f698aeab8",
+                "name": "Frank Miller",
+                "comment": "Bright with punchy fruit, this wine has a savory aroma, followed by black and blueberry fruit on the nose. It's earthy, a little funky, and ready for a charcuterie board.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+                "name": "",
+                "comment": "This wine is rich yet light — refreshing with a creaminess that's not heavy. It soaks into your palate but doesn't overwhelm, with a chewiness (viscocity) showing the depth of the Merlot. It smells like blueberries and soil.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "90ac3319-70d1-4a51-b91d-ba6c2464408p",
+                "name": "",
+                "comment": "It's dark, dense and a little pruney. This wine has so much to give, but it needs a little more time. The tannins are dusty, and the nose is all fruit and spiced meat. It will open over time in a decanter but will really shine in five to 10 years.",
+                "timestamp": 1631273521000
+            }
+        ]
+    
+    },
+    {
+        "id": "8f16bd30-bab5-40af-aca2-b63d5fdd1acc",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_perrierjouetbrut.jpg",
+        "wine": "Perrier-Jouet Belle Epoque - Fleur de Champagne Millesime Brut 2012",
+        "style": "Sparkling White",
+        "rating": "94",
+        "price": "$174.00",
+        "review": "Smells like creamy lemon curd and crusty sourdough. This is a well-made, very drinkable Champagne. The bubbles are soft and welcoming and lift the creamy and citrus notes into harmony. Definitely worthy of your next celebration.",
+        "comments": [
+            {
+                "id": "bfc9bea7-66f1-44e9-879b-4d363a888eb9",
+                "name": "Sarah Gill",
+                "comment": "It's dark, dense and a little pruney. This wine has so much to give, but it needs a little more time. The tannins are dusty, and the nose is all fruit and spiced meat. It will open over time in a decanter but will really shine in five to 10 years.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "89898957-04ba-4bd0-9f5c-a7aea7447961",
+                "name": "Geo Spacoli",
+                "comment": "This wine smells like strawberries, blackberries, and wet-stone minerality. There is a saline vibe on the nose that messes with the berry fruit but brings the intensity of savoriness. It's still light and bright on the palate. Over time, the fruit will come out more. It could easily go another five-10 years in the cellar.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b4",
+                "name": "Anna Lee",
+                "comment": "This is a wine to complement all of your favorite fall flavors. It has notes of spiced pear, fig jam, and honeysuckle that are followed by floral and tropical fruit notes.",
+                "timestamp": 1631273521000
+            }
+        ]
+    
+    },
+    {
+        "id": "5b03fb06-bbc0-4814-8a12-6f1f4e1223f8",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/keithwinereview_americanfood_card_beaurivage.jpg",
+        "wine": "Beau Rivage Chenin Blanc 2017",
+        "style": "White",
+        "rating": "90",
+        "price": "$28.00",
+        "review": "This wine is sliced-apple-tart, with a slight pucker on the palate. It has a grippy mouthfeel and some river-rock minerality. It also has a fun Loire Valley vibe (where this grape calls home). It’s a great wine for a proper veggie meal of roasted vegetables or squash covered in goat cheese, drizzled with honey with a crack of black pepper.",
+        "comments": [
+            {
+                "id": "5b03fb06-bbc0-4814-8a12-6f1f4e1223f5",
+                "name": "Dennis D",
+                "comment": "This wine smells like spring, with perfumey aromas of freshly sliced green apple, honey, pear, and baking spices. Flowery and ripe fruit notes remain on the palate for a long finish.",
+                "timestamp": 1631273521000
+            },
+            {
+                "id": "02a8c481-4474-4bb8-998b-64f206bcefdb",
+                "name": "Bruce Wayne",
+                "comment": "This bottle has all the classic, buttery characteristics of California Chardonnay, but these flavors are met with the energizing zing of tart lemon zest. This bottle may just convert your Chardonnay-hating friends.",
+                "timestamp": 1631273521000
+            },
+                {
+                    "id": "eb647e6c-8673-4520-9155-3cec6f7a120d",
+                    "name": "Will Smith",
+                    "comment": "Notes of key lime and white pepper are balanced in perfect harmony. This wine would pair well with everything from schnitzel to sautéed salmon, and would be a great fit for any celebration.",
+                    "timestamp": 1631273521000
+                }
+            ]
+    },
+    {
+        "id": "bdc6bb69-e09c-498d-8abd-be2792504d00",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/keithwinereview_americanfood_card_Gundlach-Bundschu.jpg",
+        "wine": "Gundlach-Bundschu Estate Vineyard Gewurztraminer 2019",
+        "style": "White",
+        "rating": "93",
+        "price": "$21.00",
+        "review": "Right on, man! This wine is great! It is so balanced and expressive. It smells like honey and pears and a bouquet of white flowers, with flecks of white pepper. It has an awesome, frothy, vibrant palate that is crazy balanced. This wine, with a spicy pad Thai or vindaloo, would be divine. I would also throw down on this bottle with some spicy wings in a heartbeat.",
+        "comments": [
+            {
+                "id": "4040cfae-39bb-403b-80fa-b770642800b6",
+                "name": "Forest Gump",
+                "comment": "This wine is rich yet light — refreshing with a creaminess that's not heavy. It soaks into your palate but doesn't overwhelm, with a chewiness (viscocity) showing the depth of the Merlot. It smells like blueberries and soil.",
+                "timestamp": 1632344461000
+            },
+            {
+                "id": "853bcd65-b0b3-4f9c-844f-8b4133d7df6f",
+                "name": "Victor Vennioli",
+                "comment": "This this wine has everything we look for in an old school California Chard. But its notes of buttery popcorn, vanilla, and lots of oak are kept in check by nice acidity — resulting in a balanced, dry palate that invites you back for that second sip.",
+                "timestamp": 1632344461000
+            },
+            {
+                "id": "9b4f79ea-0e6c-4e59-8e05-afd933d0b3d3",
+                "name": "",
+                "comment": "The wine’s vibrant deep pink color is a result of brief contact with the dark purple skins of the grapes.  It is mouthwateringly fragrant and multi-faceted on the palate.  Thanks to its generous aromas and flavors, it pairs well with food as well as being good sipping wine.",
+                "timestamp": 1632344461000
+            }
+        ]
+    
+    },
+    {
+        "id": "3ce124a4-78b0-4d80-91b9-11f9ced631a7",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_bodegasavanciagodello.jpg",
+        "wine": "Bodegas Avancia Godello 2019",
+        "style": "White",
+        "rating": "94",
+        "price": "$29.00",
+        "review": "This wine makes me thirsty. It has such an awesome nose and smells like fresh sliced pear and a bouquet of white flowers. The wine rests on your palate, alive with vibrant acidity and the perception of tiny fizziness. The alcohol is a bit high, so pairing this bottle with food might be fun. Try it with a paella. Treat yourself with this bottle if you are not familiar with this grape. It’s a wonderful introduction.",
+        "comments": [
+            {
+                "id": "83433026-ca32-4c6d-bd86-a39ee8b7303e",
+                "name": "",
+                "comment": "This this wine has everything we look for in an old school California Chard. But its notes of buttery popcorn, vanilla, and lots of oak are kept in check by nice acidity — resulting in a balanced, dry palate that invites you back for that second sip.",
+                "timestamp": 1632344461000
+            },
+            {
+                "id": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+                "name": "",
+                "comment": "Thought to be perhaps the best ever wine produced by Catena, it’s dense and fresh, full-bodied and layered, flavourful and elegant all at once. It’s a wine to please the masses but a bottle that you’d be forgiven for saving for yourself. Featuring aromas of roses and pine needles with hints of spice and tobacco, it’s a wine that just keeps on giving. Enjoy it for its bold and structured notes. ",
+                "timestamp": 1632344461000
+            },
+            {
+                "id": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+                "name": "",
+                "comment": " It offers an aroma of blueberry pie, blackberries, Asian spices and forest floor with a hint of chocolate when sipped. It spent 32 months ageing in barrels before being bottled and is a stunning wine from start to finish. ",
+                "timestamp": 1632344461000
+            }
+        ]
+    
+    },
+    {
+        "id": "4dd464d6-90b8-4330-91e0-bd1217811bd9",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_valledellacatclassicodocg.jpg",
+        "wine": "Valle dell'Acate Cerasuolo di Vittoria Classico DOCG 2015",
+        "style": "Red",
+        "rating": "91",
+        "price": "$21.00",
+        "review": "Tart and juicy in the summer with a good chill on it, paired with some beef carpaccio; or cellar/room temp in the cold months paired with some venison on a bed of steamy polenta. Either way, this wine will shine. It smells like cherries and freshly turned soil and rests on the palate with the same. It has a slight chewy feel that can hold up to the protein.",
+        "comments": [
+            {
+                "id": "e02f302a-c67c-4600-bf12-e364b59b80ea",
+                "name": "",
+                "comment": "a crisp acidity that’s balanced through from the first sip to the last. Aged in stainless steel barrels, it’s a classic vintage Chardonnay that’s known for being one of the best and relatively easy to get hold of. Enjoy each of its tropical layers to really get a feel for the structure that makes up this bottle.",
+                "timestamp": 1632344461000
+            },
+            {
+                "id": "d3d7aa3c-6e27-4ab0-9496-f95faa5042f0",
+                "name": "",
+                "comment": "This opulent wine is a vintage worth talking about, with a range of firm, deep and rich flavours like spring flowers, graphite, creme de cassis, kirsch and liquorice. It’s aged in 65 percent new French oak barrels for almost two years before being bottled and sold and is one of the finest on the market.",
+                "timestamp": 1632512763000
+            },
+            {
+                "id": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
+                "name": "",
+                "comment": "This wine spent three years ageing in new French oak barrels, one in neutral oak and an additional year in bottle before being released on the market. With its strong flavours of sweet black fruit, fresh red plum and a touch of warm vanilla, it’s a smooth and classic red wine that’s a true pleasure to taste. Expect a crispness of red fruit and orange peel combined with a ripeness that’s only deepened over time.",
+                "timestamp": 1632344461000
+            }
+        ]
+    
+    },
+    {
+        "id": "c0ba64a8-0ecb-4a7d-ab7f-2dbbd1d437b1",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_peyrassol.jpg",
+        "wine": "Chateau Peyrassol Cotes de Provence 2019",
+        "style": "Rose",
+        "rating": "95",
+        "price": "$35.00",
+        "review": "This is what you want in a classic Provence Rosé. The aromas lift out of your glass and into your senses, reminding you of strawberries and white flowers in spring. The palate has a refreshing dry note with the slightest grip on the palate, letting you know there is structure here. The ease at which this wine goes down leaves a dilemma. Should you share? Lebron wouldn't...it happens to be one of King James's favorite rosés, and it's clear why.",
+        "comments": [
+            {
+                "id": "66327933-ce38-47e0-9bfe-5d29048bacae",
+                "name": "",
+                "comment": "A solid wine, it’s reminiscent of Masseto’s 2001 release and is best held onto until 2023 to enjoy the wide range of flavours. This 100 percent Merlot was aged for two years in oak barrels and is polished on the nose with a delicious finish. It’s a wine with plenty of structure with a bright and vibrant acidity. ",
+                "timestamp": 1632512763000
+            },
+            {
+                "id": "043a70e2-cf28-4ce1-a9a4-e5b3fac9c593",
+                "name": "",
+                "comment": "A further sip will reveal notes of pomegranate, cinnamon stick and toast, making this compelling wine one to enjoy slowly. Over time, it promises to develop more spicy notes, making it a bottle that’s enjoyable now or even more so if left to age further. ",
+                "timestamp": 1632496261000
+            },
+            {
+                "id": "d3c08f85-4570-48e1-88df-610614477359",
+                "name": "",
+                "comment": "Beautifully crafted with a wide range of dancing flavours and aromas. It’s a wine that’s both elegant and powerful, combining classic notes of white flowers, citrus and orchard fruits with spicy and buttery hints for a unique finish. ",
+                "timestamp": 1632512763000
+            }
+        ]
+    
+    },
+    {
+        "id": "d9ef9352-2367-4272-8884-70cf80cb7a38",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_duttongoldfieldchardonnay.jpg",
+        "wine": "Dutton-Goldfield Dutton Ranch Chardonnay 2017",
+        "style": "White",
+        "rating": "91",
+        "price": "$35.00",
+        "review": "Hey guys, what’s up. So, this is how it's done. What a great American wine. It takes ideas from the past and tweaks them into balance and...it’s just excellent winemaking. A slight amount of oak, and a dash of fresh churned butter, and a whisper of coconut will mess with your nose in the best way. The palate is mineral-driven, with just the right grip before it releases you, making you think about that next sip right away. It’s also not crazy expensive. You can gift it but….",
+        "comments": [
+            {
+                "id": "4d6ce289-eb58-45a1-bae3-e3874290ee48",
+                "name": "",
+                "comment": "It’s a vibrant and expressive bottle, with a bright aroma bursting with tropical fruits and acidity. One to drink now, this white wine is easy to enjoy and goes down smoothly, promising a refreshing palate that’s perfect for summer. It’s a wine that might just cause your mouth to water after sampling, thanks to its sweet, concentrated notes and impressively long finish. ",
+                "timestamp": 1630678260000
+            },
+            {
+                "id": "3b042051-f18c-4a16-a393-68ceba87277a",
+                "name": "",
+                "comment": "Its appellation is widely recognised as one of the best regions for luxury Pinot Grigio in the world and this wine in particular pays homage to that fact with its expressive character. Its accessible price makes this wine an easy choice for a summer evening dinner. Pair it with seafood or subtle chicken dishes for best results. ",
+                "timestamp": 1630678260000
+            },
+            {
+                "id": "226fd4a6-863c-459d-b69c-007262a64012",
+                "name": "",
+                "comment": "This Riesling has an aroma of spring flowers and is worth every penny for its price. Don’t disregard it for its sweetness, because this dessert wine cleverly ends up maintaining a slight dryness and a long finish. It’s fermented entirely in stainless-steel tanks and combines acidity with clean flavours and a lasting intensity. ",
+                "timestamp": 1632496261000
+            }
+        ]
+    
+    },
+    {
+        "id": "b70067d1-49c9-4925-b830-67b3e98005d5",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_domainecarnerosbrut.jpg",
+        "wine": "Domaine Carneros by Taittinger Ultra Brut 2015",
+        "style": "Sparkling White",
+        "rating": "94",
+        "price": "$46.00",
+        "review": "This might just be one of the best values out there for a sparkling wine that is an absolute joy to drink, dammit. It's just under $50, from Napa Valley, and hella focused. The nose is immediately welcoming, with soft, earthy fruit. There is a nice, firm grip on the palate, with vibrant bubbles and a heightened perception of acidity that cleanses the palate. Celebrate with this wine, but also don't miss out on an opportunity to share with close friends and your secret sauce. BBQ ribs, anyone?",
+        "comments": [
+            {
+                "id": "f516e1c9-486a-40c2-9bed-c8eba070f1f8",
+                "name": "",
+                "comment": "It’s a powerful wine with an impressively long finish, drawing out hints of star anise and savoury spices with oak, chocolate and vanilla to end. An elegant bottle, it promises creaminess on the palate and a stunning fruitiness with every mouthful. ",
+                "timestamp": 1630963412000
+            },
+            {
+                "id": "5c2000b8-f8c4-461f-935c-66eaeb52c562",
+                "name": "",
+                "comment": "It’s an example of everything a good Zinfandel should be, combined with remarkable fruit flavours, a deep ruby-purple colouring and a dash of acidity to round it off. This is a dynamic wine that’s ready to be enjoyed on a relaxing weekend.",
+                "timestamp": 1630678260000
+            },
+            {
+                "id": "0716ecfc-e296-4f9f-906b-45e84030285a",
+                "name": "",
+                "comment": "An excellent Zinfandel with plenty of depth and character. It’s extraordinarily deep and features a wide range of dark, jammy flavours with a long, dry finish. This is a wine to pair with a range of strong-tasting dishes to really bring out each and every element of its personality. Expect fruit-forward notes, typical of a Zinfandel, with an earthy, herbal structure. ",
+                "timestamp": 1631273521000
+            }
+        ]
+    
+    },
+    {
+        "id": "7c79d334-6b90-4052-9def-aa9b8519c9fb",
+        "image": "https://vinepair.com/wp-content/uploads/2020/11/top50wine_card_closmogadorcomtu.jpg",
+        "wine": "Clos Mogador 'Com Tu' 2016",
+        "style": "Red",
+        "rating": "94",
+        "price": "$43.00",
+        "review": "This wine is soft going on supple, with a slight, savory depth. The palate is bright, with a good level of acidity and a fruity core. It also has a subtle scent of orange peel and whiff of cinnamon. The great acidity gives wine such nice balance. ",
+        "comments": [
+            {
+                "id": "4b6a7565-077e-4595-a317-c53095fd5dad",
+                "name": "",
+                "comment": "An impressively deep, dark red wine made up of 77 percent Cabernet Sauvignon, 16 percent Merlot, 4 percent Cabernet Franc and 3 percent Petit Verdot. It’s broad, savoury and rich with a unique finesse in the fruit and full of complex tannins.",
+                "timestamp": 1631716921000
+            },
+            {
+                "id": "9abbf2d2-45d5-463c-8429-ca5454d971d2",
+                "name": "",
+                "comment": "This is a wine that, while best to mature for a while yet, promises to dance on your tastebuds when finally opened and enjoyed. Save it, and count down the days until you finally give in and open it. ",
+                "timestamp": 1631716921000
+            },
+            {
+                "id": "462e4097-ae85-4771-ba42-d28393e39e03",
+                "name": "",
+                "comment": "This wine is a brilliant, golden colour with fresh acidity and notes of honeycomb, orange blossoms and saffron. It’s a bottle for the impatient; perfect for drinking in 2021. While it begins as a subtle wine, it’s one that grows with each sip, with a concentrated nose of apricot, honey and marzipan and earthy notes of dried citrus. It’s well-rounded and medium sweet with a velvety texture. ",
+                "timestamp": 1631716921000
+            }
+        ]
+    
+    }
+
+]

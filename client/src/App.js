@@ -23,9 +23,9 @@ function App() {
       <Route path="/" exact component={WelcomePage}/>
       <Route path="/search" exact component={SearchPage}/>
       <Route path="/contact" exact component={ContactPage}/>
-      <Route path="/wines/reds" component={RedWinePage}/>
-      <Route path="/wines/whites" component={WhiteWinePage}/>
-      <Route path="/wines/dessert" component={DessertWinePage}/>
+      <Route path="/wines/reds" exact component={RedWinePage}/>
+      <Route path="/wines/whites" exact component={WhiteWinePage}/>
+      <Route path="/wines/dessert" exact component={DessertWinePage}/>
       <Route path="/wines/port" exact component={PortWinePage}/>
       <Route path="/wines/rose"exact component={RoseWinePage}/>
       <Route path="/wines/sparkling" exact component={SparklingWinePage}/>

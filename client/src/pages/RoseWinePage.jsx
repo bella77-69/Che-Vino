@@ -1,43 +1,56 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import './winePages.scss';
 
+export default function RoseWinePage () {
+    const [data, setData] = useState([]); //hook for all wines
+    const [oneData, fetchOneWine] = useState(''); //another hook for current wine
+   console.log(data);
 
-export default function RoseWinePage() {
-    const [data, setData] = useState([]);
-    const [oneData, fetchOneWine] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8080/wines/rose')
-        .then((res) => res.json())
-        .then((data) => {
-            setData(data);
-        })
-        .catch((err) => {
-            console.log(err)
-        });
+      const fetchWine = async () => {
+        try {
+          const getWine = await fetch('http://localhost:8080/wines/rose');
+          const data = await getWine.json();
+  
+          setData(data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      fetchWine();
     }, []);
-
+  
+    //randomly select one wine object and display onClick
     const handleClick = () => {
-        const random = data[Math.floor(Math.random() * data.length)];
-        fetchOneWine(random);
-    }
+      const random = data[Math.floor(Math.random() * data.length)];
+      fetchOneWine(random);
+    };
+   
     return (
-        <ul>
-            {data.map((item) => (
-                     <section className="wine" key={item.id}>
-                     <div className="wine-container">
-                     <h1 className="wine-title">{item.winery}</h1>
-                     <h2 className="wine-info">{item.wine}</h2>
-                     <p className="wine-location">{item.location}</p>
-                    </div>
-                     <div className="wine-img__box">
-                     <img src={item.image} className="wine-img" alt="red-wine"/>
-            
-                   <button className="wine-button" onClick={handleClick}>Wine Generator</button>
-                 </div>
-                 </section>
-            ))}
-        </ul>
+      <section className="wine">
+          <div className="wine-container">
+          <h1 className="wine-title">{oneData.winery}</h1>
+          <h2 className="wine-info">{oneData.wine}</h2>
+          <p className="wine-location">{oneData.location}</p>
+          <p className="wine-review">{oneData.reviews}</p>
+         </div>
+          <div className="wine-img__box">
+          <img src={oneData.image} className="wine-img" alt="red-wine"/>
+ 
+        <button className="wine-button" onClick={handleClick}>Wine Generator</button>
+      </div>
+      </section>
+ 
     );
-}
+  }
+
+    
+
+
+
+
+
+
+
 
