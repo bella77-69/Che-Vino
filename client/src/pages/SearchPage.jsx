@@ -1,123 +1,173 @@
-import  axios from "axios";
-import React, { Component, useState, useEffect } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import "./SearchPage.scss";
 
-;
 export default function SearchPage() {
+  const [allReviews, setAllReviews] = useState([]);
+  const [filterReviews, setFilterReview] = useState(allReviews);
 
-  const [data, setData]=useState([]);
-  const [oneData, fetchOneWine]=useState('');
   useEffect(() => {
-    const fetchWine = async () => {
-      try {
-        const getWine = await fetch('http://localhost:8080/wines/rose');
-        const data = await getWine.json();
-
-        setData(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchWine();
+    axios("http://localhost:8080/wines/review/")
+      .then((response) => {
+        console.log(response.data);
+        setAllReviews(response.data);
+        setFilterReview(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
-  //randomly select one wine object and display onClick
-  const handleClick = () => {
-    const random = data[Math.floor(Math.random() * data.length)];
-    fetchOneWine(random);
+  const handleSearch = (event) => {
+    let value = event.target.value.toLowerCase();
+    let result = [];
+    console.log(value);
+    result = allReviews.filter((data) => {
+      return data.wine.search(value) !== -1;
+    });
+
+    setFilterReview(result);
   };
- 
   return (
-    <section className="search">
-        <div className="search-container">
-        <h1 className="search-title">{oneData.winery}</h1>
-        <h2 className="search-info">{oneData.wine}</h2>
-        <p className="search-location">{oneData.location}</p>
-       </div>
-        <div className="wine-img__box">
-        <img src={oneData.image} className="search-img" alt="red-wine"/>
-
-      <button className="search-button" onClick={handleClick}>Wine Generator</button>
+    <div className="search">
+      <div className="search-card">
+        <label>Search By Year:</label>
+        <input type="text" onChange={(event) => handleSearch(event)} />
+      </div>
+      <div>
+        {filterReviews.map((value, index) => {
+          return (
+            <ul key={value.id}>
+              <li>
+                {value.wine} | {value.price} | {value.style}
+              </li>
+            </ul>
+          );
+          
+        })}
+      </div>
     </div>
-    </section>
-
+    
   );
+ 
 }
-  
-  // state = {
-  //   items: [],
-  //   currentItem: null,
-  //   index: 0
-  // };
 
+// /   state = {/
+//     post: [],
+//     allPosts: []
+// };
 
 // componentDidMount() {
-//   axios.get('http://localhost:8080/wines/rose')
-//   .then(response => {
-//     console.log(response)
-//     return response
-    
-//       // console.log(response);
-    
-//   })
-//   .then(response => {
-//  return ({ items: response.data.id, currentItem: response.data.id[0], index: 0 });
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
+//     axios
+//         .get("http://localhost:8080/wines/review", {
+//         })
+//         .then(({ data }) => {
+//             this.setState({
+//                 post: data,
+//                 allPosts: data // array data from JSON stored in these
+//             });
+//         })
+//         .catch((err) => {});
 // }
 
-// handleNext = () => {
-//     const { index, data } = this.state;
-//     const nextQuestion = index + 1;
+// onKeyUp = (e) => {
+//     // filter post list by title using onKeyUp function
+//     const post = this.state.allPosts.filter((item) =>
+//         item.id.rendered
+//             .toLowerCase()
+//             .includes(e.target.value.toLowerCase())
+//     );
+//     this.setState({ post });
+// };
 
-//     this.setState({ currentItem: data[nextQuestion], index: nextQuestion });
+// render() {
+//     return (
+//         <div className="container">
+//             <div className="search-outer">
+//                 <form
+//                     role="search"
+//                     method="get"
+//                     id="searchform"
+//                     className="searchform"
+//                     action=""
+//                 >
+//                     {/* input field activates onKeyUp function on state change */}
+//                     <input
+//                         type="search"
+//                         onChange={this.onKeyUp}
+//                         name="s"
+//                         id=" "
+//                         placeholder="Search"
+//                     />
+//                     <button type="submit" id="searchsubmit">
+//                         <i className="fa fa-search" aria-hidden="true" />
+//                     </button>
+//                 </form>
+//             </div>
+//             <ul className="data-list">
+//                 {/* post items mapped in a list linked to onKeyUp function */}
+//                 {this.state.post.map((item, index) => (
+//                     <li className={"block-" + index}>
+//                         <a className="title" href={item.id}>
+//                             <h3>{item.id.rendered}</h3>
+//                             <img src={item.image}/>
+//                         </a>
+//                         <a className="link" href={item.wine}>
+//                             Read more
+//                         </a>
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// }
 // }
 
-//     render() { 
-//       const { currentItem } = this.state;
-//        return (
-//         <div>
-//           <button className="btn" onClick={this.handleNext}>Next</button>
-//           <ul>
-//           <li ></li>
-//           </ul>
-//           </div>
-//        )
+//   constructor() {
+//     super();
+//     this.state = {
+//       items: [],
+//       error: ""
 //     }
+//   }
 
+// componentDidMount() {
+// var items = this.state.items;
+// axios.get('http://localhost:8080/wines/review')
+//   .then(response => {
+//      if (this.unmounted) return;
+//      this.setState({items: response.data});
+//       console.log(response);
+//   },
+//         (error) => {
+//       let failedRequest = "Error: fetching API data was not successful";
+//       this.setState({error: failedRequest});
+//        console.log(error);
+//    }
+// )}
+
+// componentWillUnmount() {
+//  this.unmounted = true;
 // }
-  // const [data, setData] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-  // useEffect(() => {
-  // getData()
-  // }, []);
-  
-  // async function getData() {
-  //   await axios('http://localhost:8080/wines/port')
-  //   .then((response) => {
-  //   setData(response.data);
-  //   console.log(response.data)
-  //   })
-  //   .catch((error) => {
-  //   console.error("Error fetching data: ", error);
-  //   setError(error);
-  //   })
-  //   .finally(() => {
-  //   setLoading(false);
-  //   });
-  //   }
-  //   if (loading) return "Loading...";
-  //   if (error) return "Error!";
-  //   return (
-  //   <>
-  //   <img src={data.results} alt="random user" />
-  //   <pre>{data, null, 2}</pre>
-  //   </>
-  //   );}
 
+// render() {
+// var items = this.state.items;
+// return(<div>
+//      {items.map(item =>
+//         <ul key={item.name}>
+//           <img src ={item.image}/>
+//             <li>{item.wine}</li>
+//             <li>{item.style}</li>
+//             <li>{item.review}</li>
+//         </ul>
+//       )}
+//         <p id="error">{this.state.error}</p>
+//       </div>
+//       ) //return
+//   } //render
+// } //component
+
+//////////////////////////////////
 
 // export default function SearchPage(slides) {
 //   const [current, setCurrent] = useState(0);
@@ -132,7 +182,6 @@ export default function SearchPage() {
 //     setCurrent(current === 0 ? length -1 : current -1);
 //   };
 //   console.log('currentPrev', current);
-
 
 //   const [APIData, setAPIData] = useState([])
 //     useEffect(() => {
@@ -160,15 +209,12 @@ export default function SearchPage() {
 //                     <button className="search-left" onClick={prevSlide}>Left</button>
 //                     <button className="search-right" onClick={nextSlide}>Right</button>
 //                     </div>
-                    
+
 //                   )}
-                         
+
 //                 </div>
 //               );
 //             })}
 //           </section>
 //         )
 //       }
-
-    
-

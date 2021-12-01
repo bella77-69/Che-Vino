@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router()
 const fs = require("fs");
 
-
 function listReviews() {
     return JSON.parse(fs.readFileSync('./data/reviews.json', 'utf-8'));
 }
@@ -34,24 +33,60 @@ router.get("/", (req, res) => {
     res.status(200).json(reviews);
 });
 
-router
-.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     console.log(req.params.id);
-    fs.readFile('./data/reviews.json', 'utf-8', (err, data) => {
-        if (err) {
+    fs.readFile('./data/reviews.json', 'utf-8',(err, data) => {
+        if(err) {
             console.log(err);
             res.json({message: 'error getting review id data'});
         }
         const reviewData = JSON.parse(data);
-        const foundReview = reviewData.find((review) => review.id === req.params.id);
+        const foundReview = reviewData.find((data) => data.id == req.params.id);
         if(!foundReview) {
-            res.status(404).send({message: 'No review found with the id'});
+            res.json({message: 'error getting review data'});
         } else {
             res.json(foundReview);
         }
     });
-}
-)
+})
+
+
+
+// router.get('/:id', (req, res) => {
+//     const review = listReviews();
+//     const {id}= req.params;
+
+//     const foundReview=review.find((data) => {
+//         if(data.id === id) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     })
+//     if (!foundReview) {
+//         return res.status(404).json({message: `Cannot find review with id of ${id}`});
+//     }
+//     return res.json(foundReview);
+// })
+
+// router
+// .get('/:id', (req, res) => {
+//     console.log(req.params.id);
+//     fs.readFile('./data/reviews.json', 'utf-8', (err, data) => {
+//         if (err) {
+//             console.log(err);
+//             res.json({message: 'error getting review id data'});
+//         }
+//         const reviewData = JSON.parse(data);
+//         const foundReview = reviewData.find((review) => review.id === req.params.id);
+//         if(!foundReview) {
+//             res.status(404).send({message: 'No review found with the id'});
+//         } else {
+//             res.json(foundReview);
+//         }
+//     });
+// }
+// )
 module.exports = router;
 
 

@@ -46,14 +46,15 @@
     
    
     &-wrapper {
-        display: flex;
-        // position: relative;
-        justify-content: center;
-        // border: 2px solid $dark;
-        padding-bottom: 1rem;
-        // background-color: $matteDarkGrey;
-        overflow: hidden;
-        width: 60%;
+    @include flexColumn;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+ 
+    padding-bottom: 1rem;
+    // background-color: $matteDarkGrey;
+    overflow: hidden;
+    width: 100%;
     }
 
     &-title {
@@ -67,9 +68,15 @@
     }
 
     &-button {
-        background-color: $black;
-        width: 80%;
+        width: 30%;
+        font-family: 'Glory';
+        font-weight: 600;
+        font-size: 1.3125rem;
         border-radius: .625rem;
         border: none;
+        background-color: coral;
+        padding: .3125rem;
+       
+
     }
 }

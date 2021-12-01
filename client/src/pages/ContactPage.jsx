@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './ContactPage.scss';
-
 export default function ContactPage() {
   const [inputs, setInputs] = useState({});
 
@@ -14,6 +13,7 @@ export default function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     console.log(inputs);
   }
 
@@ -48,6 +48,7 @@ export default function ContactPage() {
         <button className="form-button"onSubmit={handleChange}>Submit</button>
        </div>
     </form>
+  
   )
 }
 

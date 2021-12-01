@@ -23,7 +23,8 @@ export default function RedWinePage () {
     }, []);
   
     //randomly select one wine object and display onClick
-    const handleClick = () => {
+    const handleClick = (event) => {
+      event.preventDefault();
       const random = data[Math.floor(Math.random() * data.length)];
       fetchOneWine(random);
     };
@@ -34,6 +35,7 @@ export default function RedWinePage () {
           <h1 className="wine-title">{oneData.winery}</h1>
           <h2 className="wine-info">{oneData.wine}</h2>
           <p className="wine-location">{oneData.location}</p>
+          <p className="wine-review">{oneData.id}</p>
          </div>
           <div className="wine-img__box">
           <img src={oneData.image} className="wine-img" alt="red-wine"/>
@@ -44,13 +46,3 @@ export default function RedWinePage () {
  
     );
   }
-
-    
-
-
-
-
-
-
-
-

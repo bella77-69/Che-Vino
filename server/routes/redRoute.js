@@ -26,7 +26,7 @@ router
             res.json({message: 'error getting red wine id data'});
         }
         const redData = JSON.parse(data);
-        const foundRed = redData.find((red) => red.id == req.params.id);
+        const foundRed = redData.find((data) => data.id == req.params.id);
         if(!foundRed) {
             res.status(404).send({message: 'No wine found with the id'});
         } else {

@@ -28,9 +28,31 @@ fetchWine = () => {
     });
 }
 
-getWinebyId =() => {
-    axios.get('')
-}
+getWineById(id) {
+    axios
+      .get(`http://localhost:8080/wines/${id}`)
+      .then((response) => {
+        console.log("message:", response.data);
+        this.setState({
+          items: response.data,
+        });
+      })
+      .then((response) => {
+        console.log(this.state.items);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    const {id} = this.props.match.params
+    console.log("In component did update:", id);
+    if (id) {
+      if (prevState.items && prevState.items.id !== id) {
+        this.getWineById(id);
+      }
+    }
+  }
 
 toggleContent(event) {
     event.preventDefault();

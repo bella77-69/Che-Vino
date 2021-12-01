@@ -1,0 +1,22 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+.list {
+    color: black;
+
+    &-container{
+    border: 1px solid black;
+    color: red;
+    }
+    &-container {
+        margin: 0;
+
+        &__video {
+        width: 15%;
+        }
+        &__title {
+            color: red;
+        }
+    }
+}

@@ -17,6 +17,9 @@ export default function Header() {
         <NavLink to="/contact" className="header-nav active">
           <div className="header-nav__info">Contact</div>
         </NavLink>
+        <NavLink to="/comments" className="header-nav active">
+          <div className="header-nav__info">Comments</div>
+        </NavLink>
       </nav>
     </section>
   );

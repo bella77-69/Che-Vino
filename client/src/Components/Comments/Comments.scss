@@ -1,0 +1,164 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+.hero {
+    margin: 0 auto;
+
+    &-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    border-radius: 0.25rem;
+    margin-top: 0;
+    object-fit: cover;
+
+        @include tablet {
+        height: 25rem;
+        display: flex;
+        width: 85%;
+        }
+
+        @include desktop {
+        height: 81vh;
+        width: 71.5%;
+        }
+    }
+
+  &-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+        @include tablet {
+        position: relative;
+        background-color: grey;
+        height: 25rem;
+        text-align: center;
+        }
+
+        @include desktop {
+        height: 81.5vh;
+        }
+  }
+  
+}
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: column;
+//     color: white;
+
+//     &-wrapper {
+//     @include flex;
+//     align-items: flex-start;
+  
+//     width: 100%;
+
+//         @include tablet {
+//         width: 95%;
+//         height: 8vh;
+//         margin: 2rem;
+//         }
+
+//         @include desktop {
+//         width: 62%;
+//         margin-left: 4rem;
+//         height: 10vh;
+//         padding-bottom: 5px;
+//         }
+//     }
+
+//     &__container__left {
+//     width: 25%;
+//     margin-top: .46875rem;
+
+//         @include tablet {
+//         width: 15%;
+//         }
+//     }
+    
+//     &-img {
+//     width: 3rem;
+//     height: 3rem;
+//     border-radius: 50%;
+//     background-color: $beige;
+//     background-size: cover;
+//     margin-left: 1rem;
+//     margin-top: .5rem;
+
+//         @include tablet {
+//         margin-top: 1rem;
+//         }
+
+//         @include desktop {
+//         margin-top: 2rem;
+//         }
+//     }
+
+//     &-right {
+//     // @include bodyCopy;
+//     @include flex;
+//     width: 80%;
+//     flex-wrap: wrap;
+//     margin: 1rem;
+
+//         @include tablet {
+//         // @include deskBodyCopy;
+//         margin-top: 1rem;
+//         width: 85%;
+//         }
+
+//         @include desktop {
+//         margin-top: 0;
+//         }
+//     }
+
+//     &__container__title {
+//     display: flex;
+//     width: 100%;
+//     }
+
+//     &__container__name {
+//     // @include labelBtn;
+//     width: 50%;
+//     text-align: left;
+
+//         @include tablet {
+//         // @include deskLabelBtn;
+//         }
+
+//         @include desktop {
+//         margin-top: 2rem;
+//         }
+//     }
+
+//     &__container__comment {
+//     // @include bodyCopy;
+//     margin-top: 1rem;
+//     text-align: left;
+
+//         @include tablet {
+//         // @include deskBodyCopy;
+//         margin: 0;
+//         }
+
+//         @include desktop {
+//         margin-bottom: 2rem;
+//         }
+//     }
+
+//     &__container__date {
+//     // @include bodyCopy;
+//     width: 49%;
+//     text-align: right;
+//     // color: $silver;
+
+//         @include tablet {
+//         // @include deskBodyCopy;
+//         }
+
+//         @include desktop {
+//         width: 50%;
+//         margin-top: 2rem;
+//         }
+//     }
+// }

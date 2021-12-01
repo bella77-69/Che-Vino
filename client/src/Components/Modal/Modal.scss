@@ -1,0 +1,54 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+.modal {
+    background: $taupe;
+    color: white;
+    z-index: 10;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    color: white;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 1rem;
+
+    &-container {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // overflow: auto;
+    margin: 1rem;
+   
+    }
+
+    &-button__close {
+    width: 20%;
+    border-radius: .625rem;
+      cursor: pointer;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-self: flex-end;
+
+    }
+    &-button {
+    
+        height: 5vh;
+        color: blue;
+        ::after {
+            visibility: hidden;
+        }
+    }
+}

@@ -11,7 +11,6 @@ const portRoute = require('./routes/portRoute');
 const roseRoute = require('./routes/roseRoute');
 const sparklingRoute = require('./routes/sparklingRoute');
 const reviewRoute = require('./routes/reviewRoute');
-// const { response } = require("express");
 
 require ('dotenv').config();
 
@@ -19,9 +18,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 
-
 //routes
-
 app.use('/wines/reds', redRoute);
 app.use('/wines/whites', whiteRoute);
 app.use('/wines/dessert', dessertRoute);
@@ -29,7 +26,6 @@ app.use('/wines/port', portRoute);
 app.use('/wines/rose', roseRoute);
 app.use('/wines/sparkling', sparklingRoute);
 app.use('/wines/review', reviewRoute);
-
 
 // home route
 app.get('/wines', (req, res) => {
@@ -54,7 +50,7 @@ routes: [
     },
     {
         method: 'get',
-        endpoint: '/whites/:id'
+        endpoint: '/whites/white/:id'
     },
     {
         method: 'get',
@@ -99,7 +95,6 @@ routes: [
     }
 ]
 
-
 })
 })
 
@@ -117,8 +112,6 @@ routes: [
 ]
 })
 })
-
-
 
 
 app.listen(8080, () => {

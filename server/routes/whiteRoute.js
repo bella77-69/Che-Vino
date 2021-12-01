@@ -26,7 +26,7 @@ router
             res.json({message: 'error getting White Wine id data'});
         }
         const whiteData = JSON.parse(data);
-        const foundWhite = whiteData.find((white) => white.id === req.params.id);
+        const foundWhite = whiteData.find((data) => data.id === req.params.id);
         if(!foundWhite) {
             res.status(404).send({message: 'No White Wine found with the id'});
         } else {

@@ -25,7 +25,7 @@ router
             res.json({message: 'error getting Port Wine id data'});
         }
         const portData = JSON.parse(data);
-        const foundPort = portData.find((red) => red.id === req.params.id);
+        const foundPort = portData.find((data) => data.id === req.params.id);
         if(!foundPort) {
             res.status(404).send({message: 'No Port Wine found with the id'});
         } else {

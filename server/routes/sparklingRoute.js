@@ -27,7 +27,7 @@ router
             res.json({message: 'error getting sparking wine id data'});
         }
         const sparklingData = JSON.parse(data);
-        const foundSparkling = sparklingData.find((spark) => spark.id === req.params.id);
+        const foundSparkling = sparklingData.find((data) => data.id === req.params.id);
         if(!foundSparkling) {
             res.status(404).send({message: 'No Sparkling found with the id'});
         } else {

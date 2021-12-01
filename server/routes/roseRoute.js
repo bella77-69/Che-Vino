@@ -27,7 +27,7 @@ router
             res.json({message: 'error getting rose id data'});
         }
         const roseData = JSON.parse(data);
-        const foundRose = roseData.find((review) => review.id === req.params.id);
+        const foundRose = roseData.find((data) => data.id === req.params.id);
         if(!foundRose) {
             res.status(404).send({message: 'No rose wine found with the id'});
         } else {

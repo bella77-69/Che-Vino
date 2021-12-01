@@ -1,8 +1,22 @@
 import React from "react";
 import "./WelcomePage.scss";
-import { Link } from "react-router-dom";
+import Modal from "../Components/Modal/Modal";
 
-export default function WelcomePage() {
+export default class WelcomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isOpen: false};
+  }
+
+
+toggalModal = () => {
+  this.setState({
+    isOpen: !this.state.isOpen
+  });
+};
+
+
+  render () {
   return (
       <section className="main">
           <div className="main-container">
@@ -16,62 +30,14 @@ export default function WelcomePage() {
 
     <section className="card">
       <div className="card-wrapper">
-        <Link to="/wines/reds" className="card-link">
-          <div className="card-body">
-            <h2 className="card-title">Red Wines</h2>
-            <p className="card-description">Search for Red Wines</p>
-          </div>
-
-          <button className="card-button">View Wines</button>
-        </Link>
-      </div>
-      <div className="card-wrapper">
-        <Link to="wines/whites" className="card-link">
-          <div className="card-body">
-            <h2 className="card-title">White Wines</h2>
-            <p className="card-description">Search for White Wines</p>
-          </div>
-
-          <button className="card-button">View Wines</button>
-        </Link>
-      </div>
-      <div className="card-wrapper">
-        <div className="card-body">
-          <h2 className="card-title">Sparkling Wines</h2>
-          <p className="card-description">Search for Sparkling Wines</p>
-        </div>
-        <Link to="/wines/sparkling" className="card-link">
-          <button className="card-button">View Wines</button>
-        </Link>
-      </div>
-      <div className="card-wrapper">
-        <div className="card-body">
-          <h2 className="card-title">Port Wines</h2>
-          <p className="card-description">Search for Port Wines</p>
-        </div>
-        <Link to="/wines/port" className="card-link">
-          <button className="card-button">View Wines</button>
-        </Link>
-      </div>
-      <div className="card-wrapper">
-        <div className="card-body">
-          <h2 className="card-title">Rose Wines</h2>
-          <p className="card-description">Search for Rose Wines</p>
-        </div>
-        <Link to="/wines/rose" className="card-link">
-          <button className="card-button">View Wines</button>
-        </Link>
-      </div>
-      <div className="card-wrapper">
-        <div className="card-body">
-          <h2 className="card-title">Dessert Wines</h2>
-          <p className="card-description">Search for Dessert Wines</p>
-        </div>
-        <Link to="/wines/dessert" className="card-link">
-          <button className="card-button">View Wines</button>
-        </Link>
+        <button className="card-button modal-button" onClick={this.toggalModal}>Wines</button>
+        <Modal 
+        show={this.state.isOpen}
+        onClose={this.toggalModal}
+        />
       </div>
     </section>
     </section>
   );
+}
 }
