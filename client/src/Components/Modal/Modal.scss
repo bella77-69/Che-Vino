@@ -3,32 +3,77 @@
 @import "../../partials/_mixins";
 
 .modal {
-    // background: $darkBrown;
-    // color: $beige;
-    // z-index: 10;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     color: $beige;
-    width: 85%;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 1rem;
     border-radius: .9375rem;
+    @include flexColumn;
+
+        @include tablet {
+        width: 90%;
+        @include flex;
+        padding-top: 2.6875rem;
+        flex-wrap: wrap;
+        }
+
+        @include desktop {
+        width: 80%;
+        justify-content: center;
+        }
     
     &-container {
-    z-index: 1;
-    margin-left: 1.5rem;
     width: 100%;
     padding-bottom: 1rem;
-    // overflow: auto;
+    border-radius: .9375rem;
+
+        @include tablet {
+        width: 48.5%;
+        padding-bottom: 2rem;
+        }
+
+        @include desktop {
+        width: 31.5%;
+        padding-bottom: 2.5rem;
+        }
     }
+    
     &-close {
-    margin-left: 11.5rem;
+    margin-left: 11rem;
     margin-top: 1rem;
+    width: 6%;
+
+        @include tablet {
+        width: 2%;
+        top: 0;
+        margin-left: -1rem;
+        order: 0;
+        height: 2vh;
+        }
+
+        @include desktop {
+        margin-left: -3rem;
+        }
     }
 
+    &-link {
+    text-decoration: none;
+    color: $beige;
+    }
+ 
+
     &-title {
-    font-size: 1.1875rem;
+    font-size: .8125rem; 
+    line-height: 1.25rem; 
+    font-weight: 700;
+    text-align: center;
+
+        @include tablet {
+        font-size: 1.125rem;
+        line-height: 2rem;
+        }
+
+        @include desktop {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        }
     }
 
     &-description {
@@ -36,37 +81,62 @@
     }
 
     &-img {
-    width:45%;
-        border-radius: .9375rem;
-    }
-    &-button__close {
-    width: 20%;
+    display: flex;  
+    width: 50%;
+    height: 13vh;
     border-radius: .9375rem;
-      cursor: pointer;
-  font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 8px;
-  border: none;
-  font-size: 18px;
-  color: #2c3e50;
-  background: white;
-  transition: all 0.25s ease;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
-  position: absolute;
-  right: 0;
-  top: 0;
-  align-self: flex-end;
+    margin-left: 3rem;
 
+        @include tablet {
+        width: 65%;
+        height: 28vh;
+        margin-left: 4.2rem;
+        }
+
+        @include desktop {
+        width: 69%;
+        height: 21vh;
+        }
     }
+
+    // &-button__close {
+    // width: 20%;
+    // border-radius: .9375rem;
+    // cursor: pointer;
+    // font-weight: 500;
+    // padding: 4px 8px;
+    // border-radius: 8px;
+    // border: none;
+    // font-size: 18px;
+    // color: $darkBrown;
+  
+    // transition: all 0.25s ease;
+    // box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    // align-self: flex-end;
+
+    // }
     &-button {
-        height: 5vh;
+    height: 4.5vh;
+    width: 5.812rem;
+    background-color: $darkBrown;
+    border: none;
+    color: $beige;
+    border-radius: .9375rem;
+    font-size: .75rem; 
+    line-height: 1.25rem; 
+    font-weight: 700;
+
+        @include tablet {
+        font-size: 1.125rem;
         width: 7.812rem;
-        background-color: $darkGrey;
-        border: none;
-        color: $beige;
-        border-radius: .9375rem;
+        height: 6.5vh;
+        }
+
         ::after {
-            visibility: hidden;
+        visibility: hidden;
         }
     }
 }

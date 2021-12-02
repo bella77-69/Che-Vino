@@ -56,7 +56,7 @@
 }
 
 .card {
-    margin: 0, auto;
+    margin: 0;
     background-color: $blacker;
     // background-repeat: no-repeat;
     // position: relative;
@@ -76,15 +76,24 @@
     align-items: center;
     padding-bottom: 2rem;
     width: 100%;
+
+        @include tablet {
+        // width: 95%;
+        }
     }
 
     &-button {
         width: 40%;
         font-family: 'Glory';
-        font-size: 1.0625rem;
+        font-size: .875rem;
         border-radius: 1.25rem;
         border: none;
         background-color: $darkBrown;
         color: $beige;
-    }
+
+    //         @include tablet {
+           
+    //         font-size: 1.1875rem;
+    //         }
+     }
 }
