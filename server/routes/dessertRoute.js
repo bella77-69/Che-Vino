@@ -25,9 +25,9 @@ router
             res.json({message: 'error getting Dessert wine id data'});
         }
         const dessertData = JSON.parse(data);
-        const foundDessert = dessertData.find((data) => data.id === req.params.id);
+        const foundDessert = dessertData.find((data) => data.id == req.params.id);
         if(!foundDessert) {
-            res.status(404).send({message: 'No Dessert Wine found with the id'});
+            res.json({message: 'No Dessert Wine found with the id'});
         } else {
             res.json(foundDessert);
         }

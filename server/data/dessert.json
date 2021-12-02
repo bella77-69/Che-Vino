@@ -1,28 +1,6 @@
 [
     {
         "winery": "Oremus",
-        "wine": "Eszencia 1999",
-        "rating": {
-            "average": "5.0",
-            "reviews": "34 ratings"
-        },
-        "location": "Hungary\n·\nTokaj",
-        "image": "https://images.vivino.com/thumbs/_VYRnv4XTfCVEXlvhYw4AA_pb_x300.png",
-        "id": 1
-    },
-    {
-        "winery": "Oremus",
-        "wine": "Eszencia 2005",
-        "rating": {
-            "average": "4.9",
-            "reviews": "40 ratings"
-        },
-        "location": "Hungary\n·\nTokaj",
-        "image": "https://images.vivino.com/thumbs/_VYRnv4XTfCVEXlvhYw4AA_pb_x300.png",
-        "id": 2
-    },
-    {
-        "winery": "Oremus",
         "wine": "Eszencia 2000",
         "rating": {
             "average": "4.9",

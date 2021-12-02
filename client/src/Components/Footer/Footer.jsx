@@ -1,42 +1,43 @@
 import "./Footer.scss";
 import { SocialIcon } from "react-social-icons";
-import logo from '../../assets/logo/logo3.png';
+import logo from '../../assets/logo/logo5.png';
 export default function Footer() {
 
     return (
         <section className="footer">
             <div className="footer-main">
-      <div className="footer-social">
-           <SocialIcon className ="footer-social__icon" url="https://www.instagram.com/" bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"/>
-           <SocialIcon className="footer-social__icon"  url="https://www.facebook.com/" bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"/>
-           <SocialIcon className="footer-social__icon"  url="https://twitter.com/" bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"/>
+            <div className="footer-social">
+           <SocialIcon className ="footer-social--icon" url="https://www.instagram.com/" bgColor="rgba(0,0,0,0)"
+              fgColor="#f5e3d9"/>
+           <SocialIcon className="footer-social--icon"  url="https://www.facebook.com/" bgColor="rgba(0,0,0,0)"
+              fgColor="#f5e3d9"/>
+           <SocialIcon className="footer-social--icon"  url="https://twitter.com/" bgColor="rgba(0,0,0,0)"
+              fgColor="#f5e3d9"/>
         </div>
-        </div>
-        <div className="nav">
-            <div className="nav--wrapper">
-                <ul className="nav-list">
-                    <li className="nav-list__item">Chantelle Mckenzie</li>
-                    <li className="nav-list__item">Che Vino CEO</li>
+        <div className="footer-nav">
+            <div className="footer-nav--wrapper">
+                <ul className="footer-list">
+                    <li className="footer-item">Chantelle Mckenzie</li>
+                    <li className="footer-item">Che Vino CEO</li>
                 </ul>
-                <ul className="nav-list">
-                    <li className="nav-list__item">1234 Main Street</li>
-                    <li className="nav-list__item">Vancouver, BC</li>
+                <ul className="footer-list">
+                    <li className="footer-item">1234 Main Street</li>
+                    <li className="footer-item">Vancouver, BC</li>
                 </ul>
-                <ul className="nav-list">
-                    <li className="nav-list__item">info@chevino.com</li>
+                <ul className="footer-list">
+                    <li className="footer-item">info@chevino.com</li>
                 </ul>
         </div>
         </div>
-        <section className="logo">
-            <figure className="logo-container">
-                <img src={logo} className="logo-container__image" alt="che-vino-logo"  />
-                <p className="logo-container__text">Copyright Che Vino © 2021 All Rights Reserved</p>
-            </figure>
-        </section>
+        
+        <div className="footer-logo">
+        
       
+        <figure className="footer-container">
+                <img src={logo} className="footer-image" alt="che-vino-logo"  />
+            </figure>
+        </div>
+        </div>
 
     
         </section>

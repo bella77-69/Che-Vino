@@ -30,7 +30,6 @@ fetchWine = () => {
 
 toggleContent(event) {
     event.preventDefault();
-    const {dataCallBack} = this.props
     this.fetchWine();
     console.log(this.props)
     }

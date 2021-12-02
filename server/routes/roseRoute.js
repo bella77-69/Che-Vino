@@ -7,7 +7,7 @@ function listRose() {
   return JSON.parse(fs.readFileSync("./data/rose.json", 'utf-8'));
 }
 
-function getRedsById(id) {
+function getRosesById(id) {
   const roseArr = listRose();
   let filteredRose = roseArr.find(item => item.id === id);
   return filteredRose;

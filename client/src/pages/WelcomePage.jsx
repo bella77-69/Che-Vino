@@ -22,7 +22,8 @@ toggalModal = () => {
           <div className="main-container">
           <div className="main-title">Buying wine can be overwhelming, due to the variety of wines on the shelves.  
               The Che Vino helps take the guess work out of making that decision.  
-              Chi Vino determines a bottle of wine at random.  You have the choice of the different types of wine avaiable, such as Red, White, Dessert, Port, Rose, or Sparkling Wine.
+              Chi Vino determines a bottle of wine at random. You have the choice of the different types of wine avaiable, such as Red, White, Dessert, Port, Rose, or Sparkling Wine. Checkout the seach page that shows
+              the top 20 wines.  There you can read comments about the wine, see the wine score, and the average price.
               Enjoy, and remember to drink responsible!
            </div>
           </div>
@@ -30,7 +31,7 @@ toggalModal = () => {
 
     <section className="card">
       <div className="card-wrapper">
-        <button className="card-button modal-button" onClick={this.toggalModal}>Wines</button>
+        <button className="card-button modal-button" onClick={this.toggalModal}>Wine Lists</button>
         <Modal 
         show={this.state.isOpen}
         onClose={this.toggalModal}

@@ -3,80 +3,88 @@
 @import "../partials/_mixins";
 
 .main {
-    margin: 0, auto;
     @include flexColumn;
     align-items: center;
     background-color: $black;
+    font-family: 'Glory';
 
+        @include tablet {
+        margin: 0;
+        }
 
     &-container {
+    margin: 1.5rem;
     display: flex;
-    width: 85%;
-    font-family: 'Glory';
     color: $beige;
-    font-size: 1.312rem;
+    font-size: 1rem; 
+    font-weight: 500;
     margin: 1rem;
+    border: 2px solid $darkGrey;
+    border-radius: 1.25rem;
+
+        @include tablet {
+        margin: 2rem;
+        width: 75%;
+        font-size: 1.5rem ;
+        line-height: 2rem; /*24px */
+        // font-weight: 600;
+        }
+
+        @include desktop {
+        width: 80%;
+        }
     }
 
     &-title {
-        text-align: left;
+    text-align: left;
+    font-family: 'Glory';
+    line-height: 1.25rem;
+    // font-weight: 300;
+    margin: 1.5rem;
+
+        @include tablet {
+        font-size: 1.5rem ; /*24px */
+        line-height: 2rem; /*32px */
+        text-align: center;
+        }
+
+        @include desktop {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        }
     }
 }
 
 .card {
     margin: 0, auto;
     background-color: $blacker;
-   
-    background-repeat: no-repeat;
-    position: relative;
-    object-fit: cover;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
+    // background-repeat: no-repeat;
+    // position: relative;
+    // object-fit: cover;
+    // background-position: center center;
+    // background-size: cover;
+    // overflow: hidden;
     width: 100%;
-    z-index: 1;
-    height: auto;
-    @include flexColumn;
-    align-items: center;
-   
-    &-link {
-    text-decoration: none;
-    }
-    
-    
+    // z-index: 1;
+    // height: auto;
+    // @include flexColumn;
+    // align-items: center;
    
     &-wrapper {
     @include flexColumn;
     justify-content: center;
     align-items: center;
-    justify-content: center;
- 
-    padding-bottom: 1rem;
-    // background-color: $matteDarkGrey;
-    overflow: hidden;
+    padding-bottom: 2rem;
     width: 100%;
     }
 
-    &-title {
-    color: $cement;
-    text-decoration: none;
-    font-size: 1.5rem;
-    }
-
-    &-description {
-        color: $cement;
-    }
-
     &-button {
-        width: 30%;
+        width: 40%;
         font-family: 'Glory';
-        font-weight: 600;
-        font-size: 1.3125rem;
-        border-radius: .625rem;
+        font-size: 1.0625rem;
+        border-radius: 1.25rem;
         border: none;
-        background-color: coral;
-        padding: .3125rem;
-       
-
+        background-color: $darkBrown;
+        color: $beige;
     }
 }

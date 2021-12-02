@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require('cors');
 const app = express();
-const router = express.Router()
+const router = express.Router();
 PORT = 8080;
 
 const redRoute = require('./routes/redRoute');
@@ -27,6 +27,7 @@ app.use('/wines/rose', roseRoute);
 app.use('/wines/sparkling', sparklingRoute);
 app.use('/wines/review', reviewRoute);
 
+
 // home route
 app.get('/wines', (req, res) => {
     res.json({message: 'Hello, welcome to my Wine api',
@@ -50,7 +51,7 @@ routes: [
     },
     {
         method: 'get',
-        endpoint: '/whites/white/:id'
+        endpoint: '/whites/:id'
     },
     {
         method: 'get',
@@ -82,7 +83,7 @@ routes: [
     },
     {
         method: 'get',
-        endpoint: '/dessert/:id'
+        endpoint: '/:id'
     },
     {
         method: 'post',

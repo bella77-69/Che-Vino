@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import "./Header.scss";
-import logo from "../../assets/logo/logo3.png";
+import logo from "../../assets/logo/logo4.png";
 
 export default function Header() {
   return (
@@ -11,13 +11,13 @@ export default function Header() {
         </Link>
       </div>
       <nav className="header-nav">
-        <NavLink to="/search" className="header-nav active">
+        <NavLink to="/search" className="header-nav--active">
           <div className="header-nav__info">Search</div>
         </NavLink>
-        <NavLink to="/contact" className="header-nav active">
+        <NavLink to="/contact" className="header-nav--active">
           <div className="header-nav__info">Contact</div>
         </NavLink>
-        <NavLink to="/comments" className="header-nav active">
+        <NavLink to="/comments" className="header-nav--active">
           <div className="header-nav__info">Comments</div>
         </NavLink>
       </nav>

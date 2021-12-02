@@ -6,6 +6,7 @@ constructor(props){
     super(props);
     this.state ={
         items: [],
+        activeItems: []
     }
     this.toggleContent = this.toggleContent.bind(this)
 }
@@ -20,6 +21,7 @@ fetchWine = () => {
     .then((response) => {
         this.setState ({
             items: response.data,
+            activeItems: response.data[0]
         })
         console.log(response.data)
     })
@@ -33,11 +35,11 @@ getWineById(id) {
       .then((response) => {
         console.log("message:", response.data);
         this.setState({
-         items: response.data,
+         activeItems: response.data,
         });
       })
       .then((response) => {
-        console.log(this.state.items);
+        console.log(this.state.activeItems);
       })
       .catch((error) => {
         console.log(error);
@@ -47,7 +49,7 @@ getWineById(id) {
     const {id} = this.props.match.params
     console.log("In component did update:", id);
     if (id) {
-      if (prevState.items && prevState.items.id !== id) {
+      if (prevState.activeItems && prevState.activeItems.id !== id) {
         this.getWineById(id);
       }
     }
@@ -55,14 +57,14 @@ getWineById(id) {
 
 toggleContent(event) {
     event.preventDefault();
-    const {dataCallBack} = this.props
     this.fetchWine();
     console.log(this.props)
     }
     
 
 render () {
-    const { items } =this.state;
+    const { items, activeItems } =this.state
+    console.log(activeItems)
     return (
     <div>
         <ul>{items.map(item => (

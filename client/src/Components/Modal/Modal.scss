@@ -3,30 +3,45 @@
 @import "../../partials/_mixins";
 
 .modal {
-    background: $taupe;
-    color: white;
-    z-index: 10;
+    // background: $darkBrown;
+    // color: $beige;
+    // z-index: 10;
     border-radius: 16px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-    color: white;
-    width: 100%;
+    color: $beige;
+    width: 85%;
     max-width: 100%;
     max-height: 100%;
     margin: 1rem;
-
+    border-radius: .9375rem;
+    
     &-container {
     z-index: 1;
-    top: 0;
-    left: 0;
+    margin-left: 1.5rem;
     width: 100%;
+    padding-bottom: 1rem;
     // overflow: auto;
-    margin: 1rem;
-   
+    }
+    &-close {
+    margin-left: 11.5rem;
+    margin-top: 1rem;
     }
 
+    &-title {
+    font-size: 1.1875rem;
+    }
+
+    &-description {
+    font-size: 1.125rem;
+    }
+
+    &-img {
+    width:45%;
+        border-radius: .9375rem;
+    }
     &-button__close {
     width: 20%;
-    border-radius: .625rem;
+    border-radius: .9375rem;
       cursor: pointer;
   font-weight: 500;
   padding: 4px 8px;
@@ -44,9 +59,12 @@
 
     }
     &-button {
-    
         height: 5vh;
-        color: blue;
+        width: 7.812rem;
+        background-color: $darkGrey;
+        border: none;
+        color: $beige;
+        border-radius: .9375rem;
         ::after {
             visibility: hidden;
         }

@@ -7,48 +7,55 @@
     margin: 0 auto;
     background-color: $darkGrey;
     padding-top: .5rem;
-    height: 8.5rem;
+    height: 10.5rem;
     width: 100%;
+    font-family: 'Glory';
+    padding-left: 1rem;
+    padding-right: 1rem;
     
         @include tablet{
         display: flex;
         justify-content: space-between;
-        height: 12.5rem;
+        height: 10.5rem;
         }
 
         @include desktop  {
-        height: 12.625rem;
+        height: 11.625rem;
         }
 
     &-container {
-    display: flexColumn;
- 
+    @include flexColumn;
+    align-items: center;
     text-align: center;
     
         @include tablet {
-        margin: 0; 
+        margin-left: 1.5rem;
+        }
+
+        @include desktop {
+        margin-left: 1rem;
         }
     }
 
     &-logo {
     margin-top: 1rem;
-    width: 6.175rem;
-    height: 4.056rem;
-    top: 1.899rem;
+    width: 5.575rem;
+    height: 5.556rem;
+
 
         @include tablet {
-            width: 7.613rem;
-            height: 1.056rem;
-            margin-left: 2rem;
-            margin-top: 2.461rem;
-            height: 4.75rem;
+        // width: 8.613rem;
+        // height: 4.056rem;
+        // margin-left: 2rem;
+        margin-top: 2.461rem;
+        height: 6.75rem;
+        width: 8rem;
         }
 
         @include desktop {
-            margin-left: 10.548rem;
-            width: 6.613rem;
-            height: 1.956rem;
-            height: 46%;
+        margin-left: 1rem;
+        width: 9rem;
+        height: 70%;
         }
     }
 
@@ -57,72 +64,54 @@
     text-decoration: none;
     justify-content: space-evenly;
     color: $beige;
-    padding-bottom: 1px;
- 
-    &:hover {
-        color: $beige;
-        }  
+    width: 100%;
+    font-size: .75rem; 
+    line-height: 1.25rem; 
+    font-weight: 700;
+     
         @include tablet {
         height: 2.375rem;
-        width: 14.687rem;
-        margin-top: 1.5rem;
-        margin-right: 1.25rem;
+        width: 24.687rem;
+        margin-top: 2.461rem;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        // margin-top: 1.5rem;
+        // margin-right: 1.25rem;
         }
 
         @include desktop {
-        width: 20%;
+        width: 35%;
+        height: 3.375rem;
+        margin-right: 1rem;
+        font-size: 1.375rem;
         }
-    }
-
-    &-nav__active {
-    text-decoration: none;
     
-    font-family: "Glory";
+    }
+    &-nav--active {
+    text-decoration: none;
     @include flex;
     align-items: center;
     justify-content: center; 
-    width: 6.687rem;
-    height: 2.25rem;
+    width: 4.687rem;
+    height: 1.55rem;
     margin-top: .5rem;
     color: $beige;
-    background-color: $black;
+    background-color: $darkBrown;
     border-radius: 1.25rem;
-
+    &:hover {
+    color: $beige;
+    }
         @include tablet {
         width: 6.687rem;
         height: 2.375rem;
         margin-right: 1.5rem;
         }
+
+        @include desktop {
+        width: 9.687rem;
+        height: 3.375rem;
+        }
     }
-
-    &-nav__link {
-        text-decoration: none;
-        
-        font-family: "Glory";
-        @include flex;
-        align-items: center;
-        justify-content: center; 
-        width: 8.25rem;
-        height: 2.25rem;
-        margin-top: .5rem;
-        color: $beige;
-        border-radius: 1.25rem;
-    
-            @include tablet {
-            width: 6.687rem;
-            height: 2.375rem;
-            margin-right: 2.5rem;
-            }
-        }
-
-        &--active {
-        background-color: $black;
-        text-decoration: none;
-        
-        border-radius: 1.562rem;
-        width: 10.25rem;
-        padding-top: .475rem;
-        height: 2.25rem;
-        }
 }
 
