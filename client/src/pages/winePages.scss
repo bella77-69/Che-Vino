@@ -14,7 +14,6 @@
         margin: 0;
         }
 
-
     &-container--left {
     width: 29%;
     margin: 1rem;
@@ -40,7 +39,6 @@
 
         @include desktop {
         border-radius: .9375rem;
-        // margin-right: 3rem;
         align-items: center;
         }
     }

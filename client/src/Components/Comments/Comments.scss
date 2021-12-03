@@ -3,20 +3,47 @@
 @import "../../partials/_mixins";
 
 .hero {
-    margin: 0 auto;
+    font-family: $glory;
+    background-color: $taupe;
+    padding-bottom: 1rem;
+
+    &-wrapper {
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      color: $beige;
+
+   
+        @include tablet {
+        position: relative;
+        // height: 25rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        }
+
+        @include desktop {
+        height: 81.5vh;
+        }
+  }
 
     &-img {
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    border-radius: 0.25rem;
-    margin-top: 0;
+    width: 40%;
+    margin-top: 1rem;
     object-fit: cover;
+    border-radius: 1.25rem;
+    margin-right: 1rem;
 
         @include tablet {
-        height: 25rem;
+        height: auto;
         display: flex;
-        width: 85%;
+        order: -1;
+        align-items: center;
+        // width: 85%;
         }
 
         @include desktop {
@@ -24,141 +51,62 @@
         width: 71.5%;
         }
     }
+ &-card {
+   margin: 1rem;
+   color: $beige;
+  
 
-  &-wrapper {
-    width: 100%;
-    margin: 0 auto;
+ }
+
+ &-title {
+   font-size: .875rem;
+   width: 100%;
+   margin-top: 1rem;
+   margin-left: 1rem;
 
         @include tablet {
-        position: relative;
-        background-color: grey;
-        height: 25rem;
-        text-align: center;
-        }
+        
+   }
+ }
 
-        @include desktop {
-        height: 81.5vh;
-        }
-  }
+ &-rating {
+   font-size: .875rem;
+   width: 49%;
+   margin-left: 1rem;
+
+      @include tablet {
+      width: 15%;
+      }
+ }
+
+ &-style {
+   font-size: .75rem;
+   width: 40%;
+   margin-left: 1rem;
+
+      @include tablet {
+      width: 15%;
+
+      }
+ }
+
+ &-price {
+   font-size: .75rem;
+   width: 40%;
+   margin-top: 1rem;
+   margin-left: 1rem;
+
+      @include tablet {
+      width: 15%;
+      }
+  
+ }
+
+ &-review {
+   font-size: 1rem;
+   font-style: oblique;
+   
+ }
+
   
 }
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     color: white;
-
-//     &-wrapper {
-//     @include flex;
-//     align-items: flex-start;
-  
-//     width: 100%;
-
-//         @include tablet {
-//         width: 95%;
-//         height: 8vh;
-//         margin: 2rem;
-//         }
-
-//         @include desktop {
-//         width: 62%;
-//         margin-left: 4rem;
-//         height: 10vh;
-//         padding-bottom: 5px;
-//         }
-//     }
-
-//     &__container__left {
-//     width: 25%;
-//     margin-top: .46875rem;
-
-//         @include tablet {
-//         width: 15%;
-//         }
-//     }
-    
-//     &-img {
-//     width: 3rem;
-//     height: 3rem;
-//     border-radius: 50%;
-//     background-color: $beige;
-//     background-size: cover;
-//     margin-left: 1rem;
-//     margin-top: .5rem;
-
-//         @include tablet {
-//         margin-top: 1rem;
-//         }
-
-//         @include desktop {
-//         margin-top: 2rem;
-//         }
-//     }
-
-//     &-right {
-//     // @include bodyCopy;
-//     @include flex;
-//     width: 80%;
-//     flex-wrap: wrap;
-//     margin: 1rem;
-
-//         @include tablet {
-//         // @include deskBodyCopy;
-//         margin-top: 1rem;
-//         width: 85%;
-//         }
-
-//         @include desktop {
-//         margin-top: 0;
-//         }
-//     }
-
-//     &__container__title {
-//     display: flex;
-//     width: 100%;
-//     }
-
-//     &__container__name {
-//     // @include labelBtn;
-//     width: 50%;
-//     text-align: left;
-
-//         @include tablet {
-//         // @include deskLabelBtn;
-//         }
-
-//         @include desktop {
-//         margin-top: 2rem;
-//         }
-//     }
-
-//     &__container__comment {
-//     // @include bodyCopy;
-//     margin-top: 1rem;
-//     text-align: left;
-
-//         @include tablet {
-//         // @include deskBodyCopy;
-//         margin: 0;
-//         }
-
-//         @include desktop {
-//         margin-bottom: 2rem;
-//         }
-//     }
-
-//     &__container__date {
-//     // @include bodyCopy;
-//     width: 49%;
-//     text-align: right;
-//     // color: $silver;
-
-//         @include tablet {
-//         // @include deskBodyCopy;
-//         }
-
-//         @include desktop {
-//         width: 50%;
-//         margin-top: 2rem;
-//         }
-//     }
-// }

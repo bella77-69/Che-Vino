@@ -6,7 +6,7 @@ export default function CommentsList({ comments, listId }) {
 
   return (
     <section className="list">
-      <h2 className="list-title">Comments</h2>
+      <h2 className="list-title">Top 20 Wines of 2021</h2>
 
       {comment
         .filter((data) => data.id !== listId)
@@ -17,18 +17,21 @@ export default function CommentsList({ comments, listId }) {
               className="list-link"
               key={data.id}
             >
-              <div className="list-card__left" id={data.style}>
-                <video
-                  className="list-video"
-                  poster={data.image}
-                  alt="videos"
-                ></video>
-                <h2 className="list-rating">{data.rating}</h2>
-              </div>
-              <div className="list-card__right">
-                <h2 className="list-wine">{data.wine}</h2>
-                <p className="list-style">{data.style}</p>
-                <p className="list-price">{data.price}</p>
+              <div className="list-card">
+                <div className="list-card--left" id={data.style}>
+                  <img
+                    className="list-image"
+                    src={data.image}
+                    alt="videos"
+                  ></img>
+                </div>
+
+                <div className="list-card--right">
+                  <h2 className="list-wine">{data.wine}</h2>
+                  <p className="list-style">Style:  {data.style}</p>
+                  <h2 className="list-rating">Rating:  {data.rating}</h2>
+                  <p className="list-price">{data.price}</p>
+                </div>
               </div>
             </Link>
           );

@@ -26,8 +26,7 @@
         margin: 2rem;
         width: 75%;
         font-size: 1.5rem ;
-        line-height: 2rem; /*24px */
-        // font-weight: 600;
+        line-height: 2rem;
         }
 
         @include desktop {
@@ -39,12 +38,11 @@
     text-align: left;
     font-family: 'Glory';
     line-height: 1.25rem;
-    // font-weight: 300;
     margin: 1.5rem;
 
         @include tablet {
-        font-size: 1.5rem ; /*24px */
-        line-height: 2rem; /*32px */
+        font-size: 1.5rem ;
+        line-height: 2rem; 
         text-align: center;
         }
 
@@ -58,28 +56,14 @@
 .card {
     margin: 0;
     background-color: $blacker;
-    // background-repeat: no-repeat;
-    // position: relative;
-    // object-fit: cover;
-    // background-position: center center;
-    // background-size: cover;
-    // overflow: hidden;
     width: 100%;
-    // z-index: 1;
-    // height: auto;
-    // @include flexColumn;
-    // align-items: center;
-   
+
     &-wrapper {
     @include flexColumn;
     justify-content: center;
     align-items: center;
     padding-bottom: 2rem;
     width: 100%;
-
-        @include tablet {
-        // width: 95%;
-        }
     }
 
     &-button {
@@ -91,9 +75,5 @@
         background-color: $darkBrown;
         color: $beige;
 
-    //         @include tablet {
-           
-    //         font-size: 1.1875rem;
-    //         }
      }
 }

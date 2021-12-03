@@ -3,19 +3,76 @@
 @import "../../partials/_mixins";
 
 .list {
-    color: black;
+    margin: 0;
+    background-color: $taupe;
+    // background-color: $cement;
+    color: $beige;
+
+
+    &-title {
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    }
+
+    &-link {
+    text-decoration: none;
+    color: $beige;
+    }
 
     &-card{
-    border: 1px solid black;
-    color: red;
+    // border: 1px solid $darkBrown;
+    border-radius: .9375rem;
+    height: fit-content;
+    display: flex;
+    line-height: 1rem;
+
+    &--left {
+    width: 44%;
+    display: flex;
     }
-    &-container {
-        margin: 0;
+
+    &--right {
+    @include flexColumn;
+    width: 80%;
     }
-    &-video {
-    width: 15%;
     }
-    &__title {
-    color: red;
+
+    &-image {
+    width: 44%;
+    display: flex;
+    width: 6.5rem;
+    height: 9.375rem;
+    object-fit: cover;
+    border-radius: .25rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: .9375rem;
     }
+
+    &-wine {
+    width: 85%;
+    text-align: left;
+    margin-top: 1rem; 
+    font-size: .875rem;
+    margin-left: 1rem;
+    }
+
+    &-style {
+    margin-left: 1rem;
+    font-size: .875rem;
+    }
+
+    &-rating {
+    margin-left: 1rem;
+    font-size: .875rem;
+    line-height: .5rem;
+    }
+
+    &-price {
+    margin-left: 1rem;
+    font-size: .875rem;
+    line-height: .5rem;
+    }
+  
     }
