@@ -24,7 +24,7 @@ export default function CommentsList({ comments, listId }) {
                     src={data.image}
                     alt="videos"
                   ></img>
-                </div>
+                  </div>
 
                 <div className="list-card--right">
                   <h2 className="list-wine">{data.wine}</h2>

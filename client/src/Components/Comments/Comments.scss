@@ -2,9 +2,17 @@
 @import "../../partials/fonts";
 @import "../../partials/_mixins";
 
+
+
 .hero {
+    background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url('../../assets/images/cork2.jfif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
     font-family: $glory;
-    background-color: $taupe;
+    background-color: $blacker;
     padding-bottom: 1rem;
 
     &-wrapper {
@@ -25,14 +33,17 @@
         }
 
         @include desktop {
-        height: 81.5vh;
+          @include flexColumn;
+          flex-wrap: nowrap;
+          align-items: center;
+        // height: 81.5vh;
         }
   }
 
     &-img {
     background-repeat: no-repeat;
     background-position: center;
-    width: 40%;
+    width: 44%;
     margin-top: 1rem;
     object-fit: cover;
     border-radius: 1.25rem;
@@ -47,15 +58,34 @@
         }
 
         @include desktop {
-        height: 81vh;
-        width: 71.5%;
+          order: -1;
+          width: 15%;
+          margin-right: 0rem;
+          // margin-left: 5rem;
+          // margin-top: 5rem;
+        // height: 81vh;
+        // width: 71.5%;
         }
     }
- &-card {
-   margin: 1rem;
-   color: $beige;
-  
+    
+    &-card {
+    margin: 1rem;
+    color: $beige;
+    font-size: 1rem;
+    font-weight: 600;
 
+      @include tablet {
+      font-size: 1.125rem;
+      margin-left: 2.5rem;
+      }
+
+      @include desktop {
+      margin-left: 10rem;
+      width: 75%;
+      text-align: center;
+      padding: .625rem;
+      font-size: 1.3125rem;
+      }
  }
 
  &-title {
@@ -64,9 +94,21 @@
    margin-top: 1rem;
    margin-left: 1rem;
 
-        @include tablet {
-        
-   }
+      @include tablet {
+      font-size: 1.125rem;
+      }
+
+      @include desktop {
+      display: flex;
+      font-size: 1.5625rem;
+
+      margin-top: 2rem;
+      order: -1;
+      font-size: 1.9375rem;
+      margin-left: 0rem;
+      justify-content: center;
+   
+      }
  }
 
  &-rating {
@@ -75,7 +117,14 @@
    margin-left: 1rem;
 
       @include tablet {
+      font-size: 1rem;
       width: 15%;
+      }
+
+      @include desktop {
+      order: -1;
+      margin: 0;
+      font-size: 1.5625rem;
       }
  }
 
@@ -86,7 +135,13 @@
 
       @include tablet {
       width: 15%;
+      font-size: 1rem;
+      }
 
+      @include desktop {
+      order: -1;
+      margin: 0;
+      font-size: 1.5625rem;
       }
  }
 
@@ -98,13 +153,29 @@
 
       @include tablet {
       width: 15%;
+      font-size: 1rem;
+      }
+
+      @include desktop {
+      order: -1;
+      margin: 0;
+      font-size: 1.5625rem;
       }
   
  }
 
  &-review {
-   font-size: 1rem;
-   font-style: oblique;
+   font-size: .75rem;
+   font-weight: 400;
+
+      @include tablet {
+      font-size: 1.25rem;
+      width: 95%;
+      }
+
+      @include desktop {
+      font-size: 1.5625rem;
+      }
    
  }
 

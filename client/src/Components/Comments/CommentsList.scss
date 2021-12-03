@@ -3,16 +3,38 @@
 @import "../../partials/_mixins";
 
 .list {
-    margin: 0;
-    background-color: $taupe;
-    // background-color: $cement;
+    margin-top: -1.9375rem;
+    background-color: $darkGrey;
     color: $beige;
+    font-family: $glory;
 
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &-title {
     text-align: left;
     margin-top: 1rem;
+    font-size: .875rem;
     margin-left: 1rem;
+    padding-top: 1rem;
+
+        @include tablet {
+        font-size: 1.125rem;
+        padding-top: 1.5rem;
+        }
+
+        @include desktop {
+        margin-top: 1rem;
+        font-size: 1.9375rem;
+        width:100%;
+        text-align: center;
+        margin-left: 0rem;
+        }
     }
 
     &-link {
@@ -21,20 +43,50 @@
     }
 
     &-card{
-    // border: 1px solid $darkBrown;
     border-radius: .9375rem;
     height: fit-content;
     display: flex;
     line-height: 1rem;
+    padding-bottom: 1.625rem;
+
+        @include desktop {
+        width: 38.4375rem;
+        padding-bottom: 1.875rem;
+        margin-left: 1rem;
+        }
 
     &--left {
     width: 44%;
     display: flex;
+
+        @include tablet {
+        margin-left: 2rem;
+        width: 30%;
+        }
+
+        @include desktop {
+        width: 30%;
+        }
     }
 
     &--right {
     @include flexColumn;
     width: 80%;
+
+        @include tablet{
+        width: 100%;
+        @include flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+        margin-right: 5.625rem;
+        }
+
+        @include desktop {
+        @include flexColumn;
+        margin-left: 2rem;
+        }
     }
     }
 
@@ -42,12 +94,42 @@
     width: 44%;
     display: flex;
     width: 6.5rem;
-    height: 9.375rem;
     object-fit: cover;
     border-radius: .25rem;
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: .9375rem;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
+        @include desktop {
+        width: 7.5rem;
+        }
+
+    &:hover {
+    opacity: 0.4;  
+
+        @include tablet {
+        margin-left: 3rem;
+        }
+
+        @include desktop {
+        width: 80%;
+        }
+    
+    &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    }
+
+        @include tablet {
+        margin-left: 2rem;
+        height: fit-content;
+    }
+    }
     }
 
     &-wine {
@@ -56,23 +138,69 @@
     margin-top: 1rem; 
     font-size: .875rem;
     margin-left: 1rem;
+
+        @include tablet {
+        font-size: 1.125rem;
+        width: 100%;
+        font-style: bold;
+        };
+
+        @include desktop {
+        margin-left: 0rem;
+        font-size: 1.3125rem;
+        font: message-box;
+        }
     }
 
     &-style {
     margin-left: 1rem;
     font-size: .875rem;
+    font-weight: 400;
+
+        @include tablet {
+        margin-left: 0rem;
+        width: 30%;
+        font-size: 1.125rem;   
+        }
+
+        @include desktop {
+        margin-left: 0rem;
+        font-size: 1.3125rem;
+        width: 100%;
+        }
     }
 
     &-rating {
     margin-left: 1rem;
     font-size: .875rem;
-    line-height: .5rem;
+    font-weight: 400;
+
+        @include tablet {
+        margin-left: 0rem;
+        width: 30%;
+        font-size: 1.125rem;
+        }
+
+        @include desktop {
+        width: 100%;
+        font-size: 1.3125rem;
+        }
     }
 
     &-price {
     margin-left: 1rem;
     font-size: .875rem;
-    line-height: .5rem;
+    font-weight: 400;
+
+        @include tablet {
+        margin-left: 0rem;
+        font-size: 1.125rem;
+        }
+
+        @include desktop {
+        width: 100%;
+        font-size: 1.3125rem;
+        }
     }
   
     }
