@@ -5,11 +5,13 @@ import "./SearchPage.scss";
 export default function SearchPage() {
   const [allReviews, setAllReviews] = useState([]);
   const [filterReviews, setFilterReview] = useState(allReviews);
+  console.log("all reviews", allReviews)
+  console.log("filter reviews", filterReviews)
 
   useEffect(() => {
     axios("http://localhost:8080/wines/review/")
       .then((response) => {
-        console.log(response.data);
+        console.log("use effect",response.data);
         setAllReviews(response.data);
         setFilterReview(response.data);
       })
@@ -21,12 +23,14 @@ export default function SearchPage() {
   const handleSearch = (event) => {
     let value = event.target.value.toLowerCase();
     let result = [];
-    console.log(value);
+    console.log("Handle Search", value);
     result = allReviews.filter((data) => {
+      console.log("handle Search", data)
       return data.wine.search(value) !== -1;
     });
 
     setFilterReview(result);
+    console.log(result)
   };
   return (
     <div className="search">

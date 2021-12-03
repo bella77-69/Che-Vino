@@ -5,56 +5,149 @@
 .wine {
     font-family: $glory;
     margin: 0, auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
     align-items: center;
-    border-radius: 1.5625rem;
     padding: 3%;
-    box-shadow: .625rem .625rem;
-    background-color: moccasin;
+    background-color: $darkBrown;
 
-    &-container {
-    margin: 0;
+        @include tablet {
+        margin: 0;
+        }
+
+
+    &-container--left {
+    width: 29%;
+    margin: 1rem;
+
+        @include tablet {
+        width: 30%;
+        }
+
+        @include desktop {
+        border-radius: .9375rem;
+        order: 1;
+        margin-right: 9rem;
+        }
+    }
+
+    &-container--right {
+    width: 70%;
+
+        @include tablet {
+        width: 70%;
+        @include flexColumn;
+        }
+
+        @include desktop {
+        border-radius: .9375rem;
+        // margin-right: 3rem;
+        align-items: center;
+        }
     }
 
     &-title {
-    color: midnightblue;
+    color: $beige;
+    font-size: 1rem;
+    font-weight: 500; 
+    line-height: 1.5rem;
     display: flex;
     align-items: center;
+    font-weight: bolder;
 
+        @include tablet {
+        font-size: 1.5rem ;
+        line-height: 2rem;
+        }
+
+        @include desktop {
+        display: flex;
+        margin-top: 3.5rem;
+        font-size: 2rem;
+        }
     }
     &-info {
-        color: red;
+    color: $beige;
+    font-size: .875rem;
+    line-height: 1rem;
+    font-weight: lighter;
+
+        @include tablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        }
+
+        @include desktop {
+        font-size: 1.5rem;
+        }
     }
 
     &-location {
-        color: green;
+    color:$beige;
+    font-size: .75rem;
+    line-height: 1rem;
+
+        @include tablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        }
+
+        @include desktop {
+        font-size: 1.5rem;
+        }
     }
 
     &-review {
-        color: black;
+    color: $beige;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-style: oblique;
+
+        @include tablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        }
+
+        @include desktop {
+        font-size: 1.5rem;
+        }
     }
 
     &-img {
-        object-fit: cover;
+    object-fit: cover;
+    height: 30vh; //set to auto at breakpoints
+
+        @include tablet {
+        height: auto;
+        margin-left: 1.5rem;
+        }
+
+        @include desktop {
+        padding: 3.125rem;
+        display: inline-block;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: middle;
+        width: 40%;
+        }
     }
 
-    &-img__box {
-    margin: 0;
-
-    }
     &-button {
     outline: none;
     text-decoration: none;
-    border-radius: 3.125rem;
+    border-radius: 1.25rem;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     opacity: 1;
-    background-color: orchid;
-    border: .0625rem solid grey;
-
+    background-color: $darkGrey;
+    border: none;
+    width: 85%;
+    justify-content: center;
+    height: 5vh;
+    color: $beige;
+    font-family: $glory;
+    font-weight: bolder;
+    margin-top: 1rem;
     &:hover {
         animation: rotate 0.7s ease-in-out both;
         animation-delay: 0.06s;
@@ -78,5 +171,16 @@
       }
       
     }
+        @include tablet {
+        width: 50%;
+        font-size: 1rem;
+        }
+
+        @include desktop {
+        width: 32%;
+        font-size: 1.5rem;
+        display: flex;
+        order: -1;
+        }
 }
 }

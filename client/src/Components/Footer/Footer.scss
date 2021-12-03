@@ -30,7 +30,7 @@
         margin-left: 1.5rem;
 
         @include desktop {
-        margin-left: 1.5rem;
+        margin-left: 3.5rem;
         width: 50%;
         height: 8vh;
         }
@@ -41,7 +41,7 @@
     padding-right: 1.875rem;
         
         @include desktop {
-        padding: 25px;
+        padding: .9375rem;
         }
 }
     }
@@ -58,7 +58,7 @@
         }
 
         @include desktop {
-        margin-left: 1rem;
+        margin-left: 2rem;
         }
     }
 

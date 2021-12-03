@@ -53,7 +53,7 @@
         }
 
         @include desktop {
-        margin-left: 1rem;
+        margin-left: 3.5rem;
         width: 9rem;
         height: 70%;
         }
@@ -83,7 +83,7 @@
         @include desktop {
         width: 35%;
         height: 3.375rem;
-        margin-right: 1rem;
+        margin-right: 3.5rem;
         font-size: 1.375rem;
         }
     
@@ -110,7 +110,7 @@
 
         @include desktop {
         width: 9.687rem;
-        height: 3.375rem;
+        // height: 3.375rem;
         }
     }
 }

@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router()
 const fs = require("fs");
 
-
 function listReds() {
-    return JSON.parse(fs.readFileSync("./data/red.json", 'utf-8'));
+    return JSON.parse(fs.readFileSync("./data/red.json", 'utf-8'));  
 }
 
 function getRedsById(id) {
@@ -17,6 +16,8 @@ router.get("/", (req, res) => {
     const reds = listReds();
     res.status(200).json(reds);
 });
+
+
 router
 .get('/:id', (req, res) => {
     console.log(req.params.id);
@@ -35,7 +36,5 @@ router
     });
 }
 )
-
-
 
 module.exports = router;

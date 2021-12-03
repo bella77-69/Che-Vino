@@ -38,7 +38,7 @@ export default function DessertWinePage () {
           <p className="wine-review">{oneData.id}</p>
          </div>
           <div className="wine-img__box">
-          <img src={oneData.image} className="wine-img" alt="red-wine"/>
+          <img src={oneData.image} className="wine-img" alt="wine"/>
  
         <button className="wine-button" onClick={handleClick}>Wine Generator</button>
       </div>
