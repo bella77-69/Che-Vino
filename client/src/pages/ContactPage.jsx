@@ -1,56 +1,94 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React from "react";
 import './ContactPage.scss';
-export default function ContactPage() {
-  const [inputs, setInputs] = useState({});
+import Contact from "../Components/Contact/Contact";
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const email =event.target.email;
-    const value = event.target.value;
-
-    setInputs(values => ({...values, [name]: value, [email]: value}))
-  }
-
-  const handleSubmit = (event) => {
+export default class ContactPage extends React.Component {
+      state = {
+        id: '',
+      name: '',
+      email: '',
+      comment: '',
+    };
+  
+  handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(inputs);
-  }
+    const {id, name, email, comment } = this.state;
+
+    const addReview = {
+      comment: comment,
+      email: email,
+      id: id,
+      name: name,
+    };
+
+    axios
+      .post('http://localhost:8080/wines/review/', addReview)
+      .then((response) => console.log('Comment Created!!!', response))
+
+      .catch((error) => {
+        console.error(error);
+      });
+    }
+
+    handleNameChange = (event) => {
+      this.setState({name: event.target.value});
+    }
+
+    handleEmailChange = (event) => {
+      this.setState({email: event.target.value});
+    }
+
+    handleCommentChange = (event) => {
+      this.setState({comment: event.target.value})
+    }
+
+  render() {
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <div>
+      
+    <form onSubmit={this.handleSubmit} className="form">
       <div className="form-container">
-  
+      <h1 className="form-head">Contact Che Vino</h1>
+      <p className="form-question">For Inquiries, Support Requests or General Questions</p>
       <input className="form-input"
         type="text" 
-        name="username"
+        name="name"
         placeholder="Enter your name." 
-        value={inputs.username || ""} 
-        onChange={handleChange}
+        value={this.name} 
+        onChange={this.handleNameChange}
       />
 
         <input className="form-input"
           type="text" 
           name="email"
           placeholder="Enter your email" 
-          value={inputs.email || ""} 
-          onChange={handleChange}
+          value={this.email} 
+          onChange={this.handleEmailChange}
         />
    
         <input className="form-input form-comment"
           type="text" 
           name="comment"
           placeholder="Comments...." 
-          value={inputs.comment || ""} 
-          onChange={handleChange}
+          value={this.comment} 
+          onChange={this.handleCommentChange}
         />
     
-        <button className="form-button"onSubmit={handleChange}>Submit</button>
+        <button className="form-button">Submit</button>
        </div>
+      
     </form>
-  
+ 
+  <div>
+ <Contact />
+
+  </div>
+   </div>
   )
 }
-
+}
   
 

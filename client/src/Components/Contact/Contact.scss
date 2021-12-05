@@ -1,0 +1,26 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+.contact {
+    margin: 0, auto;
+    font-family: $glory;
+    padding: .875rem;
+
+    &-title {
+    font-size: .875rem;
+    }
+
+    &-name {
+    margin: 0;
+    font-size: .6875rem;
+    }
+
+    &-review {
+    font-size: .75rem;
+    }
+
+    &-time {
+    color: $Greyish;
+    }
+}

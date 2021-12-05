@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require('cors');
 const app = express();
-const router = express.Router();
 PORT = 8080;
 
 const redRoute = require('./routes/redRoute');
@@ -99,6 +98,7 @@ routes: [
 })
 })
 
+
 app.get ('/review', (req, res) => {
     res.json({message: 'Hello, welcome to my Reviews api',
 routes: [
@@ -108,11 +108,20 @@ routes: [
     },
     {
         method: 'get',
-        endpoint: 'review/:id'
-    }
+        endpoint: '/review/:id'
+    },
+    {
+        method: 'post',
+        endpoint: '/review',
+        body: {
+            name: 'string',
+            email: 'string',
+            comment: 'string'
+        },
+    },
 ]
-})
-})
+});
+});
 
 
 app.listen(8080, () => {

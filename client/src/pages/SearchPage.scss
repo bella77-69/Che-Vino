@@ -4,59 +4,112 @@
 
 .search {
     margin: 0, auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
+    font-family: $glory;
+    background-color: $darkBrown;
+    padding-bottom: 1rem;
+
+    @include desktop {
+    @include flexColumn;
     align-items: center;
+    }
 
     &-card {
-        display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        @include tablet {
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+
+        @include desktop {
+        width: 100%;
         flex-direction: column;
-    }
-
-    &:active {
-        opacity: 1;
-        transition: 1s ease-in-out;
-        transform: scale(1.08);
-    }
-    &-box {
-        display: flex;
-        color: white;
+        margin-top: 3rem;
+        }
     
+    &:active {
+    opacity: 1;
+    transition: 1s ease-in-out;
+    transform: scale(1.08);
+    }
     }
 
-    &-left {
-        // position: absolute;
-        z-index: 10;
-        cursor: pointer;
-        user-select: none;
+    &-year {
+    font-size: .875rem;
+    font-weight: 600;
+    color: $beige;
+    margin-top: 1rem;
+ 
 
-        &:hover {
-            color: red;
+        @include tablet {
+        font-size: 1.125rem;
+        margin-left: 3rem;
+        }
+
+        @include desktop {
+        margin-top: 1rem;
+        margin-left: 0;
+        }
+}
+    &-input {
+    font-size: .875rem;
+    width: 50%;
+    border-radius: .9375rem;
+    margin-top: 1rem;
+
+    box-shadow: 0 .0725rem .0625rem $cement;
+
+        @include tablet {
+        font-size: 1.125rem;
+        margin-left: 3rem;
+        }
+
+        @include desktop {
+        width: 20%;
+        margin-left: 0;
+        margin-top: 3rem;
+        };
+    }
+
+    &-box {
+    display: inline-block;
+    list-style-type: none;
+    font-size: .875rem;
+    color: $beige;
+    width: 90%;
+
+        @include tablet {
+        font-size: 1.125rem;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+        }
+
+        @include desktop {
+        width: 50%;
+        margin-top: 2rem;
         }
     }
 
-    &-right {
-        // position: absolute;
-        z-index: 10;
-        cursor: pointer;
-        user-select: none; 
-
-        &:hover {
-            color: red;
+    &-list {
+    display: block;
+    position: relative;
+    background-color: $darkGrey;
+    border-radius: .9375rem;
+    padding: .625rem;
+    width: 80%;
+    
+        @include desktop {
+        margin-left: 2rem;
         }
+  
+    &:hover {
+    color: $mattegrey;
     }
-
-    &-title {
-        color: purple;
     }
-
-    &-img {
-        width: 15%;
-        height: auto;
-    }
-
-
 }
 
 

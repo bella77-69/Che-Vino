@@ -55,7 +55,6 @@ export default class CommentsPage extends React.Component {
       }
     }
   }
-
   render() {
     return (
       <div>

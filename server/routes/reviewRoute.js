@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router()
 const fs = require("fs");
+const { v4: uuidv4} = require('uuid');
+const path = require('path');
+
+const reviewFile = path.join(__dirname, '../data/newReviews.json');
 
 function listReviews() {
     return JSON.parse(fs.readFileSync('./data/reviews.json', 'utf-8'));
@@ -14,24 +18,24 @@ function getReviewsById(id) {
 
 function addReview(body) {
     const reviewArr = listReviews();
-    const review = new Review(body.wine, body.name, body.comment);
+    const review = new Review(body.name, body.email, body.comment);
     reviewArr.push(review)
 
-    fs.writeFileSync(listReviews())
+    fs.writeFileSync(reviewFile, JSON.stringify(reviewArr));
     return review;
 }
 
-function Review(wine, name, comment) {
+function Review(name, email, comment) {
     this.id = uuidv4();
-    this.wine = wine;
     this.name = name;
+    this.email = email;
     this.comment = comment;
 }
 
 router.get("/", (req, res) => {
     const reviews = listReviews();
     res.status(200).json(reviews);
-});
+})
 
 router.get('/:id', (req, res) => {
     console.log(req.params.id);
@@ -49,6 +53,25 @@ router.get('/:id', (req, res) => {
         }
     });
 })
+
+let comments = [];
+
+router.post('/', (req, res) => {
+    const newComment = {
+        name: req.body.name,
+        email: req.body.email,
+        comment: req.body.comment
+    }
+    if(!req.body.name || !req.body.email || !req.body.comment) {
+        res.status(400).json ({
+            error: "POST body must contain all required properties",
+            requiredProperties: ['name', 'email', 'comment'],
+        });
+    }
+    comments.push(newComment);
+    console.log(comments)
+    res.json(addReview(req.body));
+});
 
 module.exports = router;
 

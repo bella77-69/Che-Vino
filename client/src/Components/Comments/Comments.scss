@@ -2,8 +2,6 @@
 @import "../../partials/fonts";
 @import "../../partials/_mixins";
 
-
-
 .hero {
     background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url('../../assets/images/cork2.jfif');
     background-repeat: no-repeat;
@@ -23,20 +21,17 @@
       justify-content: flex-start;
       color: $beige;
 
-   
         @include tablet {
         position: relative;
-        // height: 25rem;
         text-align: center;
         justify-content: center;
         align-items: center;
         }
 
         @include desktop {
-          @include flexColumn;
-          flex-wrap: nowrap;
-          align-items: center;
-        // height: 81.5vh;
+        @include flexColumn;
+        flex-wrap: nowrap;
+        align-items: center;
         }
   }
 
@@ -54,17 +49,12 @@
         display: flex;
         order: -1;
         align-items: center;
-        // width: 85%;
         }
 
         @include desktop {
-          order: -1;
-          width: 15%;
-          margin-right: 0rem;
-          // margin-left: 5rem;
-          // margin-top: 5rem;
-        // height: 81vh;
-        // width: 71.5%;
+        order: -1;
+        width: 15%;
+        margin-right: 0rem;
         }
     }
     
@@ -107,7 +97,6 @@
       font-size: 1.9375rem;
       margin-left: 0rem;
       justify-content: center;
-   
       }
  }
 
@@ -161,7 +150,6 @@
       margin: 0;
       font-size: 1.5625rem;
       }
-  
  }
 
  &-review {
@@ -176,8 +164,5 @@
       @include desktop {
       font-size: 1.5625rem;
       }
-   
  }
-
-  
 }

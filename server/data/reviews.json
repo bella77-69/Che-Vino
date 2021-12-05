@@ -27,7 +27,6 @@
                 "timestamp": 1626011132000
             }
         ]
-    
     },
     {
         "id": "c05b9a93-8682-4ab6-aff2-92ebb4bbfc14",
@@ -57,7 +56,6 @@
                 "timestamp": 1625177192000
             }
         ]
-    
     },
     {
         "id": "25ce5d91-a262-4dcf-bb87-42b87546bcfa",
@@ -87,7 +85,6 @@
                 "timestamp": 1623002522000
             }
         ]
-    
     },
     {
         "id": "b6f35f03-7936-409b-bd2a-446bcc5f30e7",
@@ -117,7 +114,6 @@
                 "timestamp": 1620930181000
             }
         ]
-    
     },
     {
         "id": "1b964601-a6dd-4fcc-b5f3-1000338c9557",
@@ -147,7 +143,6 @@
                 "timestamp": 1630678260000
             }
         ]
-    
     },
     {
         "id": "9c268c0a-83dc-4b96-856a-bb5ded2772b1",
@@ -177,7 +172,6 @@
                 "timestamp": 1631023292000
             }
         ]
-    
     },
     {
         "id": "fc5261d1-58a0-47e4-9c19-2b7a1715fa1b",
@@ -207,7 +201,6 @@
                 "timestamp": 1631716921000
             }
         ]
-    
     },
     {
         "id": "99478bed-6428-49ed-8eaa-f245a5414336",
@@ -222,7 +215,7 @@
                 "id": "6ff4314c-acde-4c91-a753-95cb7a366ee9",
                 "name": "Jesse Cruz",
                 "comment": "One of the last holdouts for Gewurztraminer from this area brings us another argument that the grape deserves wider recognition in the region.  I think what’s happening is that so little acreage is left, area winemakers avail themselves of this and the other couple of bottlings for drinking pleasure so that their own customers won’t request yet another bottling in their own arsenals.  This example is actually fully dry (zero residual sugar) and utilizes a little neutral oak to round off the acidity, leaving impressions of fresh tangerine, roses, lychee and a dash of grapefruit to refresh, finish long and leave us wanting more.  Perfectly balanced, there’s a tension that keeps me coming back sip after sip.  Riveting wine!",
-                "timestamp":  1632227521000
+                "timestamp": 1632227521000
             },
             {
                 "id": "894b2ef9-640e-4d55-95ac-c65cfc39d693",
@@ -237,7 +230,6 @@
                 "timestamp": 1632512763000
             }
         ]
-    
     },
     {
         "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3",
@@ -267,7 +259,6 @@
                 "timestamp": 1632496261000
             }
         ]
-    
     },
     {
         "id": "115a7fe2-88f2-40b2-8d66-2530c6af1936",
@@ -297,7 +288,6 @@
                 "timestamp": 1631273521000
             }
         ]
-    
     },
     {
         "id": "a193a6a7-42ab-4182-97dc-555ee85e7486",
@@ -327,7 +317,6 @@
                 "timestamp": 1631273521000
             }
         ]
-    
     },
     {
         "id": "8f16bd30-bab5-40af-aca2-b63d5fdd1acc",
@@ -357,7 +346,6 @@
                 "timestamp": 1631273521000
             }
         ]
-    
     },
     {
         "id": "5b03fb06-bbc0-4814-8a12-6f1f4e1223f8",
@@ -380,13 +368,13 @@
                 "comment": "This bottle has all the classic, buttery characteristics of California Chardonnay, but these flavors are met with the energizing zing of tart lemon zest. This bottle may just convert your Chardonnay-hating friends.",
                 "timestamp": 1631273521000
             },
-                {
-                    "id": "eb647e6c-8673-4520-9155-3cec6f7a120d",
-                    "name": "Will Smith",
-                    "comment": "Notes of key lime and white pepper are balanced in perfect harmony. This wine would pair well with everything from schnitzel to sautéed salmon, and would be a great fit for any celebration.",
-                    "timestamp": 1631273521000
-                }
-            ]
+            {
+                "id": "eb647e6c-8673-4520-9155-3cec6f7a120d",
+                "name": "Will Smith",
+                "comment": "Notes of key lime and white pepper are balanced in perfect harmony. This wine would pair well with everything from schnitzel to sautéed salmon, and would be a great fit for any celebration.",
+                "timestamp": 1631273521000
+            }
+        ]
     },
     {
         "id": "bdc6bb69-e09c-498d-8abd-be2792504d00",
@@ -416,7 +404,6 @@
                 "timestamp": 1632344461000
             }
         ]
-    
     },
     {
         "id": "3ce124a4-78b0-4d80-91b9-11f9ced631a7",
@@ -446,7 +433,6 @@
                 "timestamp": 1632344461000
             }
         ]
-    
     },
     {
         "id": "4dd464d6-90b8-4330-91e0-bd1217811bd9",
@@ -476,7 +462,6 @@
                 "timestamp": 1632344461000
             }
         ]
-    
     },
     {
         "id": "c0ba64a8-0ecb-4a7d-ab7f-2dbbd1d437b1",
@@ -506,7 +491,6 @@
                 "timestamp": 1632512763000
             }
         ]
-    
     },
     {
         "id": "d9ef9352-2367-4272-8884-70cf80cb7a38",
@@ -536,7 +520,6 @@
                 "timestamp": 1632496261000
             }
         ]
-    
     },
     {
         "id": "b70067d1-49c9-4925-b830-67b3e98005d5",
@@ -566,7 +549,6 @@
                 "timestamp": 1631273521000
             }
         ]
-    
     },
     {
         "id": "7c79d334-6b90-4052-9def-aa9b8519c9fb",
@@ -596,7 +578,5 @@
                 "timestamp": 1631716921000
             }
         ]
-    
     }
-
 ]

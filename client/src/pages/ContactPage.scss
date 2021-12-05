@@ -6,38 +6,89 @@
     margin: 0;
     padding: 10px;
     background-color: $blacker;
+    font-family: $glory;
 
     &-container {
     @include flexColumn;
     margin: 1rem;
     align-items: center;
+    color: $beige;
+
+        @include desktop {
+        margin-right: 5rem;
+        align-items: flex-end;
+        }
+    }
+
+    &-head {
+    
+    font-size: .875rem;
+    }
+
+    &-question {
+    font-style: oblique;
+    font-size: .75rem;
+    text-align: center;
+    margin-top: 0;
+    width: 65%;
     }
 
     &-input {
-    padding: 1rem;
+    padding: .625rem;
     border-radius: .3125rem;
     margin-bottom: 1.5rem;
     background-color: $Greyish;
-    
+    border-radius: .9375rem;
 
+        @include tablet {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        }
+
+        @include desktop {
+        width: 50%;
+        }
+  
+    
     &::placeholder {
     color:$beige;
-    font-family: 'Glory';
-    font-size: 1.1875rem;
-    font-weight: 600;
+    font-family: $glory;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+
+        @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        }
     }
     }
     &-comment {
     height: 10vh;
+
+        @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        }
+
+        @include desktop {
+        height: 20vh;
+        }
     }
 
     &-button {
     width: 35%;
-    height: 6vh;
     background-color: $darkdarkgrey;
     color: $beige;
-    border-radius: .625rem;
-    font-size: 20px;
+    border-radius: .9375rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    border: none;
+
+        @include tablet {
+        width: 6.687rem;
+        height: 2.375rem;
+        }
 
     &:hover{
     background-color: $brown;
