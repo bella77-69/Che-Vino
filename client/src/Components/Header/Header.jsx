@@ -18,7 +18,7 @@ export default function Header() {
           <div className="header-nav__info">Contact</div>
         </NavLink>
         <NavLink to="/comments" className="header-nav--active">
-          <div className="header-nav__info">Comments</div>
+          <div className="header-nav__info">Top 20</div>
         </NavLink>
       </nav>
     </section>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CommentsList({ comments, listId }) {
   const comment = comments;
-
+console.log(comments)
   return (
     <section className="list">
       <h2 className="list-title">Top 20 Wines of 2021</h2>

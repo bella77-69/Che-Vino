@@ -16,13 +16,26 @@
 
         @include desktop {
         margin-right: 5rem;
-        align-items: flex-end;
+        align-items: center;
+        background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.3)),url("../assets/images/pour.png");
+        background-repeat: no-repeat;
+        margin-left: 5rem;
+        flex-wrap: wrap;
+        align-content: flex-end;
         }
     }
 
     &-head {
-    
     font-size: .875rem;
+
+        @include tablet {
+        font-size: 1.125rem;
+        }
+
+        @include desktop {
+        font-size: 1.25rem;
+      
+        }
     }
 
     &-question {
@@ -31,6 +44,10 @@
     text-align: center;
     margin-top: 0;
     width: 65%;
+
+        @include tablet {
+        font-size: 1.125rem;
+        }
     }
 
     &-input {
@@ -48,6 +65,7 @@
 
         @include desktop {
         width: 50%;
+        font-size: 1rem;
         }
   
     
@@ -88,6 +106,7 @@
         @include tablet {
         width: 6.687rem;
         height: 2.375rem;
+        font-size: .875rem;
         }
 
     &:hover{

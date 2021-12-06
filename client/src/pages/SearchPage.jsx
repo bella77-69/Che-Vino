@@ -9,7 +9,7 @@ export default function SearchPage() {
   console.log("filter reviews", filterReviews)
 
   useEffect(() => {
-    axios("http://localhost:8080/wines/review/")
+    axios("http://localhost:8080/wines/reds/")
       .then((response) => {
         console.log("use effect",response.data);
         setAllReviews(response.data);

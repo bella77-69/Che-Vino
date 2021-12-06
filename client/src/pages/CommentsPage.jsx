@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import Comments from "../Components/Comments/Comments";
 import CommentsList from "../Components/Comments/CommentsList";
-import "./Comments.scss";
+// import "./Comments.scss";
 
 export default class CommentsPage extends React.Component {
   state = {
