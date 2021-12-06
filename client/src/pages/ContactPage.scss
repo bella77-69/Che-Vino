@@ -33,8 +33,7 @@
         }
 
         @include desktop {
-        font-size: 1.25rem;
-      
+        font-size: 1.5625rem;
         }
     }
 
@@ -48,6 +47,10 @@
         @include tablet {
         font-size: 1.125rem;
         }
+
+        @include desktop {
+        font-size: 1.5rem;
+        }
     }
 
     &-input {
@@ -56,28 +59,33 @@
     margin-bottom: 1.5rem;
     background-color: $Greyish;
     border-radius: .9375rem;
+    font-size: .875rem;
 
         @include tablet {
         margin-top: 1rem;
-        font-size: 0.875rem;
+        font-size: 1.125rem;
         line-height: 1.25rem;
         }
 
         @include desktop {
         width: 50%;
-        font-size: 1rem;
+        font-size: 1.5625rem;
         }
   
     
     &::placeholder {
     color:$beige;
     font-family: $glory;
-    font-size: 0.75rem;
+    font-size: .875rem;
     line-height: 1.25rem;
 
         @include tablet {
-        font-size: 0.875rem;
+        font-size: 1.125rem;
         line-height: 1.25rem;
+        }
+
+        @include desktop {
+        font-size: 1.5625rem;
         }
     }
     }
@@ -87,10 +95,12 @@
         @include tablet {
         font-size: 0.875rem;
         line-height: 1.25rem;
+        width: 30%;
         }
 
         @include desktop {
         height: 20vh;
+        width: 50%;
         }
     }
 
@@ -107,6 +117,10 @@
         width: 6.687rem;
         height: 2.375rem;
         font-size: .875rem;
+        }
+
+        @include desktop {
+        font-size: 1.125rem;
         }
 
     &:hover{

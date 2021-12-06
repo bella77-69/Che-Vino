@@ -451,17 +451,6 @@
     "id": 41
     },
     {
-    "winery": "Hundred Acre",
-    "wine": "Gold Chardonnay N.V.",
-    "rating": {
-    "average": "4.7",
-    "reviews": "481 ratings"
-    },
-    "location": "United States\n·\nNapa Valley",
-    "image": "https://images.vivino.com/highlights/icon/top_ranked.svg",
-    "id": 42
-    },
-    {
     "winery": "F.X. Pichler",
     "wine": "Unendlich Riesling N.V.",
     "rating": {
@@ -922,17 +911,6 @@
     "location": "France\n·\nChevalier-Montrachet Grand Cru",
     "image": "https://images.vivino.com/thumbs/lD32nuv9Sw6sJ7eQ8M6FtA_pb_x300.png",
     "id": 84
-    },
-    {
-    "winery": "Trimbach",
-    "wine": "Clos Sainte Hune Riesling Alsace 1989",
-    "rating": {
-    "average": "4.7",
-    "reviews": "48 ratings"
-    },
-    "location": "France\n·\nAlsace",
-    "image": "https://images.vivino.com/thumbs/sOfai0jLTaKoP_6oXtvH9w_pb_x300.png",
-    "id": 85
     },
     {
     "winery": "Joh. Jos. Prüm",
@@ -2275,17 +2253,6 @@
     "location": "Italy\n·\nMarche",
     "image": "https://images.vivino.com/thumbs/YL3ZizVbTbK1htyrRBjTLA_pb_x300.png",
     "id": 207
-    },
-    {
-    "winery": "Domaine Coche-Dury",
-    "wine": "Meursault Blanc 2010",
-    "rating": {
-    "average": "4.6",
-    "reviews": "156 ratings"
-    },
-    "location": "France\n·\nMeursault",
-    "image": "https://images.vivino.com/thumbs/RqOPX5tRQOyZ9XN3hjhMCA_pb_x300.png",
-    "id": 208
     },
     {
     "winery": "Domaine des Comtes Lafon",
@@ -3751,17 +3718,6 @@
     "id": 341
     },
     {
-    "winery": "Domaine de Montille",
-    "wine": "Puligny-Montrachet 1er Cru Le Cailleret 2006",
-    "rating": {
-    "average": "4.6",
-    "reviews": "46 ratings"
-    },
-    "location": "France\n·\nPuligny-Montrachet Premier Cru",
-    "image": "https://images.vivino.com/thumbs/Q7YsINAjSXKoF-bReiq9Zg_pb_x300.png",
-    "id": 342
-    },
-    {
     "winery": "Williams Selyem",
     "wine": "Olivet Lane Vineyard Chardonnay 2015",
     "rating": {
@@ -4849,17 +4805,6 @@
     "location": "Italy\n·\nIsola dei Nuraghi",
     "image": "https://images.vivino.com/highlights/icon/top_ranked.svg",
     "id": 441
-    },
-    {
-    "winery": "Domaine de la Vougeraie",
-    "wine": "Vougeot 1er Cru 'Le Clos Blanc de Vougeot' (Monopole) 2002",
-    "rating": {
-    "average": "4.6",
-    "reviews": "31 ratings"
-    },
-    "location": "France\n·\nVougeot 1er Cru 'Le Clos Blanc'",
-    "image": "https://images.vivino.com/thumbs/SZwT1VVxRSu2MaxUFGOHNw_pb_x300.png",
-    "id": 442
     },
     {
     "winery": "Emrich-Schönleber",

@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import Comments from "../Components/Comments/Comments";
 import CommentsList from "../Components/Comments/CommentsList";
-// import "./Comments.scss";
+
 
 export default class CommentsPage extends React.Component {
   state = {
@@ -12,7 +12,7 @@ export default class CommentsPage extends React.Component {
   };
 
   componentDidMount() {
-      this.fetchComment();
+    this.fetchComment();
   }
 
   fetchComment = () => {
@@ -28,7 +28,7 @@ export default class CommentsPage extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   getWineById(id) {
     axios
@@ -47,7 +47,7 @@ export default class CommentsPage extends React.Component {
       });
   }
   componentDidUpdate(prevProps, prevState) {
-    const {id} = this.props.match.params
+    const { id } = this.props.match.params;
     console.log("In component did update:", id);
     if (id) {
       if (prevState.activeComment && prevState.activeComment.id !== id) {

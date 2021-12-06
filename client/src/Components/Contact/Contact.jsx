@@ -1,21 +1,23 @@
 import React from "react";
 import "./Contact.scss";
 import background from "../../assets/images/pour.png";
-export default function Contact({ comment }) {
 
+export default function Contact({ comment }) {
   return (
     <div className="contact">
       <div className="contact-box">
-      <img className="contact-background" src={background} alt="wine-bottle"/>
-      <h1 className="contact-title">Recent Comments</h1>
-     
+        <img
+          className="contact-background"
+          src={background}
+          alt="wine-bottle"
+        />
+        <h1 className="contact-title">Recent Comments</h1>
       </div>
       <div className="contact-container" key={comment.id}>
-         
         <h4 className="contact-name">{comment.name}</h4>
         <p className="contact-review">{comment.comment}</p>
 
-        <h4 className="contact-name">{comment.name}Mike McKinnon</h4>
+        <h4 className="contact-name">Mike McKinnon</h4>
         <p className="contact-review">
           When it comes to wine, this can mean a few different things: learn
           more about wine, helping you chose better wine, record your tasting
@@ -50,7 +52,6 @@ export default function Contact({ comment }) {
         </p>
         <p className="contact-time">posted 1 day ago</p>
       </div>
-      </div>
-  
+    </div>
   );
 }

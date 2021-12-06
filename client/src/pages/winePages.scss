@@ -112,7 +112,7 @@
 
     &-img {
     object-fit: cover;
-    height: 30vh; //set to auto at breakpoints
+    height: 30vh;
 
         @include tablet {
         height: auto;

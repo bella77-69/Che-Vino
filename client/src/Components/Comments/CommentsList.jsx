@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CommentsList({ comments, listId }) {
   const comment = comments;
-console.log(comments)
+
   return (
     <section className="list">
       <h2 className="list-title">Top 20 Wines of 2021</h2>
@@ -24,12 +24,12 @@ console.log(comments)
                     src={data.image}
                     alt="videos"
                   ></img>
-                  </div>
+                </div>
 
                 <div className="list-card--right">
                   <h2 className="list-wine">{data.wine}</h2>
-                  <p className="list-style">Style:  {data.style}</p>
-                  <h2 className="list-rating">Rating:  {data.rating}</h2>
+                  <p className="list-style">Style: {data.style}</p>
+                  <h2 className="list-rating">Rating: {data.rating}</h2>
                   <p className="list-price">{data.price}</p>
                 </div>
               </div>

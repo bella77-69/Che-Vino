@@ -44,7 +44,7 @@
         width: 2%;
         top: 0;
         margin-left: -1rem;
-        order: 0;
+        order: 1;
         height: 2vh;
         }
 
@@ -82,13 +82,13 @@
     &-img {
     display: flex;  
     width: 50%;
-    height: 13vh;
+    height: 11vh;
     border-radius: .9375rem;
     margin-left: 3rem;
 
         @include tablet {
         width: 65%;
-        height: 28vh;
+        height: auto;
         margin-left: 4.2rem;
         }
 

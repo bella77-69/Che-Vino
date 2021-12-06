@@ -54,6 +54,7 @@
         width: 100%;
         justify-content: flex-start;
         margin-left: 5rem;
+        font-size: 1.5625rem;
         }
     }
 
@@ -82,6 +83,10 @@
         @include tablet {
         font-size: 1.125rem;
         }
+
+        @include desktop {
+        font-size: 1.5625rem;
+        }
     }
 
     &-review {
@@ -90,7 +95,7 @@
     font-weight: 300;
 
         @include tablet {
-        font-size: 1.125rem;
+        font-size: 1.5625rem;
         }
     }
 
@@ -103,6 +108,7 @@
 
         @include desktop {
         padding-bottom: 1.25rem;
+        font-size: 1.3125rem;
         }
     }
 }
