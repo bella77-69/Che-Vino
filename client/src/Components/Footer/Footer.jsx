@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="footer-nav">
           <div className="footer-nav--wrapper">
             <ul className="footer-list">
-              <li className="footer-item">Chantelle Mckenzie</li>
+              <li className="footer-item">Jane Doe</li>
               <li className="footer-item">Che Vino CEO</li>
             </ul>
             <ul className="footer-list">

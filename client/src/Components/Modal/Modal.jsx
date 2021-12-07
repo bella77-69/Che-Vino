@@ -26,21 +26,21 @@ export default class Modal extends React.Component {
         </div>
         <div className="modal-container">
           <Link to="/wines/reds" className="modal-link">
-            <img className="modal-img" src={red} alt="wine-img" />
+            <img className="modal-img modal-red" src={red} alt="wine-img" />
           </Link>
           <div className="modal-content">{this.props.children}</div>
         </div>
         <div className="modal-container">
           <div className="modal-body"></div>
           <Link to="/wines/whites" className="modal-link">
-            <img className="modal-img" src={white} alt="wine-img" />
+            <img className="modal-img modal-white" src={white} alt="wine-img" />
           </Link>
           <div className="modal-content">{this.props.children}</div>
         </div>
         <div className="modal-container">
           <div className="modal-body"></div>
           <Link to="/wines/sparkling" className="modal-link">
-            <img className="modal-img" src={sparkling} alt="wine-img" />
+            <img className="modal-img modal-sparkling" src={sparkling} alt="wine-img" />
           </Link>
           <div className="modal-content">{this.props.children}</div>
         </div>

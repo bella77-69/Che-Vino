@@ -44,16 +44,21 @@
     width: 6%;
 
         @include tablet {
-        width: 2%;
-        top: 0;
-        margin-left: -1rem;
+        visibility: hidden;
+        display: flex;
+        // width: 2%;
+        // top: 0;
+        margin-left: -1.5rem;
         order: 1;
         height: 2vh;
+        flex-wrap: wrap;
+        flex-direction: row;
+        transform: translateX(66px);
         }
 
-        @include desktop {
-        margin-left: -3rem;
-        }
+        // @include desktop {
+        // margin-left: -3rem;
+        // }
     }
 
     &-link {
@@ -71,14 +76,44 @@
         @include tablet {
         width: 65%;
         height: auto;
-        margin-left: 4.2rem;
+        margin-left: 4.5rem;
         }
 
         @include desktop {
-        width: 69%;
-        height: 21vh;
+        width: 53%;
         }
     }
+
+    &-red {
+
+        @include tablet {
+        margin-left: 4.3rem;
+        }
+    }
+    //     @include desktop {
+    //     margin-left: 4rem;
+    //     }
+    // }
+
+    &-sparkling {
+        @include tablet {
+        margin-left: 4rem;
+        }
+    }
+    //     @include desktop {
+    //     margin-left: 4rem;
+    //     }
+    // }
+
+    &-white {
+        @include tablet {
+        margin-left: 4rem;
+        }
+    }
+    //     @include desktop {
+    //     margin-left: 4rem;
+    //     }
+    // }
 
     &-button {
     height: 4.5vh;
