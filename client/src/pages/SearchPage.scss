@@ -20,7 +20,6 @@
 
         @include tablet {
         align-items: center;
-        flex-direction: row;
         flex-wrap: wrap;
         }
 
@@ -38,36 +37,36 @@
     }
 
     &-year {
-    font-size: .875rem;
-    font-weight: 600;
+    @include Copy;
     color: $beige;
     margin-top: 1rem;
  
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         margin-left: 3rem;
         }
 
         @include desktop {
+        @include deskHeader;
         margin-top: 1rem;
         margin-left: 0;
         }
 }
     &-input {
-    font-size: .875rem;
+    @include Copy;
     width: 50%;
     border-radius: .9375rem;
     margin-top: 1rem;
-
     box-shadow: 0 .0725rem .0625rem $cement;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         margin-left: 3rem;
         }
 
         @include desktop {
+        @include deskHeader;
         width: 20%;
         margin-left: 0;
         margin-top: 3rem;
@@ -75,40 +74,99 @@
     }
 
     &-box {
-    display: inline-block;
-    list-style-type: none;
-    font-size: .875rem;
+    @include flex;
+    @include Copy;
     color: $beige;
-    width: 90%;
+    width: 80%;
+    margin-top: 1.5rem;
+    align-items: center;
 
         @include tablet {
-        font-size: 1.125rem;
-        flex-direction: column;
-        width: 100%;
+        @include deskCopy;
         margin-top: 2rem;
+        margin-left: 2.5rem;
         }
 
         @include desktop {
-        width: 50%;
+        width: 70%;
         margin-top: 2rem;
         }
+    
+    &__img {
+    width: 22%;
+
+        @include tablet {
+        width: 10%;
+        }
+
+        @include desktop {
+        width: 6%;
+        }
+    }
     }
 
     &-list {
-    display: block;
-    position: relative;
     background-color: $darkGrey;
     border-radius: .9375rem;
     padding: .625rem;
     width: 80%;
-    
-        @include desktop {
-        margin-left: 2rem;
-        }
-  
+    margin-left: 1rem;
     &:hover {
     color: $mattegrey;
     }
+
+        @include tablet {
+        width: 75%;
+        }
+    
+        @include desktop {
+        margin-left: 2rem;
+        @include flexColumn;
+        align-content: space-between;
+        justify-content: space-around;
+        }
+  
+   
+    }
+    &-name {
+    @include Copy;
+        
+        @include tablet {
+        font-size: 1.125rem;
+        display: flex;
+        justify-content: center;
+        }
+
+        @include desktop {
+        @include deskHeader;
+        }
+    }
+        
+    &-location {
+    @include Copy;
+    display: flex;
+    justify-content: center;
+
+        @include tablet {
+        @include deskCopy;
+        }
+
+        @include desktop {
+        @include deskMiddle;
+        }
+    }
+    
+    &-rating{
+    @include Copy;
+    font-weight: 600;
+    font-style: oblique;
+
+        @include tablet {
+        @include deskMiddle;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        }
     }
 }
 

@@ -33,7 +33,7 @@ export default class WelcomePage extends React.Component {
         <section className="card">
           <div className="card-wrapper">
             <button
-              className="card-button modal-button"
+              className="modal-button"
               onClick={this.toggalModal}
             >
               Wine Lists

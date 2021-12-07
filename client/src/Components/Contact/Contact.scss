@@ -20,7 +20,6 @@
     opacity: 88%;
     background-position: center;
     background-size: 50%;
-    width: 12.375rem;
     width: 40%;
     max-height: 100%;
 
@@ -36,8 +35,7 @@
     }
 
     &-title {
-    font-size: 1.25rem;
-    font-weight: 700;
+    @include header;
     @include flex;
     justify-content: flex-end;
     margin-right: 2rem;
@@ -47,7 +45,7 @@
         @include tablet {
         margin-right: 7.5rem;  
         margin-top: 3rem;
-        font-size: 1.5rem;
+        @include deskSectionHeader;
         }
 
         @include desktop {
@@ -72,30 +70,34 @@
         margin-left: 5rem;
         width: 85%;
         }
-   
     }
 
     &-name {
     margin: 0;
-    font-size: .875rem;
+    @include Copy;
     color: $lightBeige;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         }
 
         @include desktop {
-        font-size: 1.5625rem;
+        @include deskHeader;
+        font-weight: bold;
         }
     }
 
     &-review {
-    font-size: .875rem;
+    @include bodyCopy;
     color: $lightBeige;
-    font-weight: 300;
+ 
 
         @include tablet {
-        font-size: 1.5625rem;
+        @include deskCopy;
+        }
+
+        @include desktop {
+        @include deskHeader;
         }
     }
 
@@ -103,12 +105,12 @@
     color: $beige;
     font-style: oblique;
     margin-top: 0;
-    padding-bottom: .3125rem;
+    padding-bottom: 1.3125rem;
     border-bottom: 1px solid $black;
 
         @include desktop {
-        padding-bottom: 1.25rem;
-        font-size: 1.3125rem;
+        padding-bottom: 3.25rem;
+        @include deskSectionHeader;
         }
     }
 }

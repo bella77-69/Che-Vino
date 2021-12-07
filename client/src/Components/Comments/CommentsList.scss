@@ -19,18 +19,18 @@
     &-title {
     text-align: left;
     margin-top: 1rem;
-    font-size: .875rem;
+    @include Copy;
     margin-left: 1rem;
     padding-top: 1rem;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         padding-top: 1.5rem;
         }
 
         @include desktop {
         margin-top: 1rem;
-        font-size: 1.9375rem;
+        @include deskPageHeader;
         width:100%;
         text-align: center;
         margin-left: 0rem;
@@ -70,8 +70,10 @@
     }
 
     &--right {
-    @include flexColumn;
+    @include flex;
+    flex-wrap: wrap;
     width: 80%;
+    margin-top: 1rem;
 
         @include tablet{
         width: 100%;
@@ -91,19 +93,21 @@
     }
 
     &-image {
-    width: 44%;
     display: flex;
     width: 6.5rem;
-    object-fit: cover;
-    border-radius: .25rem;
+    object-fit: contain;
+    border-radius: .9375rem;
     margin-left: 1rem;
     margin-top: 1rem;
-    border-radius: .9375rem;
     transition: .5s ease;
-    backface-visibility: hidden;
+ 
 
         @include desktop {
         width: 7.5rem;
+        }
+
+        @include desktop {
+        width: 9.5rem;
         }
 
     &:hover {
@@ -114,7 +118,7 @@
         }
 
         @include desktop {
-        width: 80%;
+        width: 95%;
         }
     
     &::after {
@@ -136,70 +140,71 @@
     width: 85%;
     text-align: left;
     margin-top: 1rem; 
-    font-size: .875rem;
+    @include Copy;
     margin-left: 1rem;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         width: 100%;
         font-style: bold;
         };
 
         @include desktop {
         margin-left: 0rem;
-        font-size: 1.3125rem;
+        @include deskHeader;
         font: message-box;
         }
     }
 
     &-style {
     margin-left: 1rem;
-    font-size: .875rem;
-    font-weight: 400;
+    @include Copy;
+    margin-top: .5rem;
 
         @include tablet {
         margin-left: 0rem;
         width: 30%;
-        font-size: 1.125rem;   
+        @include deskCopy;  
         }
 
         @include desktop {
         margin-left: 0rem;
-        font-size: 1.3125rem;
+        @include deskSubHeader;
         width: 100%;
         }
     }
 
     &-rating {
     margin-left: 1rem;
-    font-size: .875rem;
+    @include Copy;
     font-weight: 400;
+    margin-top: .5rem;
 
         @include tablet {
         margin-left: 0rem;
         width: 30%;
-        font-size: 1.125rem;
+        @include deskCopy;
         }
 
         @include desktop {
         width: 100%;
-        font-size: 1.3125rem;
+        @include deskSubHeader;
         }
     }
 
     &-price {
     margin-left: 1rem;
-    font-size: .875rem;
-    font-weight: 400;
+   @include Copy;
+    margin-top: .5rem;
 
         @include tablet {
         margin-left: 0rem;
-        font-size: 1.125rem;
+        @include deskCopy;
         }
 
         @include desktop {
         width: 100%;
-        font-size: 1.3125rem;
+        @include deskSubHeader;
         }
     }
   

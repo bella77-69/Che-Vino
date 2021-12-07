@@ -6,7 +6,7 @@
     @include flexColumn;
     align-items: center;
     background-color: $black;
-    font-family: 'Glory';
+    font-family: $glory;
 
         @include tablet {
         margin: 0;
@@ -16,8 +16,7 @@
     margin: 1.5rem;
     display: flex;
     color: $beige;
-    font-size: 1rem; 
-    font-weight: 500;
+    @include Copy;
     margin: 1rem;
     border: 2px solid $darkGrey;
     border-radius: 1.25rem;
@@ -25,30 +24,29 @@
         @include tablet {
         margin: 2rem;
         width: 75%;
-        font-size: 1.5rem ;
-        line-height: 2rem;
+        @include deskHeader;
+        margin-top: 3rem;
         }
 
         @include desktop {
-        width: 80%;
+        width: 60%;
+        margin-top: 5rem;
         }
     }
 
     &-title {
     text-align: left;
-    font-family: 'Glory';
     line-height: 1.25rem;
     margin: 1.5rem;
 
         @include tablet {
         font-size: 1.5rem ;
-        line-height: 2rem; 
+        line-height: 1.75rem; 
         text-align: center;
         }
 
         @include desktop {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        @include deskPageHeader;
         }
     }
 }
@@ -69,11 +67,10 @@
     &-button {
         width: 40%;
         font-family: 'Glory';
-        font-size: .875rem;
+        @include labelBtn;
         border-radius: 1.25rem;
         border: none;
         background-color: $darkBrown;
         color: $beige;
-
      }
 }

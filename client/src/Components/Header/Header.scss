@@ -61,24 +61,19 @@
     justify-content: space-evenly;
     color: $beige;
     width: 100%;
-    font-size: .75rem; 
-    line-height: 1.25rem; 
-    font-weight: 700;
+    @include sectionHeader;
      
         @include tablet {
         height: 2.375rem;
         width: 24.687rem;
         margin-top: 2.461rem;
-        font-size: .875rem;
-        line-height: 1.25rem;
-        font-weight: 700;
+        @include deskLabelBtn;
         }
 
         @include desktop {
         width: 35%;
         height: 3.375rem;
         margin-right: 3.5rem;
-        font-size: 1.375rem;
         }
     }
 

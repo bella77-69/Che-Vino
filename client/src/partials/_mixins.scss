@@ -31,3 +31,99 @@
   display: flex;
   flex-direction: $direction;
 }
+
+//font mixins 
+//mobile text styles
+@mixin pageHeader {
+  font-size: 1.5rem; //24px
+  line-height: 2rem ; //32px
+  font-weight: 700 bold;   
+}
+
+@mixin header {
+  font-size: 1.125rem; //18px
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+
+@mixin sectionHeader {
+  font-size: .75rem; //12px
+  line-height: 1.125rem; //20px
+  font-weight: 500;
+}
+
+@mixin subHeader {
+  font-size: .8125rem; //13px
+  line-height: 1.125rem; //18px
+  font-weight: 500 bold;
+}
+
+@mixin Copy {
+  font-size: .875rem; //14px
+  line-height: 1.125rem;
+  font-weight: 500 bold;  
+}
+
+@mixin bodyCopy {
+  font-size: .8125rem; //13px
+  line-height: 1.125rem; //18px
+  font-weight: 400;
+}
+
+@mixin labelBtn {
+  font-size: .75rem; //12px
+  line-height: 1.25rem; //20px
+  font-weight: 500;
+}
+
+//Desktop & Tablet text styles
+@mixin deskPageHeader {
+  font-size: 1.5625rem; //33px
+  line-height: 2.25rem; //44px
+  font-weight: 700 bold;
+}
+
+@mixin deskSectionHeader {
+  font-size: 1.3125rem; //21px
+  line-height: 1.25rem; //20px
+  font-weight: 700 bold;
+}
+
+@mixin deskHeader {
+  font-size:  1.375rem; //22px
+  line-height: 1.25rem;
+  font-weight: 500;
+  
+}
+
+@mixin deskSubHeader {
+  font-size: .875rem; //14px
+  line-height: 1.75rem; //22px 
+  font-weight: 700 bold;   
+}
+
+@mixin deskCopy { 
+  font-size: 1rem; //16px
+  line-height: 1.375rem;
+  font-weight: 500 bold;
+  
+}
+
+@mixin deskBodyCopy {
+  font-size: .875rem;  //14px
+  line-height: 1.375rem; //22px
+  font-weight: 400;
+}
+
+@mixin deskMiddle {
+  font-size: 1.125rem; //18px
+  line-height: 1.375;
+  font-weight: 500;
+  
+}
+
+@mixin deskLabelBtn {
+  font-size: 1.125rem; //18px
+  line-height: 1.25rem; //20px
+  font-weight: 500;
+}

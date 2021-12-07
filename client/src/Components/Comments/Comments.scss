@@ -38,7 +38,7 @@
     &-img {
     background-repeat: no-repeat;
     background-position: center;
-    width: 44%;
+    width: 30%; 
     margin-top: 1rem;
     object-fit: cover;
     border-radius: 1.25rem;
@@ -61,11 +61,10 @@
     &-card {
     margin: 1rem;
     color: $beige;
-    font-size: 1rem;
-    font-weight: 600;
+    @include Copy;
 
       @include tablet {
-      font-size: 1.125rem;
+      @include deskSectionHeader;
       margin-left: 2.5rem;
       }
 
@@ -74,51 +73,49 @@
       width: 75%;
       text-align: center;
       padding: .625rem;
-      font-size: 1.3125rem;
+      @include deskPageHeader;
       }
  }
 
  &-title {
-   font-size: .875rem;
+   @include Copy;
    width: 100%;
    margin-top: 1rem;
    margin-left: 1rem;
 
       @include tablet {
-      font-size: 1.125rem;
+      @include deskCopy;
       }
 
       @include desktop {
       display: flex;
-      font-size: 1.5625rem;
-
+      @include deskPageHeader;
       margin-top: 2rem;
       order: -1;
-      font-size: 1.9375rem;
       margin-left: 0rem;
       justify-content: center;
       }
  }
 
  &-rating {
-   font-size: .875rem;
+   @include sectionHeader;
    width: 49%;
    margin-left: 1rem;
 
       @include tablet {
-      font-size: 1rem;
+      @include deskCopy;
       width: 15%;
       }
 
       @include desktop {
       order: -1;
       margin: 0;
-      font-size: 1.5625rem;
+      @include deskHeader;
       }
  }
 
  &-style {
-   font-size: .75rem;
+   @include sectionHeader;
    width: 40%;
    margin-left: 1rem;
 
@@ -130,12 +127,12 @@
       @include desktop {
       order: -1;
       margin: 0;
-      font-size: 1.5625rem;
+      @include deskPageHeader;
       }
  }
 
  &-price {
-   font-size: .75rem;
+   @include sectionHeader;
    width: 40%;
    margin-top: 1rem;
    margin-left: 1rem;
@@ -148,21 +145,20 @@
       @include desktop {
       order: -1;
       margin: 0;
-      font-size: 1.5625rem;
+      @include deskPageHeader;
       }
  }
 
  &-review {
-   font-size: .75rem;
-   font-weight: 400;
-
+   @include sectionHeader;
+   
       @include tablet {
-      font-size: 1.25rem;
+      @include deskSectionHeader;
       width: 95%;
       }
 
       @include desktop {
-      font-size: 1.5625rem;
+      @include deskPageHeader;
       }
  }
 }

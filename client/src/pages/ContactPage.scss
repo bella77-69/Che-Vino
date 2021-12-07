@@ -26,10 +26,10 @@
     }
 
     &-head {
-    font-size: .875rem;
+    @include Copy;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         }
 
         @include desktop {
@@ -39,17 +39,17 @@
 
     &-question {
     font-style: oblique;
-    font-size: .75rem;
+    @include sectionHeader;
     text-align: center;
     margin-top: 0;
     width: 65%;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskCopy;
         }
 
         @include desktop {
-        font-size: 1.5rem;
+        @include deskHeader;
         }
     }
 
@@ -59,33 +59,30 @@
     margin-bottom: 1.5rem;
     background-color: $Greyish;
     border-radius: .9375rem;
-    font-size: .875rem;
+    @include subHeader;
 
         @include tablet {
         margin-top: 1rem;
-        font-size: 1.125rem;
-        line-height: 1.25rem;
+        @include deskMiddle;
         }
 
         @include desktop {
         width: 50%;
-        font-size: 1.5625rem;
+        @include deskHeader;
         }
   
     
     &::placeholder {
     color:$beige;
     font-family: $glory;
-    font-size: .875rem;
-    line-height: 1.25rem;
+    @include bodyCopy;
 
         @include tablet {
-        font-size: 1.125rem;
-        line-height: 1.25rem;
+        @include deskMiddle;
         }
 
         @include desktop {
-        font-size: 1.5625rem;
+        @include deskHeader;
         }
     }
     }
@@ -93,9 +90,8 @@
     height: 10vh;
 
         @include tablet {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        width: 30%;
+        @include bodyCopy;
+        width: 31%;
         }
 
         @include desktop {
@@ -109,18 +105,13 @@
     background-color: $darkdarkgrey;
     color: $beige;
     border-radius: .9375rem;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    @include labelBtn;
     border: none;
 
         @include tablet {
         width: 6.687rem;
         height: 2.375rem;
-        font-size: .875rem;
-        }
-
-        @include desktop {
-        font-size: 1.125rem;
+        @include deskLabelBtn;
         }
 
     &:hover{

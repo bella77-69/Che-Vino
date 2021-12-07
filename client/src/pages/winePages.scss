@@ -20,6 +20,7 @@
 
         @include tablet {
         width: 30%;
+        margin-top: 5rem;
         }
 
         @include desktop {
@@ -45,68 +46,60 @@
 
     &-title {
     color: $beige;
-    font-size: 1rem;
-    font-weight: 500; 
-    line-height: 1.5rem;
+    @include Copy;
     display: flex;
     align-items: center;
     font-weight: bolder;
 
         @include tablet {
-        font-size: 1.5rem ;
-        line-height: 2rem;
+        @include deskHeader;
+        font-weight: bold;
         }
 
         @include desktop {
         display: flex;
         margin-top: 3.5rem;
-        font-size: 2rem;
+        @include deskPageHeader;
         }
     }
     &-info {
     color: $beige;
-    font-size: .875rem;
-    line-height: 1rem;
+    @include Copy;
     font-weight: lighter;
 
         @include tablet {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @include deskCopy;
         }
 
         @include desktop {
-        font-size: 1.5rem;
+        @include deskHeader;
         }
     }
 
     &-location {
     color:$beige;
-    font-size: .75rem;
-    line-height: 1rem;
+    @include bodyCopy;
 
         @include tablet {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @include deskCopy;
         }
 
         @include desktop {
-        font-size: 1.5rem;
+        @include deskHeader;
         }
     }
 
     &-review {
     color: $beige;
-    font-size: .75rem;
-    line-height: 1rem;
+    @include Copy;
     font-style: oblique;
 
         @include tablet {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @include deskCopy;
         }
 
         @include desktop {
-        font-size: 1.5rem;
+        @include deskHeader;
         }
     }
 
@@ -144,7 +137,7 @@
     height: 5vh;
     color: $beige;
     font-family: $glory;
-    font-weight: bolder;
+    @include labelBtn;
     margin-top: 1rem;
     &:hover {
         animation: rotate 0.7s ease-in-out both;
@@ -171,12 +164,11 @@
     }
         @include tablet {
         width: 50%;
-        font-size: 1rem;
+        @include deskLabelBtn;
         }
 
         @include desktop {
         width: 32%;
-        font-size: 1.5rem;
         display: flex;
         order: -1;
         }

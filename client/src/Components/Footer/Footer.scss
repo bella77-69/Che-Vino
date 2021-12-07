@@ -14,6 +14,10 @@
     background-position: center center;
     background-size: cover;
 
+        @include tablet {
+            height: auto;
+        }
+
    &-main {
     margin: 0;
 
@@ -27,6 +31,7 @@
 
         @include tablet {
         margin-left: 1.5rem;
+        margin-top: 2rem;
 
         @include desktop {
         margin-left: 3.5rem;
@@ -65,16 +70,14 @@
     @include flexColumn;
     font-family: 'Glory';
     list-style: none;
-    font-size: 1.125rem;
-    font-weight: 500;
+    @include sectionHeader;
 
         @include tablet {
-        font-size: 1.5rem ; 
-        line-height: 2rem; 
+        @include deskSectionHeader;
         }
 
         @include desktop {
-        font-size: 1.5625rem;
+        @include deskHeader;
         }
     }
 
@@ -90,7 +93,7 @@
     }
 
     &-image {
-    width: 22%;
+    width: 15%;
     border-radius: 25px;
     padding-bottom: .3125rem;
 

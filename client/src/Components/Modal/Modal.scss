@@ -4,6 +4,7 @@
 
 .modal {
     color: $beige;
+    margin-top: 1rem;
     border-radius: .9375rem;
     @include flexColumn;
 
@@ -21,17 +22,19 @@
     
     &-container {
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
     border-radius: .9375rem;
 
         @include tablet {
-        width: 48.5%;
-        padding-bottom: 2rem;
+        width: 25%;
+        padding-bottom: 3rem;
+        margin-left: 1.5rem;
         }
 
         @include desktop {
         width: 31.5%;
         padding-bottom: 2.5rem;
+        margin-left: -2rem;
         }
     }
     
@@ -57,34 +60,13 @@
     text-decoration: none;
     color: $beige;
     }
- 
-    &-title {
-    font-size: .8125rem; 
-    line-height: 1.25rem; 
-    font-weight: 700;
-    text-align: center;
-
-        @include tablet {
-        font-size: 1.125rem;
-        line-height: 2rem;
-        }
-
-        @include desktop {
-        margin-top: 2rem;
-        margin-left: 1rem;
-        }
-    }
-
-    &-description {
-    font-size: 1.125rem;
-    }
 
     &-img {
     display: flex;  
-    width: 50%;
+    width: 44%;
     height: 11vh;
     border-radius: .9375rem;
-    margin-left: 3rem;
+    margin-left: 3.45rem;
 
         @include tablet {
         width: 65%;
@@ -105,14 +87,10 @@
     border: none;
     color: $beige;
     border-radius: .9375rem;
-    font-size: .75rem; 
-    line-height: 1.25rem; 
-    font-weight: 700;
-
-    
+    @include labelBtn;
 
         @include tablet {
-        font-size: 1.125rem;
+        @include deskLabelBtn;
         width: 7.812rem;
         height: 6.5vh;
         }
