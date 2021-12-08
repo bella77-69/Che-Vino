@@ -18,16 +18,16 @@ export default function SearchPage() {
       );
 
       setData(respRed.data);
-      // console.log("Red",respRed)
+      console.log("Red",respRed)
       setData(respWhite.data);
-      // console.log("White", respWhite)
+    
       setData(respPort.data);
       console.log("Port", respPort);
-      // setData(respRose.data);
+      setData(respRose.data);
       console.log("Rose", respRose);
-      // setData(respSparkling.data);
+      setData(respSparkling.data);
       console.log("Sparkling", respSparkling);
-      // setData(respDessert.data);
+      setData(respDessert.data);
       console.log("Dessert", respDessert);
     };
 
