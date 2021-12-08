@@ -145,10 +145,11 @@
     &-location {
     @include Copy;
     display: flex;
-    justify-content: center;
+    
 
         @include tablet {
         @include deskCopy;
+        justify-content: center;
         }
 
         @include desktop {
