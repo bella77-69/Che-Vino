@@ -10,6 +10,7 @@ const portRoute = require('./routes/portRoute');
 const roseRoute = require('./routes/roseRoute');
 const sparklingRoute = require('./routes/sparklingRoute');
 const reviewRoute = require('./routes/reviewRoute');
+const allWineRoute = require('./routes/allWineRoute');
 
 require ('dotenv').config();
 
@@ -25,7 +26,7 @@ app.use('/wines/port', portRoute);
 app.use('/wines/rose', roseRoute);
 app.use('/wines/sparkling', sparklingRoute);
 app.use('/wines/review', reviewRoute);
-
+app.use('/wines/all', allWineRoute);
 
 // home route
 app.get('/wines', (req, res) => {
@@ -34,6 +35,14 @@ routes: [
     {
         method: 'get',
         endpoint: '/review',
+    },
+    {
+        method: 'get',
+        endpoint: '/all',
+    },
+    {
+        method: 'get',
+        endpoint: '/all/:id',
     },
     {
         method: 'get',
@@ -91,6 +100,19 @@ routes: [
             name: 'string',
             wine: 'string',
             comment: 'string',       
+        }
+    },
+    {
+        method: 'post',
+        endpoint: '/all',
+        body: {
+            winery: 'string',
+            wine: 'string',
+            rating: 'string',
+            average: 'string',
+            reviews: 'string',
+            location: 'string',
+            image: 'string',
         }
     }
 ]

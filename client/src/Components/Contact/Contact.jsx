@@ -15,8 +15,7 @@ export default function Contact({ comment }) {
       </div>
       <div className="contact-container" key={comment.id}>
         <h4 className="contact-name">{comment.name}</h4>
-        <p className="contact-review">{comment.comment}</p>
-
+        <p className="contact-review contact-input">{comment.comment}</p>
         <h4 className="contact-name">Mike McKinnon</h4>
         <p className="contact-review">
           When it comes to wine, this can mean a few different things: learn

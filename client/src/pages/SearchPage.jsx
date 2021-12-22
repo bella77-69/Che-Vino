@@ -2,40 +2,25 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./SearchPage.scss";
 
-export default function SearchPage() {
+export default function SearchPage () {
   const [data, setData] = useState([]);
   const [repos, setRepos] = useState(data);
 
   useEffect(() => {
     const fetchData = async () => {
-      const respRed = await axios("http://localhost:8080/wines/reds");
-      const respWhite = await axios("http://localhost:8080/wines/whites");
-      const respRose = await axios("http://localhost:8080/wines/rose");
-      const respPort = await axios("http://localhost:8080/wines/port");
-      const respDessert = await axios("http://localhost:8080/wines/dessert");
-      const respSparkling = await axios(
-        "http://localhost:8080/wines/sparkling"
-      );
+      const respWines = await axios("http://localhost:8080/wines/all");
+ 
 
-      setData(respRed.data);
-      console.log("Red",respRed)
-      setData(respWhite.data);
+      setData(respWines.data);
+      console.log("All Wines",respWines)
     
-      setData(respPort.data);
-      console.log("Port", respPort);
-      setData(respRose.data);
-      console.log("Rose", respRose);
-      setData(respSparkling.data);
-      console.log("Sparkling", respSparkling);
-      setData(respDessert.data);
-      console.log("Dessert", respDessert);
     };
 
     fetchData();
   }, []);
 
   const handleSearch = (event) => {
-    let value = event.target.value.toLowerCase();
+    let value = event.target.value;
     let result = [];
     console.log("Handle Search", value);
     result = data.filter((data) => {
@@ -84,4 +69,6 @@ export default function SearchPage() {
   );
 }
 
+  
+ 
 
