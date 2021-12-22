@@ -66,6 +66,9 @@
       @include tablet {
       @include deskSectionHeader;
       margin-left: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       }
 
       @include desktop {
@@ -155,10 +158,97 @@
       @include tablet {
       @include deskSectionHeader;
       width: 95%;
+    
+      }
+
+      @include desktop {
+      @include deskPageHeader;
+     
+      }
+ }
+
+ &-box {
+  margin: 1rem;
+  color: $beige;
+  @include Copy;
+
+    @include tablet {
+    @include deskSectionHeader;
+    margin-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    @include desktop {
+    text-align: center;
+    padding: .625rem;
+    @include deskPageHeader;
+    margin-left: 1rem;
+    align-items: center;
+    }
+}
+
+&-heading {
+  @include Copy;
+  width: 100%;
+  margin-top: 1rem;
+  text-decoration: underline;
+ 
+
+     @include tablet {
+     @include deskCopy;
+     }
+
+     @include desktop {
+     @include deskPageHeader;
+   
+     }
+}
+
+&-comments {
+  @include sectionHeader;
+
+      @include tablet {
+      @include deskSectionHeader;
+      width: 95%;
+      text-align: left;
+     
+      }
+
+      @include desktop {
+      @include deskPageHeader;
+      margin: 0;
+      }
+}
+
+&-name {
+  @include sectionHeader;
+  text-decoration: underline;
+
+      @include tablet {
+      @include deskSectionHeader;
+      width: 95%;
       }
 
       @include desktop {
       @include deskPageHeader;
       }
- }
+}
+
+
+&-date {
+  @include sectionHeader;
+
+
+      @include tablet {
+      @include deskSectionHeader;
+      width: 95%;
+      }
+
+      @include desktop {
+      @include deskPageHeader;
+      }
+  
+}
 }
