@@ -40,6 +40,7 @@ export default function RedWinePage() {
         
         <p className="wine-location">Location:  {oneData.location}</p>
         <p className="wine-review">Wine number:  {oneData.id}</p>
+        
         <button className="wine-button" onClick={handleClick}>
           Wine Generator
         </button>
