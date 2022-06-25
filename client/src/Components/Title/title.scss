@@ -1,0 +1,22 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
+.section {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+  &-title  {
+    font-size: 1.5rem;
+    letter-spacing: .187rem;
+    text-transform: capitalize;
+    color: $font;
+    padding-top: 2rem;
+  }
+  
+  &-div {
+    width: 10rem;
+    height: 2px;
+    margin: 0 auto;
+    background: $font;
+  }
+}

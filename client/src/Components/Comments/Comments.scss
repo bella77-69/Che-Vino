@@ -2,24 +2,26 @@
 @import "../../partials/fonts";
 @import "../../partials/_mixins";
 
-.hero {
-    background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url('../../assets/images/cork2.jfif');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
+.heros {
+    // background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url('../../assets/images/cork2.jfif');
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    // object-fit: cover;
     width: 100%;
     font-family: $glory;
     background-color: $blacker;
     padding-bottom: 1rem;
+    margin-top: 0;
 
     &-wrapper {
+      // background-color: $font;
       margin: 0 auto;
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: flex-start;
-      color: $beige;
+      color: $font;
 
         @include tablet {
         position: relative;
@@ -137,7 +139,6 @@
  &-price {
    @include sectionHeader;
    width: 40%;
-   margin-top: 1rem;
    margin-left: 1rem;
 
       @include tablet {

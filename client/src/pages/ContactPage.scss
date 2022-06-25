@@ -2,120 +2,124 @@
 @import "../partials/fonts";
 @import "../partials/_mixins";
 
-.form {
-    margin: 0;
-    padding: 10px;
-    background-color: $blacker;
-    font-family: $glory;
-
-    &-container {
-    @include flexColumn;
-    margin: 1rem;
-    align-items: center;
-    color: $beige;
-
-        @include desktop {
-        margin-right: 5rem;
-        align-items: center;
-        background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.3)),url("../assets/images/pour.png");
-        background-repeat: no-repeat;
-        margin-left: 5rem;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        }
-    }
-
-    &-head {
-    @include Copy;
-
-        @include tablet {
-        @include deskCopy;
-        }
-
-        @include desktop {
-        font-size: 1.5625rem;
-        }
-    }
-
-    &-question {
-    font-style: oblique;
-    @include sectionHeader;
-    text-align: center;
+.contact {
+    background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.3));
     margin-top: 0;
-    width: 65%;
+}
+// .form {
+//     margin: 0;
+//     padding: 10px;
+//     background-color: $blacker;
+//     font-family: $glory;
+//     color: $font;
+//     &-container {
+//     @include flexColumn;
+//     margin: 1rem;
+//     align-items: center;
+//     color: $beige;
 
-        @include tablet {
-        @include deskCopy;
-        }
+//         @include desktop {
+//         margin-right: 5rem;
+//         align-items: center;
+//         background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.3)),url("../assets/images/pour.png");
+//         background-repeat: no-repeat;
+//         margin-left: 5rem;
+//         flex-wrap: wrap;
+//         align-content: flex-end;
+//         }
+//     }
 
-        @include desktop {
-        @include deskHeader;
-        }
-    }
+//     &-head {
+//     @include Copy;
 
-    &-input {
-    padding: .625rem;
-    border-radius: .3125rem;
-    margin-bottom: 1.5rem;
-    background-color: $cement;
-    border-radius: .9375rem;
-    @include subHeader;
+//         @include tablet {
+//         @include deskCopy;
+//         }
 
-        @include tablet {
-        margin-top: 1rem;
-        @include deskMiddle;
-        }
+//         @include desktop {
+//         font-size: 1.5625rem;
+//         }
+//     }
 
-        @include desktop {
-        width: 50%;
-        @include deskHeader;
-        }
+//     &-question {
+//     font-style: oblique;
+//     @include sectionHeader;
+//     text-align: center;
+//     margin-top: 0;
+//     width: 65%;
+
+//         @include tablet {
+//         @include deskCopy;
+//         }
+
+//         @include desktop {
+//         @include deskHeader;
+//         }
+//     }
+
+//     &-input {
+//     padding: .625rem;
+//     border-radius: .3125rem;
+//     margin-bottom: 1.5rem;
+//     background-color: $cement;
+//     border-radius: .9375rem;
+//     @include subHeader;
+
+//         @include tablet {
+//         margin-top: 1rem;
+//         @include deskMiddle;
+//         }
+
+//         @include desktop {
+//         width: 50%;
+//         @include deskHeader;
+//         }
   
     
-    &::placeholder {
-    color:$beige;
-    font-family: $glory;
-    @include bodyCopy;
+//     &::placeholder {
+//     color:$beige;
+//     font-family: $glory;
+//     @include bodyCopy;
 
-        @include tablet {
-        @include deskMiddle;
-        }
+//         @include tablet {
+//         @include deskMiddle;
+//         }
 
-        @include desktop {
-        @include deskHeader;
-        }
-    }
-    }
-    &-comment {
-    height: 10vh;
+//         @include desktop {
+//         @include deskHeader;
+//         }
+//     }
+//     }
+//     &-comment {
+//     height: 10vh;
 
-        @include tablet {
-        @include bodyCopy;
-        width: 31%;
-        }
+//         @include tablet {
+//         @include bodyCopy;
+//         width: 31%;
+//         }
 
-        @include desktop {
-        height: 20vh;
-        width: 50%;
-        }
-    }
+//         @include desktop {
+//         height: 20vh;
+//         width: 50%;
+//         }
+//     }
 
-    &-button {
-    width: 35%;
-    background-color: $darkdarkgrey;
-    color: $beige;
-    border-radius: .9375rem;
-    @include labelBtn;
-    border: none;
+//     &-button {
+//     width: 35%;
+//     background-color: $darkdarkgrey;
+//     color: $beige;
+//     border-radius: .9375rem;
+//     @include labelBtn;
+//     border: none;
 
-        @include tablet {
-        width: 6.687rem;
-        height: 2.375rem;
-        @include deskLabelBtn;
-        }
+//         @include tablet {
+//         width: 6.687rem;
+//         height: 2.375rem;
+//         @include deskLabelBtn;
+//         }
 
-    &:hover{
-    background-color: $brown;
-    }
-    }
-}
+//     &:hover{
+//     background-color: $brown;
+//     }
+//     }
+// }

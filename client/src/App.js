@@ -7,8 +7,8 @@ import RedWinePage from './pages/RedWinePage';
 import RoseWinePage from './pages/RoseWinePage';
 import WhiteWinePage from './pages/WhiteWinePage';
 import SparklingWinePage from './pages/SparkingWinePage';
-import WelcomePage from './pages/WelcomePage';
-
+// import WelcomePage from './pages/WelcomePage';
+import HomePage from "./pages/HomePage";
 import SearchPage from './pages/SearchPage';
 import ContactPage from './pages/ContactPage';
 import CommentsPage from './pages/CommentsPage';
@@ -20,7 +20,7 @@ function App() {
     <Router >
       <Header />
      <Switch >
-      <Route path="/" exact component={WelcomePage}/>
+      <Route path="/" exact component={HomePage}/>
       <Route path="/search" exact component={SearchPage}/>
       <Route path="/contact" exact component={ContactPage}/>
       <Route path="/comments" exact component={CommentsPage}/>

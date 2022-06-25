@@ -1,5 +1,6 @@
 import React from "react";
 import "./WelcomePage.scss";
+import Hero from "../Components/Hero/Hero";
 import Modal from "../Components/Modal/Modal";
 
 export default class WelcomePage extends React.Component {
@@ -17,16 +18,17 @@ export default class WelcomePage extends React.Component {
   render() {
     return (
       <section className="main">
+        <Hero />
         <div className="main-container">
           <div className="main-title">
-            Buying wine can be overwhelming, due to the variety of wines on the
+            {/* Buying wine can be overwhelming, due to the variety of wines on the
             shelves. The Che Vino helps take the guess work out of making that
             decision. Che Vino determines a bottle of wine at random. You have
             the choice of the different types of wine avaiable, such as Red,
             White, Dessert, Port, Rose, or Sparkling Wine. Checkout the seach
             page that shows the top 20 wines. There you can read comments about
             the wine, see the wine score, and the average price. Enjoy, and
-            remember to drink responsible!
+            remember to drink responsible! */}
           </div>
         </div>
 

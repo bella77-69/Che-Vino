@@ -2,104 +2,123 @@
 @import "../../partials/fonts";
 @import "../../partials/_mixins";
 
-.header {
-    box-sizing: border-box;
-    margin: 0 auto;
-    background-color: $darkGrey;
-    padding-top: .5rem;
-    height: 10.5rem;
-    width: 100%;
-    font-family: 'Glory';
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
-        @include tablet{
-        display: flex;
-        justify-content: space-between;
-        height: 10.5rem;
-        }
-
-        @include desktop  {
-        height: 11.625rem;
-        }
-
-    &-container {
-    @include flexColumn;
-    align-items: center;
-    text-align: center;
-    
-        @include tablet {
-        margin-left: 1.5rem;
-        }
-
-        @include desktop {
-        margin-left: 1rem;
-        }
-    }
-
-    &-logo {
-    margin-top: 1rem;
-    width: 5.575rem;
-    height: 5.556rem;
-
-        @include tablet {
-        margin-top: 2.461rem;
-        height: 6.75rem;
-        width: 8rem;
-        }
-
-        @include desktop {
-        margin-left: 3.5rem;
-        width: 9rem;
-        height: 70%;
-        }
-    }
-
-    &-nav {
+.nav {
     display: flex;
-    text-decoration: none;
-    justify-content: space-evenly;
-    color: $beige;
-    width: 100%;
-    @include sectionHeader;
-     
-        @include tablet {
-        height: 2.375rem;
-        width: 24.687rem;
-        margin-top: 2.461rem;
-        @include deskLabelBtn;
-        }
+    flex-direction: column;
+    background-color: $darkGrey;
+    position: relative;
+  
+    &-bar {
+        color: $font !important;
 
-        @include desktop {
-        width: 35%;
-        height: 3.375rem;
-        margin-right: 3.5rem;
-        }
-    }
-
-    &-nav--active {
-    text-decoration: none;
-    @include flex;
-    align-items: center;
-    justify-content: center; 
-    width: 4.687rem;
-    height: 1.55rem;
-    margin-top: .5rem;
-    color: $beige;
-    background-color: $darkBrown;
-    border-radius: 1.25rem;
-    &:hover {
-    color: $beige;
-    }
-        @include tablet {
-        width: 6.687rem;
-        height: 2.375rem;
-        margin-right: 1.5rem;
-        }
-
-        @include desktop {
-        width: 9.687rem;
+        &:hover {
+            color: $black !important;
         }
     }
 }
+
+#basic-nav-dropdown {
+    color: $font;
+}
+
+// .header {
+//     box-sizing: border-box;
+//     margin: 0 auto;
+//     background-color: $darkGrey;
+//     padding-top: .5rem;
+//     height: 10.5rem;
+//     width: 100%;
+//     font-family: 'Glory';
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+    
+//         @include tablet{
+//         display: flex;
+//         justify-content: space-between;
+//         height: 10.5rem;
+//         }
+
+//         @include desktop  {
+//         height: 11.625rem;
+//         }
+
+//     &-container {
+//     @include flexColumn;
+//     align-items: center;
+//     text-align: center;
+    
+//         @include tablet {
+//         margin-left: 1.5rem;
+//         }
+
+//         @include desktop {
+//         margin-left: 1rem;
+//         }
+//     }
+
+//     &-logo {
+//     margin-top: 1rem;
+//     width: 5.575rem;
+//     height: 5.556rem;
+
+//         @include tablet {
+//         margin-top: 2.461rem;
+//         height: 6.75rem;
+//         width: 8rem;
+//         }
+
+//         @include desktop {
+//         margin-left: 3.5rem;
+//         width: 9rem;
+//         height: 70%;
+//         }
+//     }
+
+//     &-nav {
+//     display: flex;
+//     text-decoration: none;
+//     justify-content: space-evenly;
+//     color: $beige;
+//     width: 100%;
+//     @include sectionHeader;
+     
+//         @include tablet {
+//         height: 2.375rem;
+//         width: 24.687rem;
+//         margin-top: 2.461rem;
+//         @include deskLabelBtn;
+//         }
+
+//         @include desktop {
+//         width: 35%;
+//         height: 3.375rem;
+//         margin-right: 3.5rem;
+//         }
+//     }
+
+//     &-nav--active {
+//     text-decoration: none;
+//     @include flex;
+//     align-items: center;
+//     justify-content: center; 
+//     width: 4.687rem;
+//     height: 1.55rem;
+//     margin-top: .5rem;
+//     color: $beige;
+//     background-color: $darkBrown;
+//     border-radius: 1.25rem;
+//     &:hover {
+//     color: $beige;
+//     }
+//         @include tablet {
+//         width: 6.687rem;
+//         height: 2.375rem;
+//         margin-right: 1.5rem;
+//         }
+
+//         @include desktop {
+//         width: 9.687rem;
+//         }
+//     }
+// }
 

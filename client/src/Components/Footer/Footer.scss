@@ -1,114 +1,149 @@
+@import "../../partials/mixins";
 @import "../../partials/variables";
-@import "../../partials/fonts";
-@import "../../partials/_mixins";
 
-.footer {
-    margin: 0;
-    background-color: $blacker;
-    width: 100%;
-    height: auto;
-    background-image: linear-gradient(rgba($black, 0.5), rgba($black, 0.5)),url("../../assets/images/cork3.jfif");
-    background-repeat: no-repeat;
-    position: relative;
-    object-fit: cover;
-    background-position: center center;
-    background-size: contain;
+.footer{
+    width:100%;
+    background-color: $darkGrey;
+    color:rgb(208, 207, 207);
+
+    &-img {
+    width: 30%;
+    padding: .3125rem;
+    color: $icon;
 
         @include tablet {
-            height: auto;
+        width: 15%;
         }
 
-   &-main {
-    margin: 0;
+        @include desktop {
+        width: 10%;
+        }
+    }
 
-       @include tablet {
-       display: flex;
-       flex-direction: column;
-       }
-   }
-    &-social {
+    &-header{
+    padding: 1rem;
+    font-size: .75rem;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color: $font;
+ 
+
+        @include tablet {
+        padding: 2rem;
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content:center;
+       
+        }
+    }
+
+    &-section{
     display: flex;
-    width: 25%;
-    margin-left: 1rem;
+    justify-content: flex-start;  
+    padding: .625rem;
+    width: 100%;
+    font-size: .75rem;
 
-        @include tablet {
-        margin-left: 2rem;
-        margin-top: 2rem;
-
-        @include desktop {
-        margin-left: 3.5rem;
-        width: 50%;
-        // height: 10vh;
-        }
-        }
-
-    &--icon {
-    color: $beige;
-    padding-right: 1.875rem;
-        
-        @include desktop {
-        padding: .9375rem;
-        }
-    }
-    }
-  
-    &-nav {
-    @include flexColumn;
-    justify-content: center;
-    text-decoration: none;
-    margin-left: -1rem;
-
-        @include tablet {
-        margin-left: 0.5rem;
-        padding-bottom: 30px;
-        }
+         @include tablet {
+        display: flex;
+        justify-content: flex-start;  
+        padding: .625rem;
+        width:50%;
+        font-size: 1rem;
+         }
 
         @include desktop {
-        margin-left: 2rem;
+        font-size: 1.125rem;
+        align-items: center;
+        width: 30%;
+         }
         }
+
+    &-span{
+    padding:0 1rem;
+    color: $font;
     }
 
-    &-list {
-    @include flexColumn;
-    font-family: $glory;
-    list-style: none;
-    @include sectionHeader;
-
-        @include tablet {
-        @include deskSectionHeader;
-        }
-
-        @include desktop {
-        @include deskHeader;
-        }
+    &-icon {
+    padding: 0 1rem;
+    
     }
 
-    &-item {
-    color: $beige;
-    text-decoration: none;
+    &-border {
+    background: $divder none repeat scroll 0 0;
+    display: block;
+    height: .125rem;
+    left: 0;
+    margin: 1.25rem auto;
+    position: relative;
+    right: 0;
+    text-align: center;
     top: 0;
-    }   
+    width: 11.25rem;
 
-    &-container {
-    @include flexColumn;
-    align-items: center;
-
-    }
-
-    &-image {
-    width: 15%;
-    border-radius: 25px;
-    padding-bottom: .3125rem;
+        &:before {
+        width: 100%;
+        left:120px;
+        }
+                
+        &::after {
+        width: 100%;
+        right:120px;
+        }
 
         @include tablet {
-        transform: translateY(22px);
-        width: 9%;
-        margin-top: 7rem;
+        width: 31.25rem
+        }
+        }
+
+    &-bottom {
+    padding:1.5rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:Center;
+
+        @include tablet {
+        padding:1rem;
+       
+        }
+    }
+        
+    &-social{
+    margin:0 20px;
+    transition:0.5s;
+    font-size: 1.125rem;
+    color:$font;
+
+        @include tablet {
+        padding:1rem;
+        font-size: 1.5625rem;
+        margin:0 5px;
+        }
+
+        &:hover{
+        color:$black;
+        }
+    }
+
+    &-copyright{
+    font-size: .625rem;
+    padding:0.8em 0;
+    background-color: $darkbackground;
+    text-align:center;
+    color: $font;
+
+        @include tablet {
+        font-size: .75rem;
         }
 
         @include desktop {
-        visibility: hidden;
-        margin-top: 9rem;
+        font-size: .875rem;
         }
     }
 }
+    
+  
+
+    
