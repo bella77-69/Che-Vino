@@ -37,8 +37,8 @@ export default function RedWinePage() {
           <Title title="Red Wine"></Title>
 
           <div className="about-product text-center mt-2">
-            <img src={oneData.image} width="50" />
-            <div className="mt-0 mt-4 ">
+            <img src={oneData.image} width="50" alt="wine-img"/>
+            <div className="mt-0 mt-4">
               <h4>{oneData.wine}</h4>
               <h6>Wine #: {oneData.id}</h6>
             </div>

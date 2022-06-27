@@ -12,7 +12,7 @@ import HomePage from "./pages/HomePage";
 import SearchPage from './pages/SearchPage';
 import ContactPage from './pages/ContactPage';
 import CommentsPage from './pages/CommentsPage';
-
+import Comments from './Components/Comments/Comments';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Route path="/search" exact component={SearchPage}/>
       <Route path="/contact" exact component={ContactPage}/>
       <Route path="/comments" exact component={CommentsPage}/>
-      <Route path="/comments/:id" component={CommentsPage}/>
+      <Route path="/comments/:id" component={Comments}/>
       <Route path="/wines/reds" exact component={RedWinePage}/>
       <Route path="/wines/whites" exact component={WhiteWinePage}/>
       <Route path="/wines/dessert" exact component={DessertWinePage}/>
