@@ -1,9 +1,8 @@
 const RoseModel = require("../models/rose.model");
 
-// get all users list
-exports.getAllUsers = (req, res) => {
-  //console.log('here all users list');
-  RoseModel.getAllUsers((err, user) => {
+// get all rose list
+exports.getAllRose = (req, res) => {
+  RoseModel.getAllRose((err, user) => {
     // console.log("We are here");
     if (err) res.send(err);
     //console.log("user", user);
@@ -11,67 +10,63 @@ exports.getAllUsers = (req, res) => {
   });
 };
 
-// get user by email
-exports.getUserByEmail = (req, res) => {
-  RoseModel.getUserByEmail(req.params.email, (err, user) => {
+// get rose by wine
+exports.getRoseByWine = (req, res) => {
+  RoseModel.getRoseByWine(req.params.wine, (err, user) => {
     if (err) res.send(err);
-   // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new user
-  exports.createNewUser = (req, res) => {
-    const adminReqData = new RoseModel(req.body);
-   // console.log("adminReqData", adminReqData);
+  // create new rose
+  exports.createNewRose = (req, res) => {
+    const roseReqData = new RoseModel(req.body);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      RoseModel.createNewUser(adminReqData, (err, user) => {
+      RoseModel.createNewRose(roseReqData, (err, user) => {
         if (err) res.send(err);
         res.json({
           status: true,
-          message: "User Created Successfully",
+          message: "rose Created Successfully",
           data: user.insertId,
         });
       });
     }
   };
   
-  // get user by ID  for Update
-  exports.getUserByID = (req, res) => {
-    //console.log('get user by id');
-    RoseModel.getUserByID(req.params.id, (err, user) => {
+  // get roseby ID  for Update
+  exports.getRoseByID = (req, res) => {
+    RoseModel.getRoseByID(req.params.id, (err, user) => {
       if (err) res.send(err);
-     // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update user
-  exports.updateUser = (req, res) => {
-    const adminReqData = new RoseModel(req.body);
+  // update rose
+  exports.updateRose = (req, res) => {
+    const roseReqData = new RoseModel(req.body);
   //  console.log("adminReqData update", adminReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      RoseModel.updateUser(
+      RoseModel.updateRose(
         req.params.id,
-        adminReqData,
+        roseReqData,
         (err, user) => {
           if (err) res.send(err);
-          res.json({ status: true, message: "user updated Successfully" });
+          res.json({ status: true, message: "rose updated Successfully" });
         }
       );
     }
   };
   
-  // delete user
-  exports.deleteUser = (req, res) => {
-    RoseModel.deleteUser(req.params.id, (err, user) => {
+  // delete rose
+  exports.deleteRose = (req, res) => {
+    RoseModel.deleteRose(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "User deleted successully!" });
+      res.json({ success: true, message: "rose deleted successully!" });
     });
   };

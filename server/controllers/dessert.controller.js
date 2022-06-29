@@ -1,9 +1,9 @@
 const DessertModel = require("../models/dessert.model");
 
-// get all users list
-exports.getAllUsers = (req, res) => {
-  //console.log('here all users list');
-  DessertModel.getAllUsers((err, user) => {
+// get all dessert list
+exports.getAllDessert = (req, res) => {
+  //console.log('here all dessert wine list');
+  DessertModel.getAllDessert((err, user) => {
     // console.log("We are here");
     if (err) res.send(err);
     //console.log("user", user);
@@ -11,67 +11,65 @@ exports.getAllUsers = (req, res) => {
   });
 };
 
-// get user by email
-exports.getUserByEmail = (req, res) => {
-  DessertModel.getUserByEmail(req.params.email, (err, user) => {
+// get dessert by wine
+exports.getDessertByWine = (req, res) => {
+  DessertModel.getDessertByWine(req.params.wine, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new user
-  exports.createNewUser = (req, res) => {
-    const adminReqData = new DessertModel(req.body);
-   // console.log("adminReqData", adminReqData);
+  // create new dessert
+  exports.createNewDessert = (req, res) => {
+    const dessertReqData = new DessertModel(req.body);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      DessertModel.createNewUser(adminReqData, (err, user) => {
+      DessertModel.createNewDessert(dessertReqData, (err, user) => {
         if (err) res.send(err);
         res.json({
           status: true,
-          message: "User Created Successfully",
+          message: "Dessert Wine Created Successfully",
           data: user.insertId,
         });
       });
     }
   };
   
-  // get user by ID  for Update
-  exports.getUserByID = (req, res) => {
+  // get dessert by ID  for Update
+  exports.getDessertByID = (req, res) => {
     //console.log('get user by id');
-    DessertModel.getUserByID(req.params.id, (err, user) => {
+    DessertModel.getDessertByID(req.params.id, (err, user) => {
       if (err) res.send(err);
-     // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update user
-  exports.updateUser = (req, res) => {
-    const adminReqData = new DessertModel(req.body);
+  // update dessert
+  exports.updateDessert = (req, res) => {
+    const dessertReqData = new DessertModel(req.body);
   //  console.log("adminReqData update", adminReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      DessertModel.updateUser(
+      DessertModel.updateDessert(
         req.params.id,
-        adminReqData,
+        dessertReqData,
         (err, user) => {
           if (err) res.send(err);
-          res.json({ status: true, message: "user updated Successfully" });
+          res.json({ status: true, message: "dessert wine updated Successfully" });
         }
       );
     }
   };
   
-  // delete user
-  exports.deleteUser = (req, res) => {
-    DessertModel.deleteUser(req.params.id, (err, user) => {
+  // delete dessert
+  exports.deleteDessert = (req, res) => {
+    DessertModel.deleteDessert(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "User deleted successully!" });
+      res.json({ success: true, message: "Dessert wine deleted successully!" });
     });
   };

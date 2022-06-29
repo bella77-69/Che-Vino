@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Title from "../Components/Title/Title";
+import CommentsList from "../Components/Comments/CommentsList";
 
 class CommentsPage extends React.Component {
   state = {
@@ -101,6 +102,7 @@ class CommentsPage extends React.Component {
             </div>
           </div>
         </div>
+        <CommentsList items={this.state.items}/>
       </section>
     );
   }

@@ -1,10 +1,11 @@
 const dbConn = require('../config/db.config');
 
 const Review = function (review) {
-    this.name = review.name;
-    this.email = review.email;
-    this.comment = review.comment;
-    // this.confirmPassword = user.confirmPassword;
+  this.wine = review.wine;
+  this.style = review.style;
+  this.rating = review.rating;
+  this.price = review.price;
+  this.review = review.review;
 }
 
 //get all reviews
@@ -21,14 +22,14 @@ Review.getAllReviews = (result) => {
 };
 
 
-//get review by email
-Review.getReviewByEmail = (email, result) => {
+//get review by price
+Review.getReviewByPrice = (price, result) => {
   dbConn.query(
-    "SELECT * FROM review WHERE email = ?",
-    email,
+    "SELECT * FROM review WHERE price = ?",
+    price,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching review by email", err);
+       console.log("Error while fetching review by price", err);
         result(null, err);
       } else {
         result(null, res);
@@ -69,8 +70,8 @@ Review.getReviewByEmail = (email, result) => {
   //update review
   Review.updateReview = (id, reviewReqData, result) => {
     dbConn.query(
-      "UPDATE review SET name=?, email=?, comment=?, WHERE id = ?",
-      [reviewReqData.name, reviewReqData.email, reviewReqData.comment, id],
+      "UPDATE review SET wine=?, style=?, rating=?, price=?, review=? WHERE id = ?",
+      [reviewReqData.wine, reviewReqData.style, reviewReqData.rating, reviewReqData.price, reviewReqData.review, id],
       (err, res) => {
         if (err) {
           console.log("Error while updating review");

@@ -163,6 +163,7 @@ const roseRoute = require('./routes/roseRoute');
 const sparklingRoute = require('./routes/sparklingRoute');
 const reviewRoute = require('./routes/reviewRoute');
 const allWineRoute = require('./routes/allWineRoute');
+const commentRoute =require('./routes/commentRoute');
 
 app.use(express.json());
 app.use(cors());
@@ -179,6 +180,7 @@ app.use('/wines/port', portRoute);
 app.use('/wines/rose', roseRoute);
 app.use('/wines/sparkling', sparklingRoute);
 app.use('/wines/review', reviewRoute);
+app.use('/wines/comments', commentRoute);
 app.use('/wines/all', allWineRoute);
 
 const PORT = process.env.PORT || 5000;

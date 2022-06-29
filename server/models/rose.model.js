@@ -1,14 +1,14 @@
 const dbConn = require('../config/db.config');
 
 const Rose = function (rose) {
-    this.name = rose.name
-    this.email = rose.email;
-    this.password = rose.password;
-    // this.confirmPassword = user.confirmPassword;
+  this.winery = rose.winery;
+  this.wine = rose.wine;
+  // this.rating = rose.rating.average;
+  this.location = rose.location;
 }
 
-//get all Guests
-Rose.getAllUsers = (result) => {
+//get all rose
+Rose.getAllRose = (result) => {
   dbConn.query("SELECT * FROM rose", (err, res) => {
     if (err) {
       console.log("Error while fetching Rose", err);
@@ -21,14 +21,14 @@ Rose.getAllUsers = (result) => {
 };
 
 
-//get user by email
-Rose.getUserByEmail = (email, result) => {
+//get rose by wine
+Rose.getRoseByWine= (wine, result) => {
   dbConn.query(
-    "SELECT * FROM rose WHERE email = ?",
-    email,
+    "SELECT * FROM rose WHERE wine = ?",
+    wine,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by email", err);
+       console.log("Error while fetching data by wine", err);
         result(null, err);
       } else {
         result(null, res);
@@ -37,8 +37,8 @@ Rose.getUserByEmail = (email, result) => {
   );
 };
 
-  // create new user
-  Rose.createNewUser = (roseReqData, result) => {
+  // create new rose
+  Rose.createNewRose = (roseReqData, result) => {
     dbConn.query(
       "INSERT INTO rose SET ?",
       roseReqData,
@@ -47,18 +47,18 @@ Rose.getUserByEmail = (email, result) => {
           console.log("Error while inserting data");
           result(null, err);
         } else {
-          console.log("Rose user created successfully");
+          console.log("Rose created successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //get user by ID for update
-  Rose.getUserByID = (id, result) => {
+  //get rose by ID for update
+  Rose.getRoseByID = (id, result) => {
     dbConn.query("SELECT * FROM rose WHERE id=?", id, (err, res) => {
       if (err) {
-        console.log("Error while fetching user by id", err);
+        console.log("Error while fetching rose by id", err);
         result(null, err);
       } else {
         result(null, res);
@@ -66,28 +66,28 @@ Rose.getUserByEmail = (email, result) => {
     });
   };
   
-  //update user
-  Rose.updateUser = (id, roseReqData, result) => {
+  //update rose
+  Rose.updateRose = (id, roseReqData, result) => {
     dbConn.query(
-      "UPDATE rose SET name=?, email=? WHERE id = ?",
-      [roseReqData.name, roseReqData.email, id],
+      "UPDATE rose SET winery=?, wine=?, location=? WHERE id = ?",
+      [roseReqData.winery, roseReqData.wine, roseReqData.location, id],
       (err, res) => {
         if (err) {
-          console.log("Error while updating user");
+          console.log("Error while updating rose");
           result(null, err);
         } else {
-          console.log("user updated successfully");
+          console.log("rose updated successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //delete user
-  Rose.deleteUser = (id, result) => {
+  //delete rose
+  Rose.deleteRose = (id, result) => {
     dbConn.query("DELETE from rose WHERE id=?", [id], (err, res) => {
       if (err) {
-        console.log("Error while deleting the user");
+        console.log("Error while deleting the rose wine");
         result(null, err);
       } else {
         result(null, res);

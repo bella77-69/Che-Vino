@@ -1,63 +1,24 @@
-// const express = require("express");
-// const router = express.Router()
-// const fs = require("fs");
-
-// function listDessert() {
-//     return JSON.parse(fs.readFileSync("./data/dessert.json", 'utf-8'));
-// }
-
-// function getDessertById(id) {
-//     const dessertArr = listDessert();
-//     let filteredDessert = dessertArr.find(item => item.id === id);
-//     return filteredDessert;
-// }
-
-// router.get("/", (req, res) => {
-//     const dessert = listDessert();
-//     res.status(200).json(dessert);
-// });
-// router
-// .get('/:id', (req, res) => {
-//     console.log(req.params.id);
-//     fs.readFile('./data/dessert.json', 'utf-8', (err, data) => {
-//         if (err) {
-//             console.log(err);
-//             res.json({message: 'error getting Dessert wine id data'});
-//         }
-//         const dessertData = JSON.parse(data);
-//         const foundDessert = dessertData.find((data) => data.id == req.params.id);
-//         if(!foundDessert) {
-//             res.json({message: 'No Dessert Wine found with the id'});
-//         } else {
-//             res.json(foundDessert);
-//         }
-//     });
-// }
-// )
-
-// module.exports = router;
-
 const express = require("express");
 const router = express.Router();
 
 const dessertController = require("../controllers/dessert.controller");
 
-//get all records
-router.get("/", dessertController.getAllUsers);
+//get all dessert
+router.get("/", dessertController.getAllDessert);
 
-// get user by ID
-router.get("/:id", dessertController.getUserByID);
+// get dessert by ID
+router.get("/:id", dessertController.getDessertByID);
 
-// // get ID for Update
-router.get("/:email", dessertController.getUserByEmail);
+// get ID for Update
+router.get("/search/:wine", dessertController.getDessertByWine);
 
-// // create new user
-router.post("/", dessertController.createNewUser);
+// create new dessert
+router.post("/", dessertController.createNewDessert);
 
-// update user
-router.put("/:id", dessertController.updateUser);
+// update dessert
+router.put("/:id", dessertController.updateDessert);
 
-// delete user
-router.delete("/:id", dessertController.deleteUser);
+// delete dessert
+router.delete("/:id", dessertController.deleteDessert);
 
 module.exports = router;

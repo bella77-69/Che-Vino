@@ -4,6 +4,7 @@ import Title from "../Title/Title";
 
 function Comments(props) {
   const [services, setServices] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const { id } = props.match.params;
 
   useEffect(() => {
@@ -11,6 +12,15 @@ function Comments(props) {
       .then((res) => res.json())
       .then((result) => {
         setServices(result);
+        console.log(result);
+      });
+  }, [id]);
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/wines/comments/${id}`)
+      .then((res) => res.json())
+      .then((result) => {
+        setReviews(result);
         console.log(result);
       });
   }, [id]);
@@ -41,6 +51,14 @@ function Comments(props) {
               <h5 className="card-subtitle text-muted mx-3 mt-2 font-italic">
                 {service.review}
               </h5>
+              {reviews.map((review) => (
+                <div className="card p-3 text-white" key={review.index}>
+                   <p className="card-text p-y-1 mt-2">{review.name}</p>
+                  <p className="card-text p-y-1">{review.date}</p>
+                 
+                  <p className="card-subtitle text-muted mt-2 font-italic">{review.comments}</p>
+                </div>
+              ))}
               {/* <h5 className="card-subtitle text-muted mx-3 mt-2 font-italic">
                   {service.comments}
                 </h5> */}

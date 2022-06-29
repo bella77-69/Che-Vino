@@ -1,34 +1,36 @@
 const dbConn = require('../config/db.config');
 
 const AllWines = function (all) {
-    this.name = all.name
-    this.email = all.email;
-    this.password = all.password;
-    // this.confirmPassword = user.confirmPassword;
+    this.winery = all.winery;
+    this.wine = all.wine;
+    this.rating = all.rating.average;
+    // this.average = all.average;
+    // this.reviews = all.reviews;
+    this.location = all.location;
 }
 
-//get all Guests
-AllWines.getAllUsers = (result) => {
+//get all wines
+AllWines.getAllWines = (result) => {
   dbConn.query("SELECT * FROM allwines", (err, res) => {
     if (err) {
       console.log("Error while fetching allwines", err);
       result(null, err);
     } else {
-    //  console.log("Admin fetched successfully");
+    //  console.log("Wine fetched successfully");
       result(null, res);
     }
   });
 };
 
 
-//get user by email
-AllWines.getUserByEmail = (email, result) => {
+//get wine by winery
+AllWines.getWineByWinery = (winery, result) => {
   dbConn.query(
-    "SELECT * FROM allwines WHERE email = ?",
-    email,
+    "SELECT * FROM allwines WHERE winery = ?",
+    winery,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by email", err);
+       console.log("Error while fetching data by winery", err);
         result(null, err);
       } else {
         result(null, res);
@@ -37,28 +39,27 @@ AllWines.getUserByEmail = (email, result) => {
   );
 };
 
-  // create new user
-  AllWines.createNewUser = (allwinesReqData, result) => {
+  // create new wine
+  AllWines.createNewWine = (allWinesReqData, result) => {
     dbConn.query(
       "INSERT INTO allwines SET ?",
-      allwinesReqData,
+      allWinesReqData,
       (err, res) => {
         if (err) {
           console.log("Error while inserting data");
           result(null, err);
         } else {
-          console.log("admin user created successfully");
+          console.log("Wine created successfully");
           result(null, res);
         }
       }
     );
   };
-  
-  //get user by ID for update
-  AllWines.getUserByID = (id, result) => {
+  //get wine by ID for update
+  AllWines.getWineByID = (id, result) => {
     dbConn.query("SELECT * FROM allwines WHERE id=?", id, (err, res) => {
       if (err) {
-        console.log("Error while fetching user by id", err);
+        console.log("Error while fetching wine by id", err);
         result(null, err);
       } else {
         result(null, res);
@@ -66,28 +67,28 @@ AllWines.getUserByEmail = (email, result) => {
     });
   };
   
-  //update user
- AllWines.updateUser = (id, allwinesReqData, result) => {
+  //update wine
+ AllWines.updateWine = (id, allwinesReqData, result) => {
     dbConn.query(
-      "UPDATE allwines SET name=?, email=? WHERE id = ?",
-      [allwinesReqData.name, allwinesReqData.email, id],
+      "UPDATE allwines SET winery=?, wine=?, rating=?, location=?  WHERE id = ?",
+      [allwinesReqData.winery, allwinesReqData.wine, allwinesReqData.rating, allwinesReqData.location, id],
       (err, res) => {
         if (err) {
-          console.log("Error while updating user");
+          console.log("Error while updating wine");
           result(null, err);
         } else {
-          console.log("user updated successfully");
+          console.log("wine updated successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //delete user
-  AllWines.deleteUser = (id, result) => {
+  //delete wine
+  AllWines.deleteWine = (id, result) => {
     dbConn.query("DELETE from allwines WHERE id=?", [id], (err, res) => {
       if (err) {
-        console.log("Error while deleting the user");
+        console.log("Error while deleting the wine");
         result(null, err);
       } else {
         result(null, res);

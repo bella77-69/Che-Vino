@@ -1,9 +1,9 @@
 const SparklingModel = require("../models/sparkling.model");
 
-// get all users list
-exports.getAllUsers = (req, res) => {
+// get all Sparkling list
+exports.getAllSparkling = (req, res) => {
   //console.log('here all users list');
-  SparklingModel.getAllUsers((err, user) => {
+  SparklingModel.getAllSparkling((err, user) => {
     // console.log("We are here");
     if (err) res.send(err);
     //console.log("user", user);
@@ -11,55 +11,55 @@ exports.getAllUsers = (req, res) => {
   });
 };
 
-// get user by email
-exports.getUserByEmail = (req, res) => {
-  SparklingModel.getUserByEmail(req.params.email, (err, user) => {
+// get Sparkling by wine
+exports.getSparklingByWine = (req, res) => {
+  SparklingModel.getSparklingByWine(req.params.wine, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new user
-  exports.createNewUser = (req, res) => {
-    const adminReqData = new SparklingModel(req.body);
-   // console.log("adminReqData", adminReqData);
+  // create new Sparkling
+  exports.createNewSparkling = (req, res) => {
+    const sparklingReqData = new SparklingModel(req.body);
+   // console.log("sparklingReqData", sparklingReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      SparklingModel.createNewUser(adminReqData, (err, user) => {
+      SparklingModel.createNewSparkling(sparklingReqData, (err, user) => {
         if (err) res.send(err);
         res.json({
           status: true,
-          message: "User Created Successfully",
+          message: "Sparkling Created Successfully",
           data: user.insertId,
         });
       });
     }
   };
   
-  // get user by ID  for Update
-  exports.getUserByID = (req, res) => {
+  // get Sparkling by ID  for Update
+  exports.getSparklingByID = (req, res) => {
     //console.log('get user by id');
-    SparklingModel.getUserByID(req.params.id, (err, user) => {
+    SparklingModel.getSparklingByID(req.params.id, (err, user) => {
       if (err) res.send(err);
      // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update user
-  exports.updateUser = (req, res) => {
-    const adminReqData = new SparklingModel(req.body);
-  //  console.log("adminReqData update", adminReqData);
+  // update Sparkling
+  exports.updateSparkling = (req, res) => {
+    const sparklingReqData = new SparklingModel(req.body);
+  //  console.log("sparklingReqData update", sparklingReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      SparklingModel.updateUser(
+      SparklingModel.updateSparkling(
         req.params.id,
-        adminReqData,
+        sparklingReqData,
         (err, user) => {
           if (err) res.send(err);
           res.json({ status: true, message: "user updated Successfully" });
@@ -68,10 +68,10 @@ exports.getUserByEmail = (req, res) => {
     }
   };
   
-  // delete user
-  exports.deleteUser = (req, res) => {
-    SparklingModel.deleteUser(req.params.id, (err, user) => {
+  // delete Sparkling
+  exports.deleteSparkling = (req, res) => {
+    SparklingModel.deleteSparkling(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "User deleted successully!" });
+      res.json({ success: true, message: "Sparkling deleted successully!" });
     });
   };

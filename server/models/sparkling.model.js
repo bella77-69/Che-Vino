@@ -1,14 +1,14 @@
 const dbConn = require('../config/db.config');
 
 const Sparkling = function (sparking) {
-    this.name = sparking.name
-    this.email = sparking.email;
-    this.password = sparking.password;
-    // this.confirmPassword = user.confirmPassword;
+  this.winery = sparking.winery;
+  this.wine = sparking.wine;
+  // this.rating = sparking.rating.average;
+  this.location = sparking.location;
 }
 
-//get all Guests
-Sparkling.getAllUsers = (result) => {
+//get all Sparkling
+Sparkling.getAllSparkling = (result) => {
   dbConn.query("SELECT * FROM sparkling", (err, res) => {
     if (err) {
       console.log("Error while fetching sparkling", err);
@@ -21,14 +21,14 @@ Sparkling.getAllUsers = (result) => {
 };
 
 
-//get user by email
-Sparkling.getUserByEmail = (email, result) => {
+//get sparkling by wine
+Sparkling.getSparklingByWine = (wine, result) => {
   dbConn.query(
-    "SELECT * FROM sparkling WHERE email = ?",
-    email,
+    "SELECT * FROM sparkling WHERE wine = ?",
+    wine,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by email", err);
+       console.log("Error while fetching data by wine", err);
         result(null, err);
       } else {
         result(null, res);
@@ -37,8 +37,8 @@ Sparkling.getUserByEmail = (email, result) => {
   );
 };
 
-  // create new user
-  Sparkling.createNewUser = (sparklingReqData, result) => {
+  // create new Sparkling
+  Sparkling.createNewSparkling = (sparklingReqData, result) => {
     dbConn.query(
       "INSERT INTO sparkling SET ?",
       sparklingReqData,
@@ -47,18 +47,18 @@ Sparkling.getUserByEmail = (email, result) => {
           console.log("Error while inserting data");
           result(null, err);
         } else {
-          console.log("admin user created successfully");
+          console.log("Sparkling created successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //get user by ID for update
-  Sparkling.getUserByID = (id, result) => {
+  //get Sparkling by ID for update
+  Sparkling.getSparklingByID = (id, result) => {
     dbConn.query("SELECT * FROM sparkling WHERE id=?", id, (err, res) => {
       if (err) {
-        console.log("Error while fetching user by id", err);
+        console.log("Error while fetching Sparkling by id", err);
         result(null, err);
       } else {
         result(null, res);
@@ -66,28 +66,28 @@ Sparkling.getUserByEmail = (email, result) => {
     });
   };
   
-  //update user
-  Sparkling.updateUser = (id, sparklingReqData, result) => {
+  //update Sparkling
+  Sparkling.updateSparkling = (id, sparklingReqData, result) => {
     dbConn.query(
-      "UPDATE sparkling SET name=?, email=? WHERE id = ?",
-      [sparklingReqData.name, sparklingReqData.email, id],
+      "UPDATE sparkling SET winery=?, wine=?, location=? WHERE id = ?",
+      [sparklingReqData.winery, sparklingReqData.wine,sparklingReqData.location, id],
       (err, res) => {
         if (err) {
-          console.log("Error while updating user");
+          console.log("Error while updating Sparkling");
           result(null, err);
         } else {
-          console.log("user updated successfully");
+          console.log("Sparkling updated successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //delete user
-  Sparkling.deleteUser = (id, result) => {
+  //delete Sparkling
+  Sparkling.deleteSparkling = (id, result) => {
     dbConn.query("DELETE from sparkling WHERE id=?", [id], (err, res) => {
       if (err) {
-        console.log("Error while deleting the user");
+        console.log("Error while deleting the Sparkling");
         result(null, err);
       } else {
         result(null, res);

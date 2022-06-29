@@ -1,14 +1,14 @@
 const dbConn = require('../config/db.config');
 
 const Red = function (red) {
-    this.name = red.name
-    this.email = red.email;
-    this.password = red.password;
-    // this.confirmPassword = user.confirmPassword;
+  this.winery = red.winery;
+  this.wine = red.wine;
+  // this.rating = red.rating.average;
+  this.location = red.location;
 }
 
-//get all Guests
-Red.getAllUsers = (result) => {
+//get all red
+Red.getAllRed = (result) => {
   dbConn.query("SELECT * FROM red", (err, res) => {
     if (err) {
       console.log("Error while fetching Red", err);
@@ -21,14 +21,14 @@ Red.getAllUsers = (result) => {
 };
 
 
-//get user by email
-Red.getUserByEmail = (email, result) => {
+//get red by wine
+Red.getRedByWine = (wine, result) => {
   dbConn.query(
-    "SELECT * FROM red WHERE email = ?",
-    email,
+    "SELECT * FROM red WHERE wine = ?",
+    wine,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by email", err);
+       console.log("Error while fetching red by wine", err);
         result(null, err);
       } else {
         result(null, res);
@@ -37,8 +37,8 @@ Red.getUserByEmail = (email, result) => {
   );
 };
 
-  // create new user
-  Red.createNewUser = (redReqData, result) => {
+  // create new red
+  Red.createNewRed = (redReqData, result) => {
     dbConn.query(
       "INSERT INTO red SET ?",
       redReqData,
@@ -47,18 +47,18 @@ Red.getUserByEmail = (email, result) => {
           console.log("Error while inserting data");
           result(null, err);
         } else {
-          console.log("Red user created successfully");
+          console.log("Red created successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //get user by ID for update
-  Red.getUserByID = (id, result) => {
+  //get red by ID for update
+  Red.getRedByID = (id, result) => {
     dbConn.query("SELECT * FROM red WHERE id=?", id, (err, res) => {
       if (err) {
-        console.log("Error while fetching user by id", err);
+        console.log("Error while fetching red by id", err);
         result(null, err);
       } else {
         result(null, res);
@@ -66,28 +66,28 @@ Red.getUserByEmail = (email, result) => {
     });
   };
   
-  //update user
-  Red.updateUser = (id, redReqData, result) => {
+  //update red
+  Red.updateRed = (id, redReqData, result) => {
     dbConn.query(
-      "UPDATE red SET name=?, email=? WHERE id = ?",
-      [redReqData.name, redReqData.email, id],
+      "UPDATE red SET winery=?, wine=?, location=? WHERE id = ?",
+      [redReqData.winery, redReqData.wine, redReqData.location, id],
       (err, res) => {
         if (err) {
-          console.log("Error while updating user");
+          console.log("Error while updating red");
           result(null, err);
         } else {
-          console.log("user updated successfully");
+          console.log("red updated successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //delete user
-  Red.deleteUser = (id, result) => {
+  //delete red
+  Red.deleteRed = (id, result) => {
     dbConn.query("DELETE from red WHERE id=?", [id], (err, res) => {
       if (err) {
-        console.log("Error while deleting the user");
+        console.log("Error while deleting the red");
         result(null, err);
       } else {
         result(null, res);

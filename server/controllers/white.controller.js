@@ -1,9 +1,9 @@
 const WhiteModel = require("../models/white.model");
 
-// get all users list
-exports.getAllUsers = (req, res) => {
+// get all White list
+exports.getAllWhite = (req, res) => {
   //console.log('here all users list');
-  WhiteModel.getAllUsers((err, user) => {
+  WhiteModel.getAllWhite((err, user) => {
     // console.log("We are here");
     if (err) res.send(err);
     //console.log("user", user);
@@ -11,67 +11,67 @@ exports.getAllUsers = (req, res) => {
   });
 };
 
-// get user by email
-exports.getUserByEmail = (req, res) => {
-  WhiteModel.getUserByEmail(req.params.email, (err, user) => {
+// get White by wine
+exports.getWhiteByWine = (req, res) => {
+  WhiteModel.getWhiteByWine(req.params.wine, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new user
-  exports.createNewUser = (req, res) => {
-    const adminReqData = new WhiteModel(req.body);
-   // console.log("adminReqData", adminReqData);
+  // create new White
+  exports.createNewWhite = (req, res) => {
+    const whiteReqData = new WhiteModel(req.body);
+   // console.log("whiteReqData", whiteReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      WhiteModel.createNewUser(adminReqData, (err, user) => {
+      WhiteModel.createNewWhite(whiteReqData, (err, user) => {
         if (err) res.send(err);
         res.json({
           status: true,
-          message: "User Created Successfully",
+          message: "White Created Successfully",
           data: user.insertId,
         });
       });
     }
   };
   
-  // get user by ID  for Update
-  exports.getUserByID = (req, res) => {
+  // get White by ID  for Update
+  exports.getWhiteByID = (req, res) => {
     //console.log('get user by id');
-    WhiteModel.getUserByID(req.params.id, (err, user) => {
+    WhiteModel.getWhiteByID(req.params.id, (err, user) => {
       if (err) res.send(err);
      // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update user
-  exports.updateUser = (req, res) => {
-    const adminReqData = new WhiteModel(req.body);
-  //  console.log("adminReqData update", adminReqData);
+  // update White
+  exports.updateWhite = (req, res) => {
+    const whiteReqData = new WhiteModel(req.body);
+  //  console.log("whiteReqData update", whiteReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      WhiteModel.updateUser(
+      WhiteModel.updateWhite(
         req.params.id,
-        adminReqData,
+        whiteReqData,
         (err, user) => {
           if (err) res.send(err);
-          res.json({ status: true, message: "user updated Successfully" });
+          res.json({ status: true, message: "White updated Successfully" });
         }
       );
     }
   };
   
-  // delete user
-  exports.deleteUser = (req, res) => {
-    WhiteModel.deleteUser(req.params.id, (err, user) => {
+  // delete White
+  exports.deleteWhite = (req, res) => {
+    WhiteModel.deleteWhite(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "User deleted successully!" });
+      res.json({ success: true, message: "White deleted successully!" });
     });
   };

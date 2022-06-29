@@ -11,9 +11,9 @@ exports.getAllReviews = (req, res) => {
   });
 };
 
-// get review by email
-exports.getReviewByEmail = (req, res) => {
-  ReviewModel.getReviewByEmail(req.params.email, (err, user) => {
+// get review by price
+exports.getReviewByPrice = (req, res) => {
+  ReviewModel.getReviewByPrice(req.params.price, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);

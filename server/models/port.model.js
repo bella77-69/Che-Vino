@@ -1,14 +1,14 @@
 const dbConn = require('../config/db.config');
 
 const Port = function (port) {
-    this.name = port.name
-    this.email = port.email;
-    this.password = port.password;
-    // this.confirmPassword = user.confirmPassword;
+  this.winery = port.winery;
+  this.wine = port.wine;
+  // this.rating = port.rating.average;
+  this.location = port.location;
 }
 
-//get all Guests
-Port.getAllUsers = (result) => {
+//get all port wine
+Port.getAllPort = (result) => {
   dbConn.query("SELECT * FROM port", (err, res) => {
     if (err) {
       console.log("Error while fetching Port", err);
@@ -21,14 +21,14 @@ Port.getAllUsers = (result) => {
 };
 
 
-//get user by email
-Port.getUserByEmail = (email, result) => {
+//get port by wine
+Port.getPortByWine = (wine, result) => {
   dbConn.query(
-    "SELECT * FROM port WHERE email = ?",
-    email,
+    "SELECT * FROM port WHERE wine = ?",
+    wine,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by email", err);
+       console.log("Error while fetching data by wine", err);
         result(null, err);
       } else {
         result(null, res);
@@ -37,8 +37,8 @@ Port.getUserByEmail = (email, result) => {
   );
 };
 
-  // create new user
-  Port.createNewUser = (portReqData, result) => {
+  // create new port
+  Port.createNewPort = (portReqData, result) => {
     dbConn.query(
       "INSERT INTO port SET ?",
       portReqData,
@@ -47,18 +47,18 @@ Port.getUserByEmail = (email, result) => {
           console.log("Error while inserting data");
           result(null, err);
         } else {
-          console.log("Port user created successfully");
+          console.log("Port created successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //get user by ID for update
-  Port.getUserByID = (id, result) => {
+  //get port by ID for update
+  Port.getPortByID = (id, result) => {
     dbConn.query("SELECT * FROM port WHERE id=?", id, (err, res) => {
       if (err) {
-        console.log("Error while fetching user by id", err);
+        console.log("Error while fetching port by id", err);
         result(null, err);
       } else {
         result(null, res);
@@ -66,28 +66,28 @@ Port.getUserByEmail = (email, result) => {
     });
   };
   
-  //update user
-  Port.updateUser = (id, portReqData, result) => {
+  //update port
+  Port.updatePort = (id, portReqData, result) => {
     dbConn.query(
-      "UPDATE port SET name=?, email=? WHERE id = ?",
-      [portReqData.name, portReqData.email, id],
+      "UPDATE port SET winery=?, wine=?, location=? WHERE id = ?",
+      [portReqData.winery, portReqData.wine, portReqData.location, id],
       (err, res) => {
         if (err) {
-          console.log("Error while updating user");
+          console.log("Error while updating port wine");
           result(null, err);
         } else {
-          console.log("user updated successfully");
+          console.log("Port wine updated successfully");
           result(null, res);
         }
       }
     );
   };
   
-  //delete user
-  Port.deleteUser = (id, result) => {
+  //delete port
+  Port.deletePort = (id, result) => {
     dbConn.query("DELETE from port WHERE id=?", [id], (err, res) => {
       if (err) {
-        console.log("Error while deleting the user");
+        console.log("Error while deleting port wine");
         result(null, err);
       } else {
         result(null, res);

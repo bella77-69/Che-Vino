@@ -1,77 +1,91 @@
 const AllWinesModel = require("../models/allWines.model");
 
-// get all users list
-exports.getAllUsers = (req, res) => {
-  //console.log('here all users list');
-  AllWinesModel.getAllUsers((err, user) => {
-    // console.log("We are here");
+// get all wines
+exports.getAllWines = (req, res) => {
+  AllWinesModel.getAllWines((err, user) => {
     if (err) res.send(err);
-    //console.log("user", user);
     res.send(user);
   });
 };
 
-// get user by email
-exports.getUserByEmail = (req, res) => {
-  AllWinesModel.getUserByEmail(req.params.email, (err, user) => {
+// get wine by winery
+exports.getWineByWinery = (req, res) => {
+  AllWinesModel.getWineByWinery(req.params.winery, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new user
-  exports.createNewUser = (req, res) => {
-    const AllWinesReqData = new AllWinesModel(req.body);
+  // create new wine
+  // exports.createNewWine = (req, res) => {
+  //   const allWinesReqData = new AllWinesModel(req.body);
+  //  // console.log("AllWinesReqData", AllWinesReqData);
+  //   // check null
+  //   if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
+  //     res.send(400).send({ success: false, message: "Please fill all fields" });
+  //   } else {
+  //     AllWinesModel.createNewWine(allWinesReqData, (err, user) => {
+  //       if (err) res.send(err);
+  //       res.json({
+  //         status: true,
+  //         message: "Wine Created Successfully",
+  //         data: user.insertId,
+  //       });
+  //     });
+  //   }
+  // };
+  exports.createNewWine = (req, res) => {
+    const allWinesReqData = new AllWinesModel(req.body);
    // console.log("AllWinesReqData", AllWinesReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      AllWinesModel.createNewUser(AllWinesReqData, (err, user) => {
+      AllWinesModel.createNewWine(allWinesReqData, (err, user) => {
         if (err) res.send(err);
-        res.json({
-          status: true,
-          message: "User Created Successfully",
-          data: user.insertId,
-        });
+        res.json(user)
+        // res.json({
+        //   status: true,
+        //   message: "Wine Created Successfully",
+        //   data: user.insertId,
+        // });
       });
     }
   };
-  
-  // get user by ID  for Update
-  exports.getUserByID = (req, res) => {
+  // get wine by ID  for Update
+  exports.getWineByID = (req, res) => {
     //console.log('get user by id');
-    AllWinesModel.getUserByID(req.params.id, (err, user) => {
+    AllWinesModel.getWineByID(req.params.id, (err, user) => {
       if (err) res.send(err);
      // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update user
-  exports.updateUser = (req, res) => {
-    const AllWinesReqData = new AllWinesModel(req.body);
+  // update wine
+  exports.updateWine = (req, res) => {
+    const allWinesReqData = new AllWinesModel(req.body);
   //  console.log("AllWinesReqData update", AllWinesReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      AllWinesModel.updateUser(
+      AllWinesModel.updateWine(
         req.params.id,
-        AllWinesReqData,
+        allWinesReqData,
         (err, user) => {
           if (err) res.send(err);
-          res.json({ status: true, message: "user updated Successfully" });
+          res.json({ status: true, message: "wine updated Successfully" });
         }
       );
     }
   };
   
-  // delete user
-  exports.deleteUser = (req, res) => {
-    AllWinesModel.deleteUser(req.params.id, (err, user) => {
+  // delete wine
+  exports.deleteWine = (req, res) => {
+    AllWinesModel.deleteWine(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "User deleted successully!" });
+      res.json({ success: true, message: "Wine deleted successully!" });
     });
   };

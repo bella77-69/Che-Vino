@@ -1,14 +1,14 @@
 import "./CommentsList.scss";
 import { Link } from "react-router-dom";
 
-export default function CommentsList({ comments, listId }) {
-  const comment = comments;
+export default function CommentsList({ comments,items,  listId }) {
+  // const comment = comments;
 
   return (
     <section className="list">
       <h2 className="list-title">Top 20 Wines of 2021</h2>
 
-      {comment
+      {items
         .filter((data) => data.id !== listId)
         .map((data) => {
           return (
