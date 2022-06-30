@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import "./ContactPage.scss";
-import Contact from "../Components/Contact/Contact";
+// import Contact from "../Components/Contact/Contact";
 import Title from "../Components/Title/Title";
 
 export default class ContactPage extends React.Component {
@@ -47,7 +47,7 @@ export default class ContactPage extends React.Component {
 
   render() {
     return (
-      <div className="contact">
+      <div className="wine">
       <div className="container">
         <div className="text-center">
           <Title title="Contact Che Vino"></Title>
@@ -59,7 +59,7 @@ export default class ContactPage extends React.Component {
 
         <div className="row ">
           <div className="col-lg-7 mx-auto">
-            <div className="card mt-2 mx-auto p-4 bg-light">
+            <div className="card mx-auto p-4 bg-light">
               <div className="card-body bg-light">
                 <div className="container">
                   <form id="contact-form"  onSubmit={this.handleSubmit}>
@@ -134,9 +134,9 @@ export default class ContactPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container mt-5 mb-5">
+        {/* <div className="container mt-5">
           <Contact comment={this.state.comment} />
-        </div>
+        </div> */}
       </div>
       </div>
     );

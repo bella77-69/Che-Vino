@@ -49,6 +49,16 @@ export default function SparklingWinePage() {
               <span className="font-weight-bold">Location:</span>&nbsp;&nbsp;
               <span>{oneData.location}</span>
             </div>
+            <div className="d-flex justify-content-center">
+              <span className="font-weight-bold">Average Rating:</span>
+              &nbsp;&nbsp;
+              <span>{oneData.average}</span>
+            </div>
+            <div className="d-flex justify-content-center">
+              <span className="font-weight-bold">Number of Reviews:</span>
+              &nbsp;&nbsp;
+              <span>{oneData.reviews}</span>
+            </div>
           </div>
           <div className="d-flex justify-content-center mt-4">
             <button className="btn mx-2" onClick={handleClick}>

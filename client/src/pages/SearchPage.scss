@@ -2,6 +2,36 @@
 @import "../partials/fonts";
 @import "../partials/_mixins";
 
+.form{
+
+    position: relative;
+}
+
+.form .fa-search{
+    position: absolute;
+    top:42px;
+    left: 20px;
+    color: $black;
+}
+
+
+.form-input{
+    color: $blacker;
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
 
 .search {
     margin: 0, auto;
@@ -54,25 +84,25 @@
         margin-left: 0;
         }
 }
-    &-input {
-    @include Copy;
-    width: 50%;
-    border-radius: .9375rem;
-    margin-top: 1rem;
-    box-shadow: 0 .0725rem .0625rem $cement;
+    // &-input {
+    // @include Copy;
+    // width: 50%;
+    // border-radius: .9375rem;
+    // margin-top: 1rem;
+    // box-shadow: 0 .0725rem .0625rem $cement;
 
-        @include tablet {
-        @include deskCopy;
-        margin-left: 3rem;
-        }
+    //     @include tablet {
+    //     @include deskCopy;
+    //     margin-left: 3rem;
+    //     }
 
-        @include desktop {
-        @include deskHeader;
-        width: 20%;
-        margin-left: 0;
-        margin-top: 3rem;
-        };
-    }
+    //     @include desktop {
+    //     @include deskHeader;
+    //     width: 20%;
+    //     margin-left: 0;
+    //     margin-top: 3rem;
+    //     };
+    // }
 
     &-box {
     @include flex;

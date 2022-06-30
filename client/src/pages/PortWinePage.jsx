@@ -34,7 +34,7 @@ export default function PortWinePage() {
           <Title title="Port Wine"></Title>
 
           <div className="about-product text-center mt-2">
-            <img src={oneData.image} width="50" alt="wine-img"/>
+            <img src={oneData.image} width="50" alt="wine-img" />
             <div className="mt-0 mt-4 ">
               <h4>{oneData.wine}</h4>
               <h6>Wine #: {oneData.id}</h6>
@@ -49,6 +49,16 @@ export default function PortWinePage() {
             <div className="d-flex justify-content-center">
               <span className="font-weight-bold">Location:</span>&nbsp;&nbsp;
               <span>{oneData.location}</span>
+            </div>
+            <div className="d-flex justify-content-center">
+              <span className="font-weight-bold">Average Rating:</span>
+              &nbsp;&nbsp;
+              <span>{oneData.average}</span>
+            </div>
+            <div className="d-flex justify-content-center">
+              <span className="font-weight-bold">Number of Reviews:</span>
+              &nbsp;&nbsp;
+              <span>{oneData.reviews}</span>
             </div>
           </div>
           <div className="d-flex justify-content-center mt-4">

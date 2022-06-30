@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./SearchPage.scss";
-import Title from '../Components/Title/Title';
+import Title from "../Components/Title/Title";
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchPage() {
   const [data, setData] = useState([]);
@@ -35,33 +36,57 @@ export default function SearchPage() {
   }
 
   return (
-    <div className="search pt-5">
-      <Title title="Search By Year"></Title>
-      <div className="container mt-5 mb-5">
-        <label className="container-form"></label>
-        <input
-          className="form-control"
-          type="text"
-          placeholder="Year"
-          onChange={(event) => handleSearch(event)}
-        />
-      </div>
-      <div className="p-5 text-center">
-        {repos.map((value) => {
-          return (
-            <div className="search-box" key={value.id}>
-              <img className="search-box__img" src={value.image} alt="wine" />
-
-              <div className="search-list">
-                <p className="search-name">Wine: {value.wine}</p>
-                <p className="search-location">Location: {value.location}</p>
-                <p className="search-rating">
-                  Average Rating: {value.rating.average}
-                </p>
-              </div>
+    <div className="wine">
+      <div className="container">
+        <Title title="Search By Year"></Title>
+        <div className="row height d-flex justify-content-center align-items-center">
+          <div className="col-md-6">
+            <div class="form">
+              <label className="container-form"></label>
+              <i className="fa fa-search">
+                <FaSearch />
+              </i>
+              <input
+                className="form-control form-input"
+                type="text"
+                placeholder="Search By Year"
+                onChange={(event) => handleSearch(event)}
+              />
             </div>
-          );
-        })}
+          </div>
+        </div>
+        <div className="container mt-5">
+          <div className="card">
+            {repos.map((value) => {
+              return (
+                <div class="card-columns d-flex" key={value.id}>
+                  <div class="mt-0 mt-4 ml-4 d-flex align-items-center">
+                    <img
+                      className="img-fluid img-responsive rounded product-image"
+                      src={value.image}
+                      alt="wine"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-white">Wine: {value.wine}</h5>
+                      <h6 class="card-subtitle mb-2 text-white">
+                        Winery: {value.winery}
+                      </h6>
+                      <p className="mt-2 mb-1 text-white">
+                        Average Rating: {value.average}
+                      </p>
+                      <p className="mt-2 mb-1 text-white">
+                        Reviews: {value.reviews}
+                      </p>
+                      {/* <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> */}
+                    </div>
+                  </div>
+                </div>
+                // </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

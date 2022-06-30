@@ -4,7 +4,7 @@ import background from "../../assets/images/pour.png";
 
 export default function Contact({ comment }) {
   return (
-    <div className="contact">
+    <div className="wine">
       <div className="contact-box">
         <img
           className="contact-background"
