@@ -1,0 +1,256 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/_mixins";
+
+
+// .heros {
+//     // background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url('../../assets/images/cork2.jfif');
+//     // background-repeat: no-repeat;
+//     // background-position: center center;
+//     // background-size: cover;
+//     // object-fit: cover;
+//     width: 100%;
+//     font-family: $glory;
+//     background-color: $blacker;
+//     padding-bottom: 1rem;
+//     margin-top: 0;
+
+//     &-wrapper {
+//       // background-color: $font;
+//       margin: 0 auto;
+//       display: flex;
+//       align-items: flex-start;
+//       flex-wrap: wrap;
+//       justify-content: flex-start;
+//       color: $font;
+
+//         @include tablet {
+//         position: relative;
+//         text-align: center;
+//         justify-content: center;
+//         align-items: center;
+//         }
+
+//         @include desktop {
+//         @include flexColumn;
+//         flex-wrap: nowrap;
+//         align-items: center;
+//         }
+//   }
+
+//     &-img {
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     width: 30%; 
+//     margin-top: 1rem;
+//     object-fit: cover;
+//     border-radius: 1.25rem;
+//     margin-right: 1rem;
+
+//         @include tablet {
+//         height: auto;
+//         display: flex;
+//         order: -1;
+//         align-items: center;
+//         }
+
+//         @include desktop {
+//         order: -1;
+//         width: 15%;
+//         margin-right: 0rem;
+//         }
+//     }
+    
+//     &-card {
+//     margin: 1rem;
+//     color: $beige;
+//     @include Copy;
+
+//       @include tablet {
+//       @include deskSectionHeader;
+//       margin-left: 2.5rem;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: flex-start;
+//       }
+
+//       @include desktop {
+//       margin-left: 10rem;
+//       width: 75%;
+//       text-align: center;
+//       padding: .625rem;
+//       @include deskPageHeader;
+//       }
+//  }
+
+//  &-title {
+//    @include Copy;
+//    width: 100%;
+//    margin-top: 1rem;
+//    margin-left: 1rem;
+
+//       @include tablet {
+//       @include deskCopy;
+//       }
+
+//       @include desktop {
+//       display: flex;
+//       @include deskPageHeader;
+//       margin-top: 2rem;
+//       order: -1;
+//       margin-left: 0rem;
+//       justify-content: center;
+//       }
+//  }
+
+//  &-rating {
+//    @include sectionHeader;
+//    width: 49%;
+//    margin-left: 1rem;
+
+//       @include tablet {
+//       @include deskCopy;
+//       width: 15%;
+//       }
+
+//       @include desktop {
+//       order: -1;
+//       margin: 0;
+//       @include deskHeader;
+//       }
+//  }
+
+//  &-style {
+//    @include sectionHeader;
+//    width: 40%;
+//    margin-left: 1rem;
+
+//       @include tablet {
+//       width: 15%;
+//       font-size: 1rem;
+//       }
+
+//       @include desktop {
+//       order: -1;
+//       margin: 0;
+//       @include deskPageHeader;
+//       }
+//  }
+
+//  &-price {
+//    @include sectionHeader;
+//    width: 40%;
+//    margin-left: 1rem;
+
+//       @include tablet {
+//       width: 15%;
+//       font-size: 1rem;
+//       }
+
+//       @include desktop {
+//       order: -1;
+//       margin: 0;
+//       @include deskPageHeader;
+//       }
+//  }
+
+//  &-review {
+//    @include sectionHeader;
+   
+//       @include tablet {
+//       @include deskSectionHeader;
+//       width: 95%;
+    
+//       }
+
+//       @include desktop {
+//       @include deskPageHeader;
+     
+//       }
+//  }
+
+//  &-box {
+//   margin: 1rem;
+//   color: $beige;
+//   @include Copy;
+
+//     @include tablet {
+//     @include deskSectionHeader;
+//     margin-left: 2.5rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     }
+
+//     @include desktop {
+//     text-align: center;
+//     padding: .625rem;
+//     @include deskPageHeader;
+//     margin-left: 1rem;
+//     align-items: center;
+//     }
+// }
+
+// &-heading {
+//   @include Copy;
+//   width: 100%;
+//   margin-top: 1rem;
+//   text-decoration: underline;
+ 
+
+//      @include tablet {
+//      @include deskCopy;
+//      }
+
+//      @include desktop {
+//      @include deskPageHeader;
+   
+//      }
+// }
+
+// &-comments {
+//   @include sectionHeader;
+
+//       @include tablet {
+//       @include deskSectionHeader;
+//       width: 95%;
+//       text-align: left;
+     
+//       }
+
+//       @include desktop {
+//       @include deskPageHeader;
+//       margin: 0;
+//       }
+// }
+
+// &-name {
+//   @include sectionHeader;
+//   text-decoration: underline;
+
+//       @include tablet {
+//       @include deskSectionHeader;
+//       width: 95%;
+//       }
+
+//       @include desktop {
+//       @include deskPageHeader;
+//       }
+// }
+
+
+// &-date {
+//   @include sectionHeader;
+
+
+//       @include tablet {
+//       @include deskSectionHeader;
+//       width: 95%;
+//       }
+
+//       @include desktop {
+//       @include deskPageHeader;
+//       }
+  
+// }
+// }

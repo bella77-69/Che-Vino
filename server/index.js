@@ -164,6 +164,7 @@ const sparklingRoute = require('./routes/sparklingRoute');
 const reviewRoute = require('./routes/reviewRoute');
 const allWineRoute = require('./routes/allWineRoute');
 const commentRoute =require('./routes/commentRoute');
+const contactRoute = require('./routes/contactRoute');
 
 app.use(express.json());
 app.use(cors());
@@ -182,6 +183,7 @@ app.use('/wines/sparkling', sparklingRoute);
 app.use('/wines/review', reviewRoute);
 app.use('/wines/comments', commentRoute);
 app.use('/wines/all', allWineRoute);
+app.use('/wines/contact', contactRoute);
 
 const PORT = process.env.PORT || 5000;
 

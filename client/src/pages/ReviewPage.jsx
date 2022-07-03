@@ -2,9 +2,9 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Title from "../Components/Title/Title";
-import CommentsList from "../Components/Comments/CommentsList";
+import ReviewsList from "../Components/Reviews/ReviewsList";
 
-class CommentsPage extends React.Component {
+class ReviewPage extends React.Component {
   state = {
     currentItemsId: "",
     currentItem: {},
@@ -53,7 +53,7 @@ class CommentsPage extends React.Component {
         this.setState({
           currentItemsId: res.data[0],
         });
-        window.location.href = `/comments/${id}`;
+        window.location.href = `/reviews/${id}`;
       })
       .catch((err) => {
         console.error(err);
@@ -77,13 +77,13 @@ class CommentsPage extends React.Component {
                   />
 
                   <h4 className="card-title mt-4 mx-3">{item.wine}</h4>
-                  <h5 className="card-subtitle mx-3 mt-2 font-italic">
+                  <h5 className="card-subtitle mx-3 mt-2">
                     {item.style}
                   </h5>
-                  <h5 className="card-subtitle mx-3 mt-2 font-italic">
+                  <h5 className="card-subtitle mx-3 mt-2">
                     {item.price}
                   </h5>
-                  <h5 className="card-subtitle text-muted mx-3 mt-2 font-italic">
+                  <h5 className="card-subtitle mx-3 mt-2 text-muted font-italic">
                     {item.review}
                   </h5>
                   <p className="card-text p-y-1 mx-3 mt-2">
@@ -102,9 +102,9 @@ class CommentsPage extends React.Component {
             </div>
           </div>
         </div>
-        <CommentsList items={this.state.items}/>
+        <ReviewsList items={this.state.items}/>
       </section>
     );
   }
 }
-export default CommentsPage;
+export default ReviewPage;

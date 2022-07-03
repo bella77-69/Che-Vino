@@ -1,8 +1,7 @@
 import "./CommentsList.scss";
 import { Link } from "react-router-dom";
 
-export default function CommentsList({ comments,items,  listId }) {
-  // const comment = comments;
+export default function ReviewsList({ items,  listId }) {
 
   return (
     <section className="list">

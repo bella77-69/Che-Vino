@@ -1,9 +1,9 @@
-const CommentsModel = require("../models/comments.model");
+const ContactModel = require("../models/contact.model");
 
-// get all comments list
-exports.getAllComments = (req, res) => {
+// get all contacts list
+exports.getAllContacts = (req, res) => {
   //console.log('here all users list');
-  CommentsModel.getAllComments((err, user) => {
+  ContactModel.getAllContacts((err, user) => {
     // console.log("We are here");
     if (err) res.send(err);
     //console.log("user", user);
@@ -11,67 +11,67 @@ exports.getAllComments = (req, res) => {
   });
 };
 
-// get comment by name
-exports.getByCommentId= (req, res) => {
-  CommentsModel.getByCommentId(req.params.commentid, (err, user) => {
+// get contact by email
+exports.getByContactEmail= (req, res) => {
+  ContactModel.getByContactEmail(req.params.email, (err, user) => {
     if (err) res.send(err);
    // console.log("single email user data", user);
     res.send(user);
   });
 };
   
-  // create new comment
-  exports.createNewComment = (req, res) => {
-    const CommentsReqData = new CommentsModel(req.body);
+  // create new contact
+  exports.createNewContact = (req, res) => {
+    const contactReqData = new ContactModel(req.body);
    // console.log("AllWinesReqData", AllWinesReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      CommentsModel.createNewComment(CommentsReqData, (err, user) => {
+      ContactModel.createNewContact(contactReqData, (err, user) => {
         if (err) res.send(err);
         res.json({
           status: true,
-          message: "Comment Created Successfully",
+          message: "Contact Created Successfully",
           data: user.insertId,
         });
       });
     }
   };
   
-  // get comment  by ID  for Update
-  exports.getCommentByID = (req, res) => {
+  // get contact by ID  for Update
+  exports.getContactByID = (req, res) => {
     //console.log('get user by id');
-    CommentsModel.getCommentByID(req.params.id, (err, user) => {
+    ContactModel.getContactByID(req.params.id, (err, user) => {
       if (err) res.send(err);
      // console.log("single user data", user);
      res.send(user);
     });
   };
   
-  // update comment
-  exports.updateComment = (req, res) => {
-    const CommentsReqData = new CommentsModel(req.body);
+  // update contact
+  exports.updateContact = (req, res) => {
+    const contactReqData = new ContactModel(req.body);
   //  console.log("AllWinesReqData update", AllWinesReqData);
     // check null
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
       res.send(400).send({ success: false, message: "Please fill all fields" });
     } else {
-      CommentsModel.updateComment(
+      ContactModel.updateContact(
         req.params.id,
-        CommentsReqData,
+        contactReqData,
         (err, user) => {
           if (err) res.send(err);
-          res.json({ status: true, message: "comment updated Successfully" });
+          res.json({ status: true, message: "Contact updated Successfully" });
         }
       );
     }
   };
   
-  // delete comment
-  exports.deleteComment = (req, res) => {
-    CommentsModel.deleteComment(req.params.id, (err, user) => {
+  // delete contact
+  exports.deleteContact = (req, res) => {
+    ContactModel.deleteContact(req.params.id, (err, user) => {
       if (err) res.send(err);
-      res.json({ success: true, message: "Comment deleted successully!" });
+      res.json({ success: true, message: "Contact deleted successully!" });
     });
   };

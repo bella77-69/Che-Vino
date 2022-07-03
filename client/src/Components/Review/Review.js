@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import "./ContactPage.scss";
-import Contact from "../Components/Contact/Contact";
-import Title from "../Components/Title/Title";
+import React, { useState} from "react";
+// import "./ContactPage.scss";
+// import Contact from "../Components/Contact/Contact";
+import Title from '../Title/Title';
 
 export default function ContactPage() {
   const [contact, setContact] = useState({
@@ -10,9 +10,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     comment: "",
-    successMessage: null,
   });
-
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -22,7 +20,7 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, id) => {
     e.preventDefault();
     const data = {
       name: contact.name,
@@ -31,14 +29,14 @@ export default function ContactPage() {
     };
 
     axios
-      .post("http://localhost:8080/wines/contact/", data)
+      .put(`http://localhost:8080/wines/comments/{id}`, data)
       .then((response) => {
         if (response.status === 200) {
           setContact((prevState) => ({
             ...prevState,
             successMessage: "Submitted.",
           }));
-          window.location.href = "/contact";
+        //   window.location.href = `/reviews`;
           console.log(response);
         }
       })
@@ -47,14 +45,11 @@ export default function ContactPage() {
       });
   };
 
- 
-   
-
   return (
     <div className="wine">
       <div className="container">
         <div className="text-center">
-          <Title title="Contact Che Vino"></Title>
+          <Title title="Leave a Review"></Title>
           {/* <h1 >Contact Che Vino</h1> */}
           <p className="form-subtitle">
             For Inquiries, Support Requests or General Questions
@@ -130,26 +125,16 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="alert alert-success mt-2"
-                      style={{
-                        display: contact.successMessage ? "block" : "none",
-                      }}
-                      role="alert"
-                    >
-                      {contact.successMessage}
-                    </div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="container mt-5">
-          <Contact />
-        </div>
+        {/* <div className="container mt-5">
+          <Contact comment={this.state.comment} />
+        </div> */}
       </div>
     </div>
   );
 }
-

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 import Title from "../Title/Title";
 
-function Comments(props) {
+function Reviews(props) {
   const [services, setServices] = useState([]);
   const [reviews, setReviews] = useState([]);
   const { id } = props.match.params;
@@ -48,27 +48,33 @@ function Comments(props) {
               <h5 className="card-subtitle mt-3">{service.style}</h5>
               <h5 className="card-subtitle  mt-2">{service.price}</h5>
               <p className="card-text p-y-1 mt-2">Rating: {service.rating}</p>
-              <h5 className="card-subtitle text-muted mx-3 mt-2 font-italic">
-                {service.review}
-              </h5>
-              {reviews.map((review) => (
-                <div className="card p-3 text-white" key={review.index}>
-                   <p className="card-text p-y-1 mt-2">{review.name}</p>
-                  <p className="card-text p-y-1">{review.date}</p>
-                 
-                  <p className="card-subtitle text-muted mt-2 font-italic">{review.comments}</p>
-                </div>
-              ))}
-              {/* <h5 className="card-subtitle text-muted mx-3 mt-2 font-italic">
-                  {service.comments}
-                </h5> */}
+              <h5 className="card-subtitle mx-3 mt-2">{service.review}</h5>
+              <div className="d-flex justify-content-center mt-4">
+                <span className="font-weight-bold">Reviews</span>
+              </div>
 
+              {reviews.map((review) => (
+                <article class="container py-4">
+                  <div class="img-container">
+                    <img src="" alt="" id="img" />
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <p id="author">{review.name}</p>
+                  <p id="job">{review.date}</p>
+                  <p id="info">{review.comments}</p>
+                </article>
+              ))}
+              <button className="btn mx-2">
+                <Link    to={"/leave_review/" + service.id}
+              className="list-link"
+              >Leave a Review</Link>
+              </button>
               <button className="btn mx-2">
                 <Link to="/">Back to Homepage</Link>
               </button>
 
               <button className="btn">
-                <Link to="/comments">Back to Wine Page</Link>
+                <Link to="/reviews">Back to Wine Page</Link>
               </button>
             </div>
           ))}
@@ -78,4 +84,4 @@ function Comments(props) {
   );
 }
 
-export default Comments;
+export default Reviews;

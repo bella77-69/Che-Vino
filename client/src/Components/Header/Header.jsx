@@ -21,7 +21,7 @@ export default function Header() {
             <Nav.Link href="/"  className="nav-bar" >Home</Nav.Link>
             <Nav.Link href="/search"  className="nav-bar" >Search</Nav.Link>
             <Nav.Link href="/contact"  className="nav-bar" >Contact</Nav.Link>
-            <Nav.Link href="/comments"  className="nav-bar" >Comments</Nav.Link>
+            <Nav.Link href="/reviews"  className="nav-bar" >Reviews</Nav.Link>
             <NavDropdown title="Wine Generator" id="basic-nav-dropdown" >
               <NavDropdown.Item href="/wines/reds">Red Wine Generator</NavDropdown.Item>
               <NavDropdown.Item href="/wines/whites">

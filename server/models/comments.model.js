@@ -2,9 +2,9 @@ const dbConn = require('../config/db.config');
 
 const AllComments = function (comment) {
     // this.id = comment.id;
-    this.comments = comment.comments;
+    this.comment = comment.comment;
     this.name = comment.name
-    this.date = comment.date;
+    this.email = comment.email;
 }
 
 //get all Comments
@@ -22,13 +22,13 @@ AllComments.getAllComments = (result) => {
 
 
 //get comments by comment id
-AllComments.getByCommentId = (commentid, result) => {
+AllComments.getByCommentId = (email, result) => {
   dbConn.query(
-    "SELECT * FROM review_comments WHERE commentid = ?",
-    commentid,
+    "SELECT * FROM review_comments WHERE email= ?",
+    email,
     (err, res) => {
       if (err) {
-       console.log("Error while fetching data by commentid", err);
+       console.log("Error while fetching data by email", err);
         result(null, err);
       } else {
         result(null, res);
@@ -67,10 +67,10 @@ AllComments.getByCommentId = (commentid, result) => {
   };
   
   //update comment
-  AllComments.updateComment = (commentid, CommentsReqData, result) => {
+  AllComments.updateComment = (id, CommentsReqData, result) => {
     dbConn.query(
-      "UPDATE review_comments SET comments=?, name=?, date=?  WHERE commentid = ?",
-      [CommentsReqData.comments, CommentsReqData.name, CommentsReqData.date, commentid],
+      "UPDATE review_comments SET comment=?, name=?, email=?  WHERE id = ?",
+      [CommentsReqData.comments, CommentsReqData.name, CommentsReqData.email, id],
       (err, res) => {
         if (err) {
           console.log("Error while updating Comments");

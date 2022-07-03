@@ -16,7 +16,7 @@ router.get("/comments/:commentid", commentController.getByCommentId);
 router.post("/", commentController.createNewComment);
 
 // update comment
-router.put("/comments/:commentid", commentController.updateComment);
+router.put("/comments/:id", commentController.updateComment);
 
 // delete comment
 router.delete("/:id", commentController.deleteComment);
